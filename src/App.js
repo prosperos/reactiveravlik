@@ -1,25 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ApolloClient from 'apollo-boost'
+import { ApolloProvider } from 'react-apollo'
+import { BrowserRouter, Route } from 'react-router-dom'
+import Ravlik  from './ravlik/Ravlik';
+import Ravliks from './ravlik/Ravliks';
+import Home from './pages/Home'
+
+const client = new ApolloClient({
+  uri: 'http://reactwp/graphql/',
+})
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <ApolloProvider client={client}>
+        <BrowserRouter>
+
+          <div>
+            <header>
+              <h1>Ravlik site</h1>
+            </header>
+            <div className="content">
+              <Route exact path="/" component={Ravliks} />
+              <Route path="/ravliks" component={Ravliks} />
+              <Route path="/ravlik/:slug" component={Ravlik} />
+              <Route path="/home/" component={Home} />
+            </div>
+          </div>
+
+        </BrowserRouter>
+      </ApolloProvider>
   );
 }
 
