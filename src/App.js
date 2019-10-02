@@ -2,10 +2,10 @@ import React from 'react';
 import ApolloClient from 'apollo-boost'
 import { ApolloProvider } from 'react-apollo'
 import { BrowserRouter, Route } from 'react-router-dom'
-import Ravlik  from './ravlik/Ravlik';
-import Ravliks from './ravlik/Ravliks';
+import Ravlik  from './ravlik/Ravlik'
+import Ravliks from './ravlik/Ravliks'
+import './components/base.scss'
 import Home from './pages/Home'
-
 const client = new ApolloClient({
   uri: 'http://reactwp/graphql/',
 })

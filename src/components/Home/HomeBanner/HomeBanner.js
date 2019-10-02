@@ -1,6 +1,8 @@
 import React from 'react';
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
+
+import './HomeBanner.scss'
 //import { Link } from 'react-router-dom'
 
 
@@ -8,45 +10,13 @@ const HomeBanner = () => (
     <Query query={gql`
 {
   pageBy(uri: "main-home") {
-    id
-    title
-    slug
-    uri
+  
     home{
       homeBannerLogo {
         sourceUrl
       }
       homeBannerText
       homeBannerImage {
-        sourceUrl
-      }
-      homeAboutUsImage{
-        sourceUrl
-      }
-      homeAboutUsTitle
-      homeAboutUsText
-      homeAboutUsBtnName
-      homeAboutUsBtnUrl
-      
-      ourServicesTitle
-      ourServicesItems {
-       \tourServicesIcon{
-          sourceUrl
-        }
-        ourServicesDescription
-        ourServicesTitle
-      }
-      
-      ourProductsTitle
-      
-      productionTitle
-      productionDescription
-      productionImage{
-        sourceUrl
-      }
-      exportTitle
-      exportTitle
-      exportImage{
         sourceUrl
       }
     }
@@ -65,6 +35,38 @@ const HomeBanner = () => (
                     properties.push({key: k, value: v})
                 }
 
+                const image_url = data.pageBy.home.homeBannerLogo.sourceUrl
+                const banner_bg_url = {
+                    backgroundImage: `url(${image_url})`
+                }
+                const  homeBannerImage = data.pageBy.home.homeBannerImage.sourceUrl
+                const homeBannerImageStyle = {
+                    backgroundImage: `url(${homeBannerImage})`
+                }
+                return (
+                    <div className="wrapper_bunner_content">
+                        <div className="container">
+                            <div className="row center_content">
+                                <div className="col-lg-6">
+                                    <div className="wrpapper_left_info">
+                                        <div className="img_logo" style={banner_bg_url}></div>
+                                        <div className="home_banner_text">
+                                            <hr/>
+                                            <div className="banner_text">
+                                               <p>{data.pageBy.home.homeBannerText}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6">
+                                    <div className="bg_image" style={homeBannerImageStyle}></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )
+
+                /*
                 return (
                     <div className="container">
                         <div className="row">
@@ -72,19 +74,19 @@ const HomeBanner = () => (
 
                            properties.map((item, key) => {
                                const bg_logo = {
-                                   'backgroundImage': 'url()',
+                                   'backgroundImage': 'url({{data.pageBy.home.homeBannerImage.sourceUrl})',
                                    'textAlign' :'center',
 
                                }
                                {
-                                   console.log(item.key, item.value)
+                                   //console.log(item.key, item.value)
                                }
                                 return(
                                     //dataItems.exportTitle
                                     <div key={key} style={bg_logo}>
                                         <div className="col-md-6">
                                             <div className="img_logo" style={{color: 'red'}}>
-                                                <h1>tetd</h1>
+
                                             </div>
                                         </div>
                                         <div className="col-md-6"></div>
@@ -94,7 +96,7 @@ const HomeBanner = () => (
                         }
                         </div>
                     </div>
-                )
+                )*/
 
                    /* data.ravliks.edges.map(( ravlikItem, key) => {
                         return(

@@ -1,3 +1,40 @@
-.wrapper_test{
-  background-color: red;
+@import './../base.scss';
+
+.wrapper_bunner_content {
+  margin-top: 50px;
+  position: relative;
+  &:before{
+    content: '';
+    background-color: #E8F1EC;
+    position: absolute;
+    width: 67%;
+    right: 0;
+    height: 415px;
+    display: inline-block;
+    top: 10%;
+  }
+}
+.center_content{
+  align-items: center;
+}
+.img_logo{
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position:center;
+  width: 100%;
+  height: 210px;
+}
+.home_banner_text{
+  display: flex;
+  margin-top: 20px;
+  .banner_text{
+    width: 80%;
+  }
+}
+.bg_image{
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position:center;
+  width: 100%;
+  height: 526px;
 }

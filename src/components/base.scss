@@ -1,0 +1,49 @@
+$vistaBlue: #546D5E;
+$lilyWhite: #E8F1EC;
+$dimGray: #747474;
+$darkGray: #AEAEAE;
+$galliano: #D1AD1F;
+$white: #FFFFFF;
+
+$playfair:"Playfair Display";
+$openSans: "Open Sans";
+h1,h2,h3,h4 {
+  font-family: $playfair;
+  color: $dimGray;
+}
+h1{
+  font-size: 40px;
+}
+h2{
+  font-size: 32px;
+}
+h3{
+  font-size: 20px;
+}
+h4{
+  font-size: 16px;
+}
+h5{
+  font-family: $openSans;
+}
+p{
+  font-family: $openSans;
+  font-weight: 100;
+  color: $dimGray;
+  font-size: 13px;
+  line-height: 27px;
+}
+hr{
+  margin-top: 10px;
+  border: 1px solid $galliano;
+  width: 71px;
+  display: inline-block;
+}
+.email{
+  font-size: 16px;
+  font-family: $openSans;
+  color: $dimGray;
+}
+.small_button{
+  color: $galliano;
+}

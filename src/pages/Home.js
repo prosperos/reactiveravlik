@@ -2,8 +2,10 @@ import React, { Component} from 'react'
 //import { Query } from 'react-apollo'
 //import gql from 'graphql-tag'
 //import { Link } from 'react-router-dom'
-import HomeBanner from "../components/Home/HomeBanner/HomeBanner";
 
+import "../components/base.scss"
+import HomeBanner from "../components/Home/HomeBanner/HomeBanner"
+import HomeAboutUs from "../components/Home/HomeAboutUs/HomeAboutUs"
 export default class Home extends Component{
     render() {
         return(
@@ -13,7 +15,7 @@ export default class Home extends Component{
                 {/*<br />*/}
                 {/*<strong>{props.data.ravlik.ravlikMeta.amount}</strong>*/}
                 <HomeBanner/>
-
+                <HomeAboutUs/>
             </div>
         );
     }
