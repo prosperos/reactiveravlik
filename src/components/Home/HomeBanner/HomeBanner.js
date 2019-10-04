@@ -1,10 +1,11 @@
 import React from 'react';
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
-
+import button_scroll from './../../../images/bottom_scroll.png'
 import './HomeBanner.scss'
 //import { Link } from 'react-router-dom'
 
+import { Link} from "react-scroll";
 
 const HomeBanner = () => (
     <Query query={gql`
@@ -27,7 +28,7 @@ const HomeBanner = () => (
         {
             ({ loading, error, data}) => {
                 if (loading){
-                    return (<h1>Loading</h1>);
+                    return (<h1>loading</h1>);
                 }
                 var properties = []
                 for (var k in data.pageBy.home) {
@@ -60,6 +61,12 @@ const HomeBanner = () => (
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="bg_image" style={homeBannerImageStyle}></div>
+                                </div>
+                                <div className="col-lg-12">
+
+                                    <Link to="wrapper_aboutus_content"  smooth={true} duration= {1500} className="scroll_next_block">
+                                        <img src={button_scroll} alt=""/>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

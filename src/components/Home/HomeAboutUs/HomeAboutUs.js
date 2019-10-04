@@ -1,8 +1,8 @@
 import React from 'react';
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
-
 import './HomeAboutUs.scss'
+import { Link } from 'react-router-dom'
 
 const HomeAboutUs = () => (
     <Query query={gql`
@@ -32,7 +32,6 @@ const HomeAboutUs = () => (
                 const about_us = {
                     backgroundImage: `url(${image_url})`
                 }
-               console.log(data.pageBy.home.homeAboutUsImage.sourceUrl)
                 return (
                     <div className="wrapper_aboutus_content">
                         <div className="container">
@@ -52,6 +51,7 @@ const HomeAboutUs = () => (
                                             <div className="about_us_text">
                                                 <p>{data.pageBy.home.homeAboutUsText}</p>
                                             </div>
+                                            <Link to={`/about/`} className="small_button">{data.pageBy.home.homeAboutUsBtnName}</Link>
                                         </div>
                                     </div>
                                 </div>

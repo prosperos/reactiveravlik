@@ -1,0 +1,68 @@
+@import './../../base';
+
+.wrapper_export_content{
+  position: relative;
+  margin-top: 200px;
+
+  &:after{
+    content: '';
+    background-image: url(./../../../images/leaf.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 420px;
+    right: 49%;
+    height: 315px;
+    display: inline-block;
+    z-index: -1;
+    bottom: -230px;
+  }
+
+  &:before{
+    content: '';
+    background-image: url(./../../../images/export_leaf.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 420px;
+    right: 30%;
+    height: 315px;
+    display: inline-block;
+    z-index: -1;
+    bottom: -290px;
+  }
+  .bg_line{
+    &:before{
+      content: '';
+      background-color: #E8F1EC;
+      position: absolute;
+      width: 100%;
+      right: 0;
+      height: 305px;
+      display: inline-block;
+      top: 20%;
+    }
+  }
+  hr {
+    margin-top: 20px;
+  }
+  .export_image{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 164%;
+    height: 490px;
+    position: absolute;
+    right: -10%;
+    top: -10%;
+  }
+  .export_text_wpapper{
+    background-color: $white;
+    padding: 45px 60px;
+    box-shadow: 0 0 30px #E6E7E8;
+    position: relative;
+    z-index: 10;
+    max-width: 575px;
+    bottom: -160px;
+    text-align: right;
+
+  }
+}

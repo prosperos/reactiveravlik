@@ -1,0 +1,63 @@
+@import './../../base';
+
+.wrapper_our_services_content {
+  margin-bottom: 150px;
+  margin-top: 200px;
+  position: relative;
+  &:before{
+    content: '';
+    background-image: url(./../../../images/leaf_left.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    position: absolute;
+    width: 480px;
+    left: 20px;
+    height: 460px;
+    display: inline-block;
+    bottom: -20%;
+  }
+  hr{
+    margin-top: 27px;
+  }
+  .services_item {
+    background-color: $white;
+    padding: 35px 20px 50px 20px;
+    box-shadow: 0 0 30px #E6E7E8;
+    margin-bottom: 30px;
+    height: 200px;
+    display: flex;
+    .icon{
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 60px;
+      height: 60px;
+      display: inline-block;
+      margin-right: 19px;
+    }
+    .services_text{
+      .services_title{
+        max-width:310px;
+        color: $galliano;
+      }
+      p{
+        max-width: 320px;
+      }
+    }
+  }
+  .move_block{
+    position: relative;
+    .second{
+      position: absolute;
+      top: 20%;
+    }
+    .first{
+      .services_item{
+
+        position: absolute;
+        top: 60%;
+      }
+    }
+  }
+}

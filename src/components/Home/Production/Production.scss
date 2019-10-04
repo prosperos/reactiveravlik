@@ -1,0 +1,50 @@
+@import './../../base';
+
+
+.production_ravliks{
+  padding-top: 50px;
+  margin-bottom: 150px;
+  .ravlik_img{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position:center;
+    width: 425px;
+    height: 320px;
+    box-shadow: 0 0 20px #E6E7E8;
+    position: relative;
+    &:before{
+      content: '';
+      background-color: $lilyWhite;
+      position: absolute;
+      right: -10%;
+      z-index: -1;
+      width: 425px;
+      height: 320px;
+      display: inline-block;
+      top: -10%;
+    }
+  }
+  .info_ravlik{
+    margin-top: 25px;
+    margin-bottom: 10px;
+    a{
+      color: $galliano;
+    }
+  }
+  .wrapper_item{
+    margin-bottom: 30px;
+    p{
+      max-height: 50px;
+      overflow: hidden;
+    }
+  }
+  .top_offset{
+    margin-top: 80px;
+  }
+  .main_title{
+    margin-bottom: 60px;
+  }
+  hr{
+    margin-top: 26px;
+  }
+}
