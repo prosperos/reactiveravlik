@@ -25,19 +25,20 @@ const ProducionOurProducts = () => (
         {
             ({ loading, error, data}) => {
                 if (loading){
-                    return (<h1>Loading</h1>);
+                    return (<br/>);
                 }
 
                 return (
                     <div className="wrapper_production_content">
                         <div className="container-fluid">
                             <div className="row">
-                                <div className="col-lg-5 offset-1 vertical-center-block">
+                                <div className="col-lg-5 offset-xs-0 offset-md-1 offset-lg-1 offset-sm-1 offset-xl-1 vertical-center-block">
                                     <div className="production_text_wpapper">
                                         <div className="wrapper_title">
                                             <h2>{data.pageBy.home.productionTitle}</h2>
                                             <hr/>
                                         </div>
+                                        <div className="production_image visible-sm" style={{backgroundImage: `url(${data.pageBy.home.productionImage.sourceUrl})`}}></div>
                                         <p>
                                             {data.pageBy.home.productionText}
                                         </p>
@@ -45,7 +46,7 @@ const ProducionOurProducts = () => (
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
-                                    <div className="production_image" style={{backgroundImage: `url(${data.pageBy.home.productionImage.sourceUrl})`}}></div>
+                                    <div className="production_image hidden-sm" style={{backgroundImage: `url(${data.pageBy.home.productionImage.sourceUrl})`}}></div>
                                 </div>
                             </div>
                         </div>

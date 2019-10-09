@@ -32,23 +32,24 @@ const Production = () => (
         {
             ({ loading, error, data}) => {
                 if (loading){
-                    return (<h1>Loading</h1>);
+                    return (<br/>);
                 }
                return(
                    <div className="production_ravliks">
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-1">
-                                    <hr/>
+                                    <hr className="hide_mobile"/>
                                 </div>
-                                <div className="col-lg-11">
+                                <div className="col-lg-11 center-block">
                                     <h2 className="main_title">
                                         {data.pageBy.home.ourProductsTitle}
                                     </h2>
+                                    <hr className="visible-sm"/>
                                 </div>
                             {
                                 data.ravliks.edges.map(( ravlikItem, key) => {
-                                    const col_class = classNames({'col-lg-5': true, 'offset-1': key === 0 || key ===1 || key === data.ravliks.edges.length-1 })
+                                    const col_class = classNames({'col-lg-5': true, 'offset-0 offset-lg-1 offset-md-1 offset-sm-1 offset-xl-1': key === 0 || key ===1 || key === data.ravliks.edges.length-1 })
                                     const wrapper_item = classNames({'wrapper_item' : true, 'top_offset' : key === 1 || key === data.ravliks.edges.length-1})
                                     return(
                                         <div className={col_class} key={key}>

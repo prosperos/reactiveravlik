@@ -49,3 +49,41 @@
     margin-top: 70px;
   }
 }
+@media (max-width: 576px) {
+  .home_blog {
+    margin-top: 120px;
+    &:before{
+      content: '';
+      background-image: url(./../../../images/blog_mobile_leaf.png);
+      width: 140px;
+      height: 180px;
+      display: inline-block;
+      position: absolute;
+      z-index: -1;
+      top: -2%;
+    }
+    hr{
+      display: none;
+    }
+    .center-block{
+      text-align: center;
+      .main_title{
+        margin-bottom: -10px;
+        margin-left: 0;
+      }
+      hr{
+        display: block;
+        margin-bottom: 25px;
+      }
+    }
+    .blog-thumbnail{
+      background-color: transparent;
+      box-shadow: 0 0 30px #E6E7E8;
+      margin-bottom: 40px;
+    }
+    .height_blog{
+      max-height: 330px;
+      overflow: hidden;
+    }
+  }
+}

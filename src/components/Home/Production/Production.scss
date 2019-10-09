@@ -48,3 +48,38 @@
     margin-top: 26px;
   }
 }
+@media (max-width: 576px) {
+  .production_ravliks {
+    margin-bottom: 100px;
+    .hide_mobile{
+      display: none;
+    }
+    .ravlik_img{
+      width: 300px;
+      height: 225px;
+      &:before{
+        width: 300px;
+        height: 225px;
+      }
+
+    }
+    .center-block{
+      text-align: center;
+      .main_title{
+        margin-bottom: -10px;
+      }
+      hr{
+        margin-bottom: 45px;
+      }
+    }
+    .top_offset{
+      margin-top: 0;
+    }
+    .wrapper_item{
+      margin-bottom: 60px;
+    }
+  }
+  .btn_wrapper{
+    margin-top: 0;
+  }
+}

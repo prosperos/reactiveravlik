@@ -52,6 +52,9 @@ img {
 a:hover{
   text-decoration: none;
 }
+.content{
+  margin-left: 65px;
+}
 .main_title{
   font-size: 40px;
   color: $dimGray;
@@ -89,5 +92,26 @@ a:hover{
     height: 8px;
     margin-left: 10px;
     display: inline-block;
+  }
+}
+@media (max-width: 576px) {
+  h1{
+    font-size: 32px;
+  }
+  .hidden-xs{
+    display: none;
+  }
+  .main_title{
+    font-size: 32px;
+  }
+  p{
+    font-size: 15px;
+  }
+  .content {
+    margin-left: 0;
+  }
+  .container{
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }

@@ -24,7 +24,7 @@ const HomeAboutUs = () => (
         {
             ({ loading, error, data}) => {
                 if (loading){
-                    return (<h1>Loading</h1>);
+                    return (<br/>);
                 }
 
 
@@ -37,7 +37,7 @@ const HomeAboutUs = () => (
                         <div className="container">
                             <div className="row bottom_content">
                                 <div className="col-lg-6">
-                                    <div className="wrapper_about_image">
+                                    <div className="wrapper_about_image big_img">
                                         <div className="bg_image" style={about_us}></div>
                                     </div>
                                 </div>
@@ -47,6 +47,9 @@ const HomeAboutUs = () => (
                                             <div className="wrapper_title">
                                             <h2>{data.pageBy.home.homeAboutUsTitle}</h2>
                                             <hr/>
+                                            </div>
+                                            <div className="wrapper_about_image small_img">
+                                                <div className="bg_image" style={about_us}></div>
                                             </div>
                                             <div className="about_us_text">
                                                 <p>{data.pageBy.home.homeAboutUsText}</p>

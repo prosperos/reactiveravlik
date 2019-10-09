@@ -47,4 +47,38 @@
   .production_text_wpapper {
     max-width: 520px;
   }
+  .production_image.visible-sm{
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .wrapper_production_content{
+    padding-top: 45px;
+    &:after{
+      width: 230px;
+      height: 230px;
+      top: -70px;
+      background-image: url(./../../../images/product_mobile_leaf.png);
+    }
+    &:before{
+      background-image: url(./../../../images/production_content_mobile.png);
+      width: 140px;
+      height: 140px;
+      bottom: -100px;
+    }
+    .production_text_wpapper{
+      padding: 0 5px;
+      margin-bottom: 50px;
+    }
+    .hidden-sm{
+      display: none;
+    }
+    .production_image{
+      height: 240px;
+      margin-bottom: 25px;
+    }
+    .production_image.visible-sm{
+      display: block;
+    }
+  }
 }

@@ -7,8 +7,8 @@ class Form extends Component {
         this.state = {
             name: "",
             email: "",
-            text: "",
-            myfile: ""
+            phone: "",
+            text: ""
         };
     }
     Change(e) {
@@ -23,6 +23,7 @@ class Form extends Component {
         }
         formData.append("name", this.state.name);
         formData.append("email", this.state.email);
+        formData.append("phone", this.state.phone);
         formData.append("text", this.state.text);
         fetch("/send.php", {
             method: "POST",
@@ -37,51 +38,46 @@ class Form extends Component {
         });
     }
     render() {
-        const { name, email, text } = this.state;
+        const { name, email, text, phone } = this.state;
         return (
             <form
                 id="form"
-                encType="multipart/form-data"
                 method="post"
-
                 onSubmit={this.onSubmit.bind(this)}
             >
-                <p>Имя</p>
                 <input
                     id="name"
                     name="name"
                     type="text"
                     value={name}
-                    placeholder="Представьтесь"
+                    placeholder="Ім'я *"
                     onChange={this.Change.bind(this)}
                 />
-                <p>Email</p>
+                <input
+                    id="tel"
+                    name="phone"
+                    type="tel"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    value={phone}
+                    placeholder="Телефон *"
+                    onChange={this.Change.bind(this)}
+                />
                 <input
                     id="email"
                     name="email"
                     type="text"
                     value={email}
-                    placeholder="Укажите почту"
+                    placeholder="Електронна скринька"
                     onChange={this.Change.bind(this)}
                 />
-                <p>Сообщение</p>
                 <textarea
                     id="text"
                     name="text"
+                    placeholder="Коментар"
                     value={text}
                     onChange={this.Change.bind(this)}
                 />
-                <p>Прикрепить файлы</p>
-                <input
-                    id="myfile"
-                    type="file"
-                    name="myfile[]"
-                    multiple
-                    onChange={this.Change.bind(this)}
-                />
-                <p>
-                    <input value="Отправить" type="submit" />
-                </p>
+                <input value="Відправити" className="big_button" type="submit" />
             </form>
         );
     }

@@ -1,0 +1,60 @@
+.main-header{
+  position: relative;
+  .wrapper_menu{
+
+  }
+  .wrapper_logo{
+    text-align: center;
+    height: 135px;
+    .main_logo{
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position:center;
+      width: 172px;
+      height: 101px;
+      margin-top: 30px;
+      display: inline-block;
+      transition: all 0.3s ease-in-out;
+      &:hover{
+        transition: all 0.3s ease-in-out;
+        zoom: 105%;
+      }
+    }
+  }
+  .nav_links{
+
+    a{
+      margin-bottom: 25px;
+      display: inline-block;
+    }
+    .phone,.facebook,.insta{
+      &:before {
+        content: '';
+        width: 25px;
+        height: 25px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin-right: 26px;
+        margin-top: 3px;
+      }
+    }
+    .phone{
+      &:before{
+        background-image: url(./../../images/phone_black.png);
+      }
+    }
+    .facebook{
+      &:before{
+        background-image: url(./../../images/fb.png);
+      }
+    }
+    .insta{
+      &:before{
+        background-image: url(./../../images/insta.png);
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+
+}

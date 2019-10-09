@@ -9,18 +9,12 @@ import ProducionOurProducts from "../components/Home/ProducionOurProducts/Produc
 import HomeExport from "../components/Home/HomeExport/HomeExport";
 import Blog from "../components/Home/Blog/Blog";
 import Footer from "../common/Footer/Footer";
-import Header from "../common/Header/Header";
 
-export default class Home extends Component{
+export default class About extends Component{
     render() {
-        console.log("Home#render: props: ", JSON.parse(JSON.stringify(this.props)))
-
         return(
-            <div className="home_leaf">
-                <HomeBanner locale={this.props.match.params.locale} />
-                <HomeAboutUs/>
-                <OurServices/>
-                <Production/>
+            <div>
+
                 <ProducionOurProducts/>
                 <HomeExport/>
                 <Blog/>

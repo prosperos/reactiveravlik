@@ -25,17 +25,18 @@ const HomeExport = () => (
         {
             ({ loading, error, data}) => {
                 if (loading){
-                    return (<h1>Loading</h1>);
+                    return (<br/>);
                 }
                 return (
                     <div className="wrapper_export_content">
                         <div className="bg_line"></div>
                         <div className="container">
                             <div className="row">
-                                <div className="col-lg-1"><hr/></div>
-                                <div className="col-lg-11"><h2>{data.pageBy.home.exportTitle}</h2></div>
-                                <div className="col-lg-6 offset-1 vertical-center-block">
+                                <div className="col-lg-1 hidden-xs "><hr/></div>
+                                <div className="col-lg-11 center-block"><h2>{data.pageBy.home.exportTitle}</h2><hr className="title_line"/></div>
+                                <div className="col-lg-6 offset-0 offset-sm-1 offset-md-1 offset-lg-1 offset-xl-1 vertical-center-block">
                                     <div className="export_text_wpapper">
+                                        <div className="export_image" style={{backgroundImage: `url(${data.pageBy.home.exportImage.sourceUrl})`}}></div>
                                         <p>
                                             {data.pageBy.home.exportDescription}
                                         </p>

@@ -1,7 +1,33 @@
 @import './../../base';
-
+.home_leaf{
+  position: relative;
+  &:after{
+    content: '';
+    background-image: url(./../../../images/header_left_leaf.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 520px;
+    left: 0%;
+    height: 315px;
+    display: inline-block;
+    z-index: -1;
+    top: -300px;
+  }
+  &:before{
+    content: '';
+    background-image: url(./../../../images/header_right_leaf.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 245px;
+    right: 0%;
+    height: 145px;
+    display: inline-block;
+    z-index: 2;
+    top: -202px;
+  }
+}
 .wrapper_bunner_content {
-  margin-top: 50px;
+  margin-top: 25px;
   position: relative;
   &:before{
     content: '';
@@ -43,4 +69,77 @@
   justify-content: center;
   margin-top: 30px;
   cursor: pointer;
+}
+@media (max-width: 576px) {
+  .wrapper_bunner_content{
+    padding-top: 25px;
+    &:before {
+      width: 225px;
+      height: 713px;
+      top: 4%;
+    }
+    &:after{
+      content: '';
+      background-image: url(./../../../images/home_bunner_leaf_left.png);
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 155px;
+      left: 0;
+      height: 155px;
+      display: inline-block;
+      bottom: -150px;
+    }
+  }
+  .scroll_next_block{
+    display: none;
+  }
+  .home_banner_text{
+    margin-top: -10px;
+    hr{
+      display: none;
+    }
+    .banner_text{
+      width: 100%;
+    }
+  }
+  .home_leaf{
+    &:after {
+      content: '';
+      background-image: url(./../../../images/home_header_leaf.png);
+      width: 280px;
+      background-size: cover;
+      left: 0%;
+      height: 225px;
+      z-index: 1;
+      top: -40px;
+    }
+    &:before {
+      content: '';
+      background-image: url(./../../../images/mobile_header_leaf.png);
+      background-repeat: no-repeat;
+      position: absolute;
+      height: 90px;
+      width: 90px;
+      top: -160px;
+      right: 0px;
+      display: inline-block;
+      z-index: -1;
+      background-size: contain;
+    }
+  }
+  .content{
+    margin: 0;
+  }
+  .wrpapper_left_info {
+    margin-top: 120px;
+  }
+  .img_logo{
+    width: 80%;
+    height: 190px;
+  }
+  .bg_image{
+    height: 240px;
+    background-size: cover;
+    margin-top: 10px;
+  }
 }

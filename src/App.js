@@ -6,6 +6,9 @@ import Ravlik  from './ravlik/Ravlik'
 import Ravliks from './ravlik/Ravliks'
 import './components/base.scss'
 import Home from './pages/Home'
+import Header from "./common/Header/Header"
+import About from './pages/About'
+
 const client = new ApolloClient({
   uri: 'http://reactwp/graphql/',
 })
@@ -14,16 +17,18 @@ function App() {
   return (
       <ApolloProvider client={client}>
         <BrowserRouter>
-
           <div>
-            <header>
-              <h1>Ravlik site</h1>
-            </header>
+
+            <Header/>
             <div className="content">
               <Route exact path="/" component={Ravliks} />
               <Route path="/ravliks" component={Ravliks} />
               <Route path="/ravlik/:slug" component={Ravlik} />
-              <Route path="/home/" component={Home} />
+
+{/*              <Route exact path="/:locale/main-home/" component={Home} />*/}
+              <Route exact path="/main-home/" component={Home} />
+
+              <Route path="/pro-nas/" component={About} />
             </div>
           </div>
 

@@ -1,8 +1,20 @@
 .main-footer{
-
-  display: flex;
-  align-items: center;
+  margin-top: 390px;
   position: relative;
+
+  &:after{
+    content: '';
+    background-image: url(./../../images/footer_leaf.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 410px;
+    height: 315px;
+    position: absolute;
+    top: -50%;
+    z-index: -1;
+    left: 10%;
+  }
   &:before{
     content: '';
     background-image: url(./../../images/bg-footer.png);
@@ -30,6 +42,7 @@
       color: white;
       font-family: "Open Sans";
       font-size: 16px;
+      margin-bottom: 10px;
     }
   }
   .phone,.email,.address{
@@ -58,6 +71,107 @@
   .address{
     &:before{
       background-image: url(./../../images/location.png);
+    }
+  }
+  .address_wrapper {
+    margin-top: 60px;
+  }
+  .form_wrapper {
+    background-color: white;
+    margin-top: -165px;
+    width: 475px;
+    box-shadow: 0 0 30px #E6E7E8;
+    padding: 50px 50px 45px;
+  }
+  .form_title {
+    text-align: center;
+  }
+  #form{
+    display: flex;
+    flex-direction: column;
+    input{
+      height: 50px;
+      width: 375px;
+      margin-bottom: 10px;
+      background-color: transparent;
+      border: 1px solid #AEAEAE;
+      padding-left: 20px;
+      &::placeholder{
+       color: #AEAEAE;
+      }
+    }
+    input::placeholder{
+      color: #AEAEAE;
+    }
+    textarea{
+      width: 375px;
+      height: 150px;
+      background-color: transparent;
+      border: 1px solid #AEAEAE;
+      padding-left: 20px;
+      padding-top: 15px;
+      &::placeholder{
+        display: inline-block;
+        margin-left: 20px;
+        color: #AEAEAE;
+      }
+    }
+    input.big_button {
+      max-width: 275px;
+      margin: 0 auto;
+      margin-top: 25px;
+      border: 1px solid #D1AD1F;
+      padding: 15px 65px!important;
+    }
+  }
+  .footer_content{
+    p, a{
+      font-size: 10px;
+      font-family: Montserrat;
+      font-weight: 100;
+      color: #FFFFFF;
+    }
+    a{
+      text-decoration: underline;
+    }
+    p{
+      white-space: nowrap;
+    }
+  }
+  .footer_content.link{
+    display: flex;
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 25px;
+      left: -45px;
+      height: 25px;
+      margin-bottom: 30px;
+      background-image: url(./../../images/stydio.png);
+    }
+    .footer_copyright{
+      text-decoration: none;
+    }
+  }
+  .footer_links{
+    background-color: #546D5E;
+    height: 70px;
+    display: flex;
+    align-items: center;
+  }
+}
+@media (max-width: 576px) {
+  .main-footer {
+    &:after{
+      width: 200px;
+      height: 250px;
+    }
+    .form_wrapper{
+      display: none;
     }
   }
 }
