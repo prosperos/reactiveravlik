@@ -9,7 +9,6 @@ import ProducionOurProducts from "../components/Home/ProducionOurProducts/Produc
 import HomeExport from "../components/Home/HomeExport/HomeExport";
 import Blog from "../components/Home/Blog/Blog";
 import Footer from "../common/Footer/Footer";
-import Header from "../common/Header/Header";
 
 export default class Home extends Component{
     render() {

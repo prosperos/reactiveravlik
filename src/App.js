@@ -24,11 +24,10 @@ function App() {
               <Route exact path="/" component={Ravliks} />
               <Route path="/ravliks" component={Ravliks} />
               <Route path="/ravlik/:slug" component={Ravlik} />
+              <Route exact path="/:locale/main-home/" component={Home} />
+              {/*<Route exact path="/main-home/" component={Home} />*/}
 
-{/*              <Route exact path="/:locale/main-home/" component={Home} />*/}
-              <Route exact path="/main-home/" component={Home} />
-
-              <Route path="/pro-nas/" component={About} />
+              <Route path="/:locale/pro-nas/" component={About} />
             </div>
           </div>
 

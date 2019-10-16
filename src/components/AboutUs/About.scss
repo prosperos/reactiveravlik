@@ -1,0 +1,320 @@
+.about_us_bunner{
+  position: relative;
+  margin-top: 45px;
+  &:after{
+    content: '';
+    background-image: url(./../../images/about_header_leaf.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 420px;
+    right: 0;
+    top: -290px;
+    height: 315px;
+    display: inline-block;
+    z-index: -1;
+  }
+  &:before{
+    content: '';
+    background-image: url(./../../images/about_header_right.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 180px;
+    left:7%;
+    height: 315px;
+    display: inline-block;
+    z-index: -1;
+    top: -180px;
+  }
+  .leaf_boottom{
+    background-image: url(./../../images/about_header_buttom_leaf.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 180px;
+    left: 22%;
+    height: 315px;
+    display: inline-block;
+    z-index: -1;
+
+  }
+  .about_us_bg_line{
+
+    &:before{
+      content: '';
+      background-color: #E8F1EC;
+      position: absolute;
+      width: 75%;
+      left: 0;
+      height: 310px;
+      display: inline-block;
+      top: 40%;
+    }
+  }
+  .banner_big_image{
+    height: 427px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .banner_small_image{
+    height: 310px;
+    width: 440px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+  }
+  .col-lg-7{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .wrapper_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    top: 50px;
+  }
+}
+.lets_meet{
+  margin-top: 450px;
+  position: relative;
+  height: 450px;
+
+  &:before{
+    content: '';
+    background-image: url(./../../images/lets_meet_leaf.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 180px;
+    left:21%;
+    height: 315px;
+    display: inline-block;
+    z-index: -1;
+    top: -240px;
+  }
+  .meet_big_image{
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 450px;
+    width: 778px;
+    right: 0%;
+    z-index: -1;
+    top: -42%;
+  }
+  .wrapper_meet{
+    padding: 45px;
+    background-color: white;
+    box-shadow: 0 0 30px #E6E7E8;
+    text-align: center;
+  }
+  .meet_bg_line{
+
+    &:before{
+      content: '';
+      background-color: #E8F1EC;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      height: 310px;
+      display: inline-block;
+      top: -10%;
+      z-index: -2;
+    }
+  }
+  .meet_mobile_image{
+    display: none;
+  }
+}
+
+.eat_delicacies{
+  margin-top: 150px;
+  position: relative;
+  &:before{
+    content: '';
+    background-image: url(./../../images/delicacies_leaf.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 200px;
+    right: 0;
+    height: 185px;
+    display: inline-block;
+    z-index: -1;
+    top: -200px;
+  }
+  &:after{
+    content: '';
+    background-image: url(./../../images/delicacies_boottom_leaf.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 260px;
+    right: 0;
+    height: 245px;
+    display: inline-block;
+    z-index: -1;
+    bottom: -120px;
+  }
+  .left_image, .right_image{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 320px;
+    width: 100%;
+  }
+  .delicacies_wrapper_text{
+    text-align: center;
+    padding: 55px;
+    background-color: white;
+    box-shadow: 0 0 30px #E6E7E8;
+    position: relative;
+    top: -70px;
+  }
+  .col-xl-3, .col-xl-6{
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+.wrapper_services{
+  .wrapper_our_services_content{
+    margin-top: 90px;
+  }
+}
+@media (max-width: 580px) {
+  .about_us_bunner{
+    margin-top: 80px;
+    &:after{
+      width: 130px;
+      right: 0px;
+      top: -190px;
+      height: 315px;
+      z-index: 1;
+    }
+    &:before{
+      background-size: contain;
+      top: -20px;
+      left: -10%;
+      width: 115px;
+      height: 95px;
+    }
+    .about_us_bg_line{
+      &:before{
+        left: auto;
+        right: 0;
+        height: 550px;
+        width: 70%;
+        top: -10%;
+      }
+    }
+    .banner_big_image{
+      background-size: contain;
+      height: 216px;
+      max-width: 88%;
+      margin-left: 12px;
+
+    }
+    .banner_small_image{
+      width: 244px;
+      height: 170px;
+      left: auto;
+      right: 12px;
+    }
+    .wrapper_text{
+      top: 0;
+    }
+    .leaf_boottom{
+      height: 165px;
+      left: 3%;
+      bottom: -130px;
+    }
+    .col-lg-7{
+      order: 1;
+
+    }
+  }
+
+  .lets_meet{
+    margin-top: 190px;
+    height: auto;
+    &:before{
+      content: none;
+      background-image: url(./../../images/meet_about_mobile.png);
+      top: 540px;
+    }
+    .meet_bg_line{
+      &:before{
+        top: 32%;
+        height: 225px;
+        left: auto;
+        right: 0;
+      }
+    }
+    .meet_big_image{
+      display: none;
+    }
+    .wrapper_meet{
+      box-shadow: none;
+      background-color: transparent;
+      padding: 0;
+      h2{
+        max-width: 80%;
+        margin: 0 auto;
+      }
+    }
+    .meet_mobile_image{
+      display: block;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 240px;
+      margin-bottom: 25px;
+    }
+  }
+  .eat_delicacies {
+    &:before{
+      background-image: url(./../../images/delicacies_leaf_mobile.png);
+      width: 170px;
+    }
+    &:after{
+      background-image: url(./../../images/delicacies_mobile_bottom.png);
+      right: auto;
+      bottom: -80px;
+
+    }
+    .left_image, .right_image{
+      display: none;
+    }
+    .left_image_mobile{
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 240px;
+      width: 100%;
+      margin-bottom: 25px;
+    }
+    .delicacies_wrapper_text{
+      padding: 0;
+      box-shadow: none;
+      background-color: transparent;
+    }
+    .col-xl-6{
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  .delicacies_line_bg{
+      background-color: #E8F1EC;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      height: 225px;
+      display: inline-block;
+      top: 26%;
+      z-index: -2;
+    }
+  }
+}

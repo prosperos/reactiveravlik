@@ -47,6 +47,10 @@
   hr{
     margin-top: 26px;
   }
+
+}
+.visible-sm{
+  display: none;
 }
 @media (max-width: 576px) {
   .production_ravliks {
@@ -78,8 +82,12 @@
     .wrapper_item{
       margin-bottom: 60px;
     }
+
   }
   .btn_wrapper{
     margin-top: 0;
+  }
+  .visible-sm{
+    display: block;
   }
 }

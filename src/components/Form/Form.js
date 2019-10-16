@@ -8,7 +8,8 @@ class Form extends Component {
             name: "",
             email: "",
             phone: "",
-            text: ""
+            text: "",
+
         };
     }
     Change(e) {

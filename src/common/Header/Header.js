@@ -3,8 +3,12 @@ import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 import './Header.scss'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
-const Header = () => (
+import { Link, withRouter } from 'react-router-dom'
+import { LOCALES, DEFAULT_LOCALE } from "../../constants";
+import classNames from 'classnames'
+
+
+const Header = ({location}) => (
     <Query query={gql`
 {
   menus {
@@ -35,6 +39,12 @@ const Header = () => (
                 if (loading){
                     return (<br/>);
                 }
+                const WrapperLanguage = styled.div`
+                    left : ${({ open }) => open ? '25px' : '322px'};
+                        @media (max-width: 576px) {
+                            left : ${({ open }) => open ? '25px' : '0'};
+                        }
+                `
                 const NavLinks = styled.div`
                     position: absolute;
                     bottom: 35px;
@@ -73,6 +83,7 @@ const Header = () => (
                   box-shadow: 0 0 30px #E6E7E8;
                   @media (max-width: 576px) {
                       width:100%;
+                      box-shadow: none;
                   }
                 
                   a {
@@ -95,11 +106,36 @@ const Header = () => (
                   }
                 `
 
-                const Menu = ({ open }) => {
+                const Menu = ({ open, location }) => {
                     let array = data.menus.nodes[0].menuItems.nodes;
+                    //console.log("Menu: location: ", JSON.parse(JSON.stringify(location)))
 
                     return (
                         <StyledMenu open={open}>
+                            <WrapperLanguage className="language" open={open}>
+                                <ul>
+                                    <li className='selected_language'>
+                                        {location.pathname.split('/')[1] || DEFAULT_LOCALE}
+                                        <ul>
+                                            {
+                                                LOCALES.map(
+                                                    (locale, i) => {
+                                                        const currentLocale = location.pathname.split('/')[1] || DEFAULT_LOCALE
+                                                        const active = locale === currentLocale
+                                                        const url = location.pathname.split('/').map((s, i) => i === 1 ? locale : s ).join('/')
+                                                        return (
+                                                            <li key={i} className={classNames({active: active})}>
+                                                                <Link to={url}>{locale}</Link>
+                                                            </li>
+                                                        )
+                                                    }
+                                                )
+                                            }
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </WrapperLanguage>
+
                             {array.map((item,idx) =>{
                                 const  s = item.url
                                 const url = new URL(s).pathname
@@ -129,12 +165,13 @@ const Header = () => (
                   padding: 0;
                   z-index: 3110;
                 
+                   
                   &:focus {
                     outline: none;
                   }
                     @media (max-width: 576px) {
                     top:45px;
-                    left: 12%;
+                    left: ${({ open }) => open ? '92%' : '12%'};
                     }
                   div {
                     width: 25px;
@@ -172,13 +209,13 @@ const Header = () => (
                 }
 
 
-                const AppMenu = () => {
+                const AppMenu = ({location}) => {
                     const [open, setOpen] = React.useState(false);
                     const node = React.useRef();
                     return (
                         <WrapperMenu open={open}  ref={node}>
                             <Burger open={open} setOpen={setOpen} />
-                            <Menu open={open} setOpen={setOpen} />
+                            <Menu location={location} open={open} setOpen={setOpen} />
                             <NavLinks className="nav_links" open={open} setOpen={setOpen}>
                                 <a href={`tel:${data.pageBy.Header.facebookLink}`} ><span className="phone"></span></a>
                                 <a href={data.pageBy.Header.facebookLink} ><span className="facebook"></span></a>
@@ -189,10 +226,10 @@ const Header = () => (
                 }
 
 
-                const useOnClickOutside = (ref, handler) => {
+               /* const useOnClickOutside = (ref, handler) => {
                     React.useEffect(() => {
                             const listener = event => {
-                                if (!ref.current || ref.current.contains(event.target)) {
+                                if (ref.current || ref.current.contains(event.target)) {
                                     return;
                                 }
                                 handler(event);
@@ -205,10 +242,10 @@ const Header = () => (
                         },
                         [ref, handler],
                     );
-                };
+                };*/
 
                 return(
-                    <header id="mainMenu" className="main-header">
+                    <header  id="mainMenu" className="main-header">
                         <div className="container-fluid">
                             <div className="row">
                                 <div className="col-lg-12">
@@ -218,7 +255,7 @@ const Header = () => (
                                         </Link>
                                     </div>
                                 </div>
-                                <AppMenu />
+                                <AppMenu location={location} />
                             </div>
                         </div>
                     </header>
@@ -227,4 +264,4 @@ const Header = () => (
         }
     </Query>
 )
-export default Header;
+export default withRouter(props => <Header {...props}/>);

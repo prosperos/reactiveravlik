@@ -46,14 +46,11 @@ const Blog = () => (
                                     </h2>
                                     <hr/>
                                 </div>
-                                <div className="col-lg-12">
-                                    <div className="row height_blog">
                                    {
                                        data.posts.edges.map(( blogItem, key) => {
                                            const isMobile = window.innerWidth < 480;
-                                           const showItems = isMobile ? 1 : 3;
-                                           console.log(isMobile)
-                                           if (key === 3 && k)
+
+                                           if (key > 2 || (isMobile && key > 0 ))
                                                return false;
                                             return(
                                                 <div className="col-lg-4" key={key}>
@@ -68,8 +65,6 @@ const Blog = () => (
                                             )
                                         })
                                     }
-                                    </div>
-                                </div>
                                 <div className="col-lg-12">
                                     <div className="btn_wrapper">
                                         <Link to={`/blog/`} className="big_button">{data.pageBy.home.blogButtonText}</Link>
