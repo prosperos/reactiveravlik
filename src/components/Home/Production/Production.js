@@ -32,7 +32,7 @@ const Production = () => (
         {
             ({ loading, error, data}) => {
                 if (loading){
-                    return (<br/>);
+                    return null;
                 }
                return(
                    <div className="production_ravliks">

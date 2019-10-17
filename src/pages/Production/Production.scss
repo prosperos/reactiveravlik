@@ -1,0 +1,83 @@
+.production_wrapper{
+  position: relative;
+  margin-top: 55px;
+  &:before{
+    content: '';
+    background-color: #E8F1EC;
+    position: absolute;
+    width: 80%;
+    right: 0;
+    height: 370px;
+    display: inline-block;
+    top: 10%;
+  }
+  .slider_item{
+    .ravlik_image{
+
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 235px;
+      width: 100%;
+      max-width: 94%;
+    }
+  }
+  .slick-prev, .slick-next{
+    background-color: #0a0a0a;
+  }
+  .slick-next{
+    right: auto;
+  }
+  .wrapper_info_rawlik{
+    background-color: white;
+    box-shadow: 0 0 30px #E6E7E8;
+    padding: 10px 20px 85px 25px;
+    max-width: 94%;
+    p{
+      overflow: hidden;
+      max-height: 102px;
+    }
+  }
+  .col-lg-8{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .slider_item{
+    margin-left: -50px;
+    transition: 1s ease-in-out;
+  }
+  .product_text_wrapper {
+    text-align: center;
+    width: 30%;
+    transition: 1s ease-in-out;
+  }
+  .content_production {
+    display: flex;
+    position: relative;
+    transition: 1s ease-in-out;
+  }
+  .product_text_wrapper.full_text{
+    position: absolute;
+    bottom: -70%;
+    transition: 1s ease-in-out;
+  }
+
+  .small_slider {
+    width: 100%;
+    transition: 1s ease-in-out;
+  }
+  .small_slider.full_slider{
+    transition: 1s ease-in-out;
+    width: 100%;
+  }
+  .slick-initialized .slick-slide{
+    transition: 1s ease-in-out;
+  }
+  .slick-arrow{
+    left: 50%;
+    top: -20px;
+  }
+  .slick-arrow.slick-prev{
+    left: 48%;
+  }
+}

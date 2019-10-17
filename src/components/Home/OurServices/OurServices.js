@@ -27,7 +27,7 @@ const OurServices = () => (
         {
             ({ loading, error, data}) => {
                 if (loading){
-                    return (<br/>);
+                    return null;
                 }
                 const itemServices = data.pageBy.home.ourServicesItems
 

@@ -17,7 +17,7 @@
       transition: all 0.3s ease-in-out;
       &:hover{
         transition: all 0.3s ease-in-out;
-        zoom: 105%;
+        transform: scale(1.2);
       }
     }
   }
