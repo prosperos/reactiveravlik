@@ -9,6 +9,7 @@ import Home from './pages/Home'
 import Header from "./common/Header/Header"
 import About from './pages/About'
 import Production from './pages/Production/Production'
+import ProductionItem from './pages/ProductionItem/ProductionItem'
 
 const client = new ApolloClient({
   uri: 'http://reactwp/graphql/',
@@ -29,7 +30,8 @@ function App() {
               {/*<Route exact path="/main-home/" component={Home} />*/}
 
               <Route path="/:locale/pro-nas/" component={About} />
-              <Route path="/:locale/produktsiya/" component={Production} />
+              <Route exact path="/:locale/produktsiya/" component={Production} />
+              <Route path="/:locale/produktsiya/:slug" component={ProductionItem} />
             </div>
           </div>
 

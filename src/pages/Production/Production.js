@@ -1,6 +1,7 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import { Query } from 'react-apollo'
-import gql from 'graphql-tag'
+import  gql  from 'graphql-tag'
+
 import { Link } from 'react-router-dom'
 import Slider from "react-slick"
 import classNames from 'classnames'
@@ -10,36 +11,29 @@ import "slick-carousel/slick/slick-theme.css";
 
 class PureProduction extends Component {
 
-
-
     constructor(props) {
         super(props)
         this.state = {
             open: false,
-            index: 3
         };
 
 
 
         this.settings = {
-            className: "center",
-            centerMode: true,
-            beforeChange: (oldIndex, newIndex) =>{
-                console.log(oldIndex, 'new ', newIndex)
-                if (newIndex >= 1){
+            //centerMode: true,
+            infinite: false,
+            afterChange: (oldIndex) =>{
+                console.log(oldIndex)
+                if (oldIndex >= 1){
                     this.setState({open: true})
-                    this.setState({index: 4})
                 }else {
                     this.setState({open: false})
-                    this.setState({index: 3})
                 }
-                console.log('index',this.state.index)
             },
-            //slidesToShow: this.state.index,
             speed: 500,
             slidesToShow: 3,
             slidesToScroll: 1,
-            initialSlide: 1
+            initialSlide: 0
 
         };
     }
@@ -47,7 +41,6 @@ class PureProduction extends Component {
 
     render() {
         const { data } = this.props
-
         return(
             <div className="production_wrapper">
                 <div className="container-fluid">
@@ -59,10 +52,10 @@ class PureProduction extends Component {
                                     <hr/>
                                     <p>{data.pageBy.content}</p>
                                 </div>
-                                
+
                                 <Slider {...this.settings} className={classNames({'small_slider': 1, 'full_slider': this.state.open})}>
 
-                                    <Link to={`/ravlik/}`}  className="slider_item">
+                                    <Link to={`/ravlik/}`}  className="slider_item first">
                                         <div className="ravlik_image"></div>
                                         <div className="wrapper_info_rawlik">
                                             <h3></h3>
@@ -76,13 +69,20 @@ class PureProduction extends Component {
                                                     <div className="ravlik_image" style={{backgroundImage: `url(${ravlikItem.node.featuredImage.sourceUrl})`}}></div>
                                                     <div className="wrapper_info_rawlik">
                                                         <h3>{ravlikItem.node.title}</h3>
-                                                        <p>{ravlikItem.node.content}</p> <br/>
-                                                        <Link to={`/ravlik/${ravlikItem.node.slug}`} className="small_button">Learn more</Link>
+                                                        <p>{ravlikItem.node.content}</p>
+                                                        <Link to={`/produktsiya/${ravlikItem.node.slug}`} className="small_button">Детальніше</Link>
                                                     </div>
                                                 </Link>
                                             )
                                         })
                                     }
+                                    {/*<Link to={`/ravlik/}`}  className="slider_item last">
+                                        <div className="ravlik_image"></div>
+                                        <div className="wrapper_info_rawlik">
+                                            <h3></h3>
+                                            <p></p> <br/>
+                                        </div>
+                                    </Link>*/}
                                 </Slider>
                             </div>
                         </div>
@@ -96,30 +96,28 @@ class PureProduction extends Component {
 const Production = () => (
     <Query query={gql`
     {
-          
-          pageBy(uri: "/uk/produktsiya") {
+      pageBy(uri: "/uk/produktsiya") {
+        title
+        content
+      }
+     
+      ravliks(where: {language: EN}) {
+        edges {
+          node{
             title
+            slug
             content
-          }
-        
-    
-        ravliks{
-            edges {
-              node{
-                title
-                slug
-                content
-                featuredImage{
-                  sourceUrl
-                }
-                ravlikMeta{
-                  amount
-                  price
-                }
-              }
+            featuredImage{
+              sourceUrl
+            }
+            ravlikMeta{
+              amount
+              price
             }
           }
         }
+      }
+    }
     `
     }>
         {
@@ -127,6 +125,11 @@ const Production = () => (
                 if (loading){
                     return null;
                 }
+                if (error){
+                    console.log(error)
+                    return
+                }
+
 
                 return <PureProduction data={data} />
             }
@@ -134,3 +137,5 @@ const Production = () => (
     </Query>
 )
 export default Production;
+
+//fetch("/index.php?graphql", {"credentials":"include","headers":{"accept":"application/json","accept-language":"en-US,en;q=0.9,uk;q=0.8,ru;q=0.7","content-type":"application/json","x-wp-nonce":"a295687a2e"},"referrer":"http://reactwp/wp-admin/admin.php?page=wp-graphiql%2Fwp-graphiql.php&query=%7B++ravliks%28where%3A+%7Blanguage%3A+EN%7D%29+%7B++++edges+%7B++++++node+%7B++++++++title++++++++slug++++++++ravlikMeta+%7B++++++++++amount++++++++++price++++++++%7D++++++%7D++++%7D++%7D%7D","referrerPolicy":"strict-origin-when-cross-origin","body":"{\"query\":\"{\\n  ravliks(where: {language: EN}) {\\n    edges {\\n      node {\\n        title\\n        slug\\n        ravlikMeta {\\n          amount\\n          price\\n        }\\n      }\\n    }\\n  }\\n}\\n\",\"variables\":null}","method":"POST","mode":"cors"});

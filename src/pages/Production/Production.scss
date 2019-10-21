@@ -1,19 +1,21 @@
 .production_wrapper{
   position: relative;
   margin-top: 55px;
+
   &:before{
     content: '';
     background-color: #E8F1EC;
     position: absolute;
-    width: 80%;
+    width: 83%;
     right: 0;
     height: 370px;
     display: inline-block;
     top: 10%;
   }
   .slider_item{
+    padding-bottom: 20px;
+    margin-left: -50px;
     .ravlik_image{
-
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -31,53 +33,97 @@
   .wrapper_info_rawlik{
     background-color: white;
     box-shadow: 0 0 30px #E6E7E8;
-    padding: 10px 20px 85px 25px;
+    padding: 10px 20px 25px 25px;
     max-width: 94%;
+    text-align: right;
+    h3{
+      text-align: left;
+    }
     p{
       overflow: hidden;
       max-height: 102px;
+    }
+    .small_button{
+      margin-top: 5px;
+      display: inline-block;
     }
   }
   .col-lg-8{
     padding-left: 0;
     padding-right: 0;
   }
-  .slider_item{
-    margin-left: -50px;
-    transition: 1s ease-in-out;
+
+  .content_production {
+    display: flex;
+    position: relative;
+
+    .slider_item.first{
+      display: none!important;
+    }
+    .slider_item.last{
+      display: none!important;
+      width: 60%!important;
+    }
   }
   .product_text_wrapper {
     text-align: center;
     width: 30%;
     transition: 1s ease-in-out;
-  }
-  .content_production {
-    display: flex;
-    position: relative;
-    transition: 1s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    p{
+      max-width: 320px;
+      max-height: 155px;
+      overflow: hidden;
+      margin: 0 auto;
+    }
   }
   .product_text_wrapper.full_text{
-    position: absolute;
     bottom: -70%;
     transition: 1s ease-in-out;
   }
 
   .small_slider {
     width: 100%;
-    transition: 1s ease-in-out;
   }
   .small_slider.full_slider{
-    transition: 1s ease-in-out;
     width: 100%;
   }
-  .slick-initialized .slick-slide{
-    transition: 1s ease-in-out;
-  }
+
   .slick-arrow{
     left: 50%;
-    top: -20px;
+    top: auto;
+    bottom: -40px;
+  }
+  .slick-prev, .slick-next{
+    background-color: transparent;
+  }
+  .slick-prev.slick-disabled ,.slick-next.slick-disabled, .slick-next , .slick-prev{
+    &:before{
+      content: '';
+      background-image: url(./../../images/active_arrow.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      opacity: 0.5;
+    }
+  }
+  .slick-next{
+    transform: rotate(180deg) translate(-55%, -55%) matrix(1, 0, 0, 1, 0, -10);
+    left: 55%;
+
+    &:before {
+      opacity: 1;
+    }
   }
   .slick-arrow.slick-prev{
-    left: 48%;
+    &:before {
+      opacity: 1;
+    }
+    left: 46%;
+    transform: translate(-46%, -46%);
   }
 }
