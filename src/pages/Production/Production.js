@@ -40,7 +40,7 @@ class PureProduction extends Component {
 
 
     render() {
-        const { data } = this.props
+        const { data, locale } = this.props
         return(
             <div className="production_wrapper">
                 <div className="container-fluid">
@@ -65,12 +65,12 @@ class PureProduction extends Component {
                                     {
                                         data.ravliks.edges.map(( ravlikItem, key) => {
                                             return(
-                                                <Link to={`/ravlik/${ravlikItem.node.slug}`} key={key} className="slider_item">
+                                                <Link to={`/${locale}/produktsiya/${ravlikItem.node.slug}`} key={key} className="slider_item">
                                                     <div className="ravlik_image" style={{backgroundImage: `url(${ravlikItem.node.featuredImage.sourceUrl})`}}></div>
                                                     <div className="wrapper_info_rawlik">
                                                         <h3>{ravlikItem.node.title}</h3>
                                                         <p>{ravlikItem.node.content}</p>
-                                                        <Link to={`/produktsiya/${ravlikItem.node.slug}`} className="small_button">Детальніше</Link>
+                                                        <Link to={`/${locale}/produktsiya/${ravlikItem.node.slug}`} className="small_button">Детальніше</Link>
                                                     </div>
                                                 </Link>
                                             )
@@ -93,49 +93,54 @@ class PureProduction extends Component {
     }
 }
 
-const Production = () => (
-    <Query query={gql`
-    {
-      pageBy(uri: "/uk/produktsiya") {
-        title
-        content
-      }
-     
-      ravliks(where: {language: EN}) {
-        edges {
-          node{
+const Production = (props) => {
+    const { locale } = props.match.params
+
+    return (
+        <Query query={gql`
+        {
+          pageBy(uri: "/uk/produktsiya") {
             title
-            slug
             content
-            featuredImage{
-              sourceUrl
-            }
-            ravlikMeta{
-              amount
-              price
+          }
+         
+          ravliks {
+            edges {
+              node{
+                title
+                slug
+                content
+                featuredImage{
+                  sourceUrl
+                }
+                ravlikMeta{
+                  amount
+                  price
+                }
+              }
             }
           }
         }
-      }
-    }
-    `
-    }>
-        {
-            ({ loading, error, data}) => {
-                if (loading){
-                    return null;
-                }
-                if (error){
-                    console.log(error)
-                    return
-                }
+        `
+        }>
+            {
+                ({loading, error, data}) => {
+                    if (loading) {
+                        return null;
+                    }
+                    if (error) {
+                        console.log(error)
+                        return
+                    }
 
 
-                return <PureProduction data={data} />
+                    return <PureProduction data={data} locale={locale} />
+                }
             }
-        }
-    </Query>
-)
+        </Query>
+    )
+}
 export default Production;
 
 //fetch("/index.php?graphql", {"credentials":"include","headers":{"accept":"application/json","accept-language":"en-US,en;q=0.9,uk;q=0.8,ru;q=0.7","content-type":"application/json","x-wp-nonce":"a295687a2e"},"referrer":"http://reactwp/wp-admin/admin.php?page=wp-graphiql%2Fwp-graphiql.php&query=%7B++ravliks%28where%3A+%7Blanguage%3A+EN%7D%29+%7B++++edges+%7B++++++node+%7B++++++++title++++++++slug++++++++ravlikMeta+%7B++++++++++amount++++++++++price++++++++%7D++++++%7D++++%7D++%7D%7D","referrerPolicy":"strict-origin-when-cross-origin","body":"{\"query\":\"{\\n  ravliks(where: {language: EN}) {\\n    edges {\\n      node {\\n        title\\n        slug\\n        ravlikMeta {\\n          amount\\n          price\\n        }\\n      }\\n    }\\n  }\\n}\\n\",\"variables\":null}","method":"POST","mode":"cors"});
+

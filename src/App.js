@@ -20,8 +20,8 @@ function App() {
       <ApolloProvider client={client}>
         <BrowserRouter>
           <div>
-
             <Header/>
+
             <div className="content">
               <Route exact path="/" component={Ravliks} />
               <Route path="/ravliks" component={Ravliks} />

@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58f422f3-543e-4202-a106-8b4164767b9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/images/active_arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/not_active.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/arrow_next_product.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home/HomeExport/HomeExport.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/HomeExport/HomeExport.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Production/Production.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Production/Production.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Production/Production.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Production/Production.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/Production/Production.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="836">
-              <caret line="108" column="19" selection-start-line="108" selection-start-column="19" selection-end-line="108" selection-end-column="19" />
+            <state relative-caret-position="3110">
+              <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -32,10 +31,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+        <entry file="file://$PROJECT_DIR$/../reactwp/wp-content/themes/twentynineteen/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="770">
-              <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+            <state relative-caret-position="145">
+              <caret line="528" selection-start-line="528" selection-end-line="529" />
             </state>
           </provider>
         </entry>
@@ -43,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+            <state relative-caret-position="666">
+              <caret line="33" column="53" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="53" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -52,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="951">
-              <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+            <state relative-caret-position="418">
+              <caret line="95" column="35" selection-start-line="95" selection-start-column="35" selection-end-line="95" selection-end-column="35" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -65,13 +64,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ravlik/Ravlik.js">
+        <entry file="file://$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="726">
+              <caret line="57" column="21" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -79,8 +75,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/Production/Production.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2750">
-              <caret line="125" column="12" selection-start-line="125" selection-start-column="12" selection-end-line="125" selection-end-column="12" />
+            <state relative-caret-position="132">
+              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="12" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ravlik/Ravlik.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="24" selection-start-column="24" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -88,20 +93,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/common/Header/Header.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4576">
-              <caret line="215" column="48" selection-start-line="215" selection-start-column="37" selection-end-line="215" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ravlik/Ravliks.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+            <state relative-caret-position="-1848">
+              <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -121,12 +114,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.home_blog</find>
-      <find>footer_links</find>
-      <find>.modal</find>
-      <find>popup-overlay</find>
-      <find>box</find>
-      <find>close</find>
       <find>.mobile_popup_form</find>
       <find>production_ravliks</find>
       <find>visible-sm</find>
@@ -138,7 +125,6 @@
       <find>language</find>
       <find>wrapper_services</find>
       <find>bout_us_bunner</find>
-      <find>transform</find>
       <find>zoo</find>
       <find>bottom: -70%;</find>
       <find>.production_wrapper</find>
@@ -151,6 +137,13 @@
       <find>product_text_wrapper</find>
       <find>.production_wrappe</find>
       <find>fetch(&quot;/index.php?graphql&quot;, {&quot;credentials&quot;:&quot;include&quot;,&quot;headers&quot;:{&quot;accept&quot;:&quot;application/json&quot;,&quot;accept-language&quot;:&quot;en-US,en;q=0.9,uk;q=0.8,ru;q=0.7&quot;,&quot;content-type&quot;:&quot;application/json&quot;,&quot;x-wp-nonce&quot;:&quot;a295687a2e&quot;},&quot;referrer&quot;:&quot;http://reactwp/wp-admin/admin.php?page=wp-graphiql%2Fwp-graphiql.php&amp;query=%7B++ravliks%28where%3A+%7Blanguage%3A+EN%7D%29+%7B++++edges+%7B++++++node+%7B++++++++title++++++++slug++++++++ravlikMeta+%7B++++++++++amount++++++++++price++++++++%7D++++++%7D++++%7D++%7D%7D&quot;,&quot;referrerPolicy&quot;:&quot;strict-origin-when-cross-origin&quot;,&quot;body&quot;:&quot;{\&quot;query\&quot;:\&quot;{\\n  ravliks(where: {language: EN}) {\\n    edges {\\n      node {\\n        title\\n        slug\\n        ravlikMeta {\\n          amount\\n          price\\n        }\\n      }\\n    }\\n  }\\n}\\n\&quot;,\&quot;variables\&quot;:null}&quot;,&quot;method&quot;:&quot;POST&quot;,&quot;mode&quot;:&quot;cors&quot;});</find>
+      <find>menu_item</find>
+      <find>slug</find>
+      <find>singular_name</find>
+      <find>variables</find>
+      <find>prevItem</find>
+      <find>7</find>
+      <find>transform</find>
     </findStrings>
     <replaceStrings>
       <replace>Показать все</replace>
@@ -158,9 +151,9 @@
     <dirStrings>
       <dir>C:\Users\Designer-6\Downloads\OSPanel\domains\enduro\wp-content\autozone</dir>
       <dir>C:\Users\Designer-6\Downloads\OSPanel\domains\event\porto</dir>
-      <dir>C:\Users\Designer-6\Downloads\OSPanel\domains\reactiveravlik\src\components\Home</dir>
       <dir>C:\Users\Designer-6\Downloads\OSPanel\domains\reactiveravlik\src\components</dir>
       <dir>C:\Users\Designer-6\Downloads\OSPanel\domains\reactiveravlik\src</dir>
+      <dir>C:\Users\Designer-6\Downloads\OSPanel\domains\reactiveravlik\src\components\Home</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -169,10 +162,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="&lt;3995c468-e634-4bea-adad-4d2e4803a90b&gt;/var/www/nazar/wordpress/wp-config.php" />
-        <option value="&lt;3995c468-e634-4bea-adad-4d2e4803a90b&gt;/etc/nginx/sites-available/zruk" />
-        <option value="$PROJECT_DIR$/src/components/Home/_base.scss" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/ravlik/Ravliks.js" />
         <option value="$PROJECT_DIR$/src/components/Home/Blog/Blog.scss.css" />
         <option value="&lt;a07d573f-7ad3-4907-8b6f-9255bc089a0b&gt;/usr/share/nginx/html/moecowp/wordpress/wp-config.php" />
@@ -183,7 +172,6 @@
         <option value="$PROJECT_DIR$/src/components/Home/HomeAboutUs/HomeAboutUs.scss" />
         <option value="$PROJECT_DIR$/src/components/Home/OurServices/OurServices.scss" />
         <option value="$PROJECT_DIR$/src/components/base.scss" />
-        <option value="$PROJECT_DIR$/src/components/Home/HomeExport/HomeExport.js" />
         <option value="$PROJECT_DIR$/src/components/Home/ProducionOurProducts/ProducionOurProducts.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/components/Home/ProducionOurProducts/ProducionOurProducts.scss" />
@@ -215,11 +203,16 @@
         <option value="$PROJECT_DIR$/src/components/AboutUs/AboutUs.js" />
         <option value="$PROJECT_DIR$/src/common/Header/Header.scss" />
         <option value="$PROJECT_DIR$/src/pages/Production/Production.scss" />
-        <option value="$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.js" />
+        <option value="$PROJECT_DIR$/../newevent/wp-config.php" />
+        <option value="$PROJECT_DIR$/../reactwp/wp-content/themes/twentynineteen/templates/ravlik.php" />
         <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="&lt;dcfbbaa7-3f25-4849-9d31-7738efd783e2&gt;/home/applications/mann/wordpress/wp-config.php" />
+        <option value="&lt;dcfbbaa7-3f25-4849-9d31-7738efd783e2&gt;/opt/nginx/conf/nginx.conf" />
         <option value="$PROJECT_DIR$/../reactwp/wp-content/themes/twentynineteen/functions.php" />
         <option value="$PROJECT_DIR$/src/pages/Production/Production.js" />
-        <option value="$PROJECT_DIR$/../newevent/wp-config.php" />
+        <option value="$PROJECT_DIR$/src/components/Home/HomeExport/HomeExport.js" />
+        <option value="$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.scss" />
+        <option value="$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.js" />
       </list>
     </option>
   </component>
@@ -229,9 +222,9 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-18" />
-    <option name="y" value="5" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-9" />
+    <option name="y" value="-8" />
     <option name="width" value="1815" />
     <option name="height" value="1080" />
   </component>
@@ -254,19 +247,31 @@
             <path>
               <item name="reactiveravlik" type="b2602c69:ProjectViewProjectNode" />
               <item name="reactiveravlik" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reactiveravlik" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reactiveravlik" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="reactiveravlik" type="b2602c69:ProjectViewProjectNode" />
               <item name="reactiveravlik" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="reactiveravlik" type="b2602c69:ProjectViewProjectNode" />
               <item name="reactiveravlik" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reactiveravlik" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reactiveravlik" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="Production" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="reactiveravlik" type="b2602c69:ProjectViewProjectNode" />
@@ -289,27 +294,6 @@
               <item name="reactiveravlik" type="b2602c69:ProjectViewProjectNode" />
               <item name="reactwp" type="462c0819:PsiDirectoryNode" />
               <item name="wp-content" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactiveravlik" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactwp" type="462c0819:PsiDirectoryNode" />
-              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactiveravlik" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactwp" type="462c0819:PsiDirectoryNode" />
-              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-              <item name="wp-graphql-polylang-master" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactiveravlik" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactwp" type="462c0819:PsiDirectoryNode" />
-              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-              <item name="wp-graphql-polylang-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="reactiveravlik" type="b2602c69:ProjectViewProjectNode" />
@@ -338,7 +322,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../moeco/wp-content" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -349,15 +333,16 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2019.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Designer-6\Downloads\OSPanel\domains\reactiveravlik\src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Designer-6\Downloads\OSPanel\domains\reactiveravlik\src\images" />
       <recent name="C:\Users\Designer-6\Downloads\OSPanel\domains\reactiveravlik\src" />
       <recent name="C:\Users\Designer-6\Downloads\OSPanel\domains\reactiveravlik\src\PHPMailer" />
       <recent name="C:\Users\Designer-6\Downloads\OSPanel\domains\reactiveravlik\public" />
       <recent name="C:\Users\Designer-6\Downloads\OSPanel\domains\reactiveravlik\src\components\Home\Production" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Designer-6\Downloads\OSPanel\domains\reactiveravlik\public" />
+      <recent name="C:\Users\Designer-6\Downloads\OSPanel\domains\reactiveravlik\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -438,18 +423,18 @@
       <workItem from="1571210951924" duration="21136000" />
       <workItem from="1571297638323" duration="24763000" />
       <workItem from="1571384226635" duration="19808000" />
-      <workItem from="1571644575358" duration="6957000" />
+      <workItem from="1571644575358" duration="45925000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="399992000" />
+    <option name="totallyTimeSpent" value="438960000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.497307" weight="0.16684435" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.497307" weight="0.26705757" />
       <window_info id="Structure" order="1" sideWeight="0.5007153" side_tool="true" weight="0.1748401" />
       <window_info id="npm" order="2" sideWeight="0.502693" side_tool="true" weight="0.1748401" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -470,7 +455,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Remote Host" order="3" weight="0.26066098" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.26119402" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
@@ -503,34 +488,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/Home/HomeAboutUs/HomeAboutUs.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="87" column="17" selection-start-line="87" selection-start-column="17" selection-end-line="87" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Home/HomeBanner/HomeBanner.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="89" column="21" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Home/OurServices/OurServices.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="72" column="15" selection-start-line="72" selection-start-column="15" selection-end-line="72" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/base.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="101" column="18" selection-start-line="101" selection-start-column="18" selection-end-line="101" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -655,13 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/constants.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="41" selection-start-column="41" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/About.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -710,26 +660,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Home/HomeExport/HomeExport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="38" column="76" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Home/OurServices/OurServices.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1034">
@@ -764,9 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../fbh.loc/wp-content/themes/fbh/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -798,43 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ravlik/Ravlik.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Production/Production.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2750">
-          <caret line="125" column="12" selection-start-line="125" selection-start-column="12" selection-end-line="125" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/Header/Header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4576">
-          <caret line="215" column="48" selection-start-line="215" selection-start-column="37" selection-end-line="215" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ravlik/Ravliks.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -852,10 +742,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../reactwp/wp-content/themes/twentynineteen/functions.php">
+    <entry file="file://$PROJECT_DIR$/../newevent/wp-config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="673">
-          <caret line="324" selection-start-line="324" selection-end-line="324" />
+        <state relative-caret-position="88">
+          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../enduro/wp-content/themes/autozone/templates/post-parts/blog-template/blog-template.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../enduro/wp-content/themes/autozone/templates/header/header_bgimage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../takosking/wp-content/themes/takosking/templates/about.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="5" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../reactwp/wp-content/themes/twentynineteen/templates/ravlik.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
@@ -866,29 +780,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.js">
+    <entry file="file://$PROJECT_DIR$/src/constants.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="951">
-          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+        <state relative-caret-position="66">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../reactwp/wp-content/themes/twentynineteen/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="528" selection-start-line="528" selection-end-line="529" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ravlik/Ravlik.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="24" selection-start-column="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/Header/Header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1848">
+          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Home/HomeExport/HomeExport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" selection-start-line="9" selection-end-line="20" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../newevent/wp-config.php">
+    <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+        <state relative-caret-position="666">
+          <caret line="33" column="53" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Production/Production.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="108" column="19" selection-start-line="108" selection-start-column="19" selection-end-line="108" selection-end-column="19" />
+        <state relative-caret-position="3110">
+          <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Production/Production.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="57" column="21" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="95" column="35" selection-start-line="95" selection-start-column="35" selection-end-line="95" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
