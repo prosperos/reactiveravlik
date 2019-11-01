@@ -1,4 +1,4 @@
-@import './../../base';
+@import './../../variables';
 
 .wrapper_export_content{
   position: relative;
@@ -57,7 +57,7 @@
   .export_text_wpapper{
     background-color: $white;
     padding: 45px 60px;
-    box-shadow: 0 0 30px #E6E7E8;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 10;
     max-width: 575px;

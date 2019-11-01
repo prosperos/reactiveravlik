@@ -61,7 +61,7 @@ const Header = ({location}) => (
                     background-color: #ffffff;
                     width:  ${({ open }) => open ? '300px' : '65px'};
                     height: 100vh;
-                    box-shadow: 0 0 30px #E6E7E8;
+                    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
                     @media (max-width: 576px) {
                       box-shadow: none;
                       background-color: transparent;
@@ -80,7 +80,7 @@ const Header = ({location}) => (
                   top: 0;
                   left: 0;
                   transition: transform 0.3s ease-in-out;
-                  box-shadow: 0 0 30px #E6E7E8;
+                  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
                   @media (max-width: 576px) {
                       width:100%;
                       box-shadow: none;

@@ -49,6 +49,11 @@ img {
   height: auto;
   display: block;
 }
+strong{
+  font-size: 16px;
+  font-family: "Open Sans";
+  color: $dimGray;
+}
 a:hover{
   text-decoration: none;
 }
@@ -93,6 +98,10 @@ a:hover{
     margin-left: 10px;
     display: inline-block;
   }
+}
+.aling-center{
+  display: flex;
+  align-items: center;
 }
 @media (max-width: 576px) {
   h1{

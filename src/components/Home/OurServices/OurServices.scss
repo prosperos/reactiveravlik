@@ -1,4 +1,4 @@
-@import './../../base';
+@import './../../variables';
 
 .wrapper_our_services_content {
   margin-bottom: 90px;
@@ -23,7 +23,7 @@
   .services_item {
     background-color: $white;
     padding: 35px 20px 50px 20px;
-    box-shadow: 0 0 30px #E6E7E8;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
     height: 200px;
     display: flex;

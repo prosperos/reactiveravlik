@@ -1,4 +1,4 @@
-@import './../../base';
+@import './../../variables';
 
 
 .production_ravliks{
@@ -10,7 +10,7 @@
     background-position:center;
     width: 425px;
     height: 320px;
-    box-shadow: 0 0 20px #E6E7E8;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     position: relative;
     &:before{
       content: '';

@@ -1,0 +1,292 @@
+.vyrobnytstvo_wrapper{
+  margin-top: 35px;
+  .virobnytstvo_line{
+    background-color: #E8F1EC;
+    position: absolute;
+    width: 79%;
+    right: 0;
+    height: 310px;
+    display: inline-block;
+    top: 40%;
+  }
+  &:before{
+    content: '';
+    background-image: url(./../../images/vurobnytstvo_leaf.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 382px;
+    left: 90px;
+    top: 0;
+    height: 295px;
+    display: inline-block;
+    z-index: 5;
+  }
+  &:after{
+    content: '';
+    background-image: url(./../../images/vurobnytstvo_right.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 192px;
+    right: 70px;
+    top: 0;
+    height: 125px;
+    display: inline-block;
+    z-index: 5;
+  }
+  .vyrobnytstvo_bunner_image{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 427px;
+    width: 677px;
+    float: right;
+  }
+  .vyrobnytstvo_bunner_image_small{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 310px;
+    width: 440px;
+    position: relative;
+    bottom: -220px;
+    left: 0px;
+  }
+  .align-bottom{
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+  }
+  .title_content{
+    text-align: center;
+    position: relative;
+    top: 80px;
+  }
+
+}
+
+.prosses_vyrobnytstva{
+  margin-top: 300px;
+  position: relative;
+  &:before{
+    content: '';
+    background-image: url(./../../images/process_leaf.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 252px;
+    right: 0;
+    top: -170px;
+    height: 275px;
+    display: inline-block;
+    z-index: 5;
+  }
+  &:after{
+    content: '';
+    background-image: url(./../../images/process_left_leaf.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 342px;
+    left: 0px;
+    top: 46%;
+    height: 275px;
+    display: inline-block;
+    z-index: 5;
+  }
+  .vertical_line{
+    background-color: #E8F1EC;
+    position: absolute;
+    width: 374px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: inline-block;
+    top: 0%;
+    height: 1900px;
+  }
+  .item_proсess{
+    margin-top: 100px;
+    align-items: center;
+  }
+  .prosses_image{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 350px;
+    width: 540px;
+  }
+  .prosses_info{
+    max-height: 265px;
+    overflow: hidden;
+    text-align: center;
+  }
+  .prosses_image_mobile{
+    display: none;
+  }
+}
+.advanteges_vyrobnytstva{
+  margin-top: 220px;
+  position: relative;
+  &:after{
+    content: '';
+    background-image: url(./../../images/advanteges_leaf.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 332px;
+    right: 0px;
+    top: -200px;
+    height: 285px;
+    display: inline-block;
+    z-index: 5;
+  }
+  .advanteges_image{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 490px;
+    width: 677px;
+  }
+  .inner_wrapper{
+    background-color: white;
+    padding: 60px 25px;
+
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    .item_proсess{
+      .prosses_info{
+        width: 33.3%;
+        display: inline-block;
+        h2{
+          font-size: 40px;
+          color: #D1AD1F;
+        }
+        strong{
+          display: inline-block;
+          margin: 0 auto;
+          text-align: center;
+        }
+        &:last-child{
+          strong{
+            max-width: 80%;
+          }
+        }
+      }
+    }
+  }
+  .horisontal_line{
+    background-color: #E8F1EC;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    height: 200px;
+    display: inline-block;
+    top: 30%;
+  }
+  .aling-center{
+    display: flex;
+    align-items: center;
+  }
+}
+@media (max-width: 580px) {
+  .vyrobnytstvo_wrapper{
+    margin-top: 105px;
+    &:before{
+      left: 0px;
+      top: 90px;
+      width: 252px;
+      background-image: url(./../../images/leaf_top.png);
+    }
+    &:after{
+      width: 150px;
+      right: 0;
+    }
+    .title_content{
+      top: 0;
+      margin-bottom: 30px;
+    }
+    .vyrobnytstvo_bunner_image{
+      width: 89%;
+      height: 215px;
+      float: left;
+      &:after{
+        content: '';
+        background-image: url(./../../images/image_leaf_vyrobnytstvo.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 192px;
+        left: 0;
+        top: 190px;
+        height: 195px;
+        display: inline-block;
+        z-index: 5;
+        background-size: contain;
+      }
+    }
+    .vyrobnytstvo_bunner_image_small{
+      width: 244px;
+      height: 175px;
+      bottom: -52px;
+      right: 18px;
+      left: auto;
+      position: absolute;
+    }
+    .virobnytstvo_line{
+      top: 24%;
+      width: 70%;
+      height: 550px;
+    }
+  }
+  .prosses_vyrobnytstva {
+    margin-top: 190px;
+    &:before{
+      content: none;
+    }
+    &:after{
+      content: none;
+    }
+    .vertical_line{
+      width: 220px;
+      height: 100%;
+    }
+    .prosses_image{
+      display: none;
+    }
+    .prosses_image_mobile{
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 240px;
+      display: inline-block;
+      margin-top: 0px;
+    }
+    .prosses_info{
+      max-height: initial;
+    }
+    .item_proсess{
+      margin-top: 40px;
+      p{
+        margin-top: 10px;
+      }
+    }
+  }
+  .advanteges_vyrobnytstva {
+    margin-top: 100px;
+    &:after{
+      content: none;
+    }
+    .horisontal_line{
+      display: none;
+    }
+    .advanteges_image{
+      display: none;
+    }
+    .inner_wrapper{
+      .item_proсess {
+        .prosses_info{
+          width: 100%;
+          strong{
+            max-width: 70%;
+          }
+        }
+      }
+    }
+  }
+}

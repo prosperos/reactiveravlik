@@ -10,10 +10,9 @@ const Ravliks = () => (
             edges {
               node{
                 title
-                ravlikMeta{
-                  amount
-                  price
-                }
+                date
+                slug
+               
               }
             }
           }

@@ -1,4 +1,4 @@
-@import './../../base';
+@import './../../variables';
 
 .home_blog {
   margin-top: 340px;
@@ -23,7 +23,7 @@
     margin-left: 20px;margin-bottom: 50px;
   }
   .blog-thumbnail{
-    box-shadow: 0 0 30px #E6E7E8;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     padding-bottom: 35px;
 
     .blog_img{
@@ -85,7 +85,7 @@
     }
     .blog-thumbnail{
       background-color: transparent;
-      box-shadow: 0 0 30px #E6E7E8;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
       margin-bottom: 40px;
     }
     .height_blog{

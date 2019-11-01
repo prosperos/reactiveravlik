@@ -80,7 +80,7 @@
     background-color: white;
     margin-top: -165px;
     width: 475px;
-    box-shadow: 0 0 30px #E6E7E8;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     padding: 50px 50px 45px;
   }
   .form_title {
@@ -179,7 +179,7 @@
   display: block;
   z-index: 3999;
   position: relative;
-  box-shadow: 0 0 30px #E6E7E8;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   &:before{
     content: '';
     background-image: url(./../../images/mobile_form_top_leaf.png);
