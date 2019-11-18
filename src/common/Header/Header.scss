@@ -79,6 +79,7 @@
   .selected_language{
     display: inline-block;
     width: 35px;
+    text-transform: uppercase;
     &:after{
       content: '';
       background-image: url(./../../images/select.png);

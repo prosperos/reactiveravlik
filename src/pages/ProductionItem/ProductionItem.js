@@ -4,6 +4,7 @@ import { graphql } from 'react-apollo'
 import './ProductionItem.scss'
 import {Link} from "react-router-dom";
 import Footer from "../../common/Footer/Footer";
+import Page404 from "../Page404/Page404"
 
 class ProductionItem extends React.Component{
 
@@ -80,7 +81,7 @@ class ProductionItem extends React.Component{
        // console.log('data', this.props.match.params);
 
         if( !props.data.ravlik){
-            return null
+            return <Page404/>
         }
         //console.log('categories', props.data.ravlik.categories.edges)
         return(

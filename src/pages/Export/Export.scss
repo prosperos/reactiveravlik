@@ -133,3 +133,195 @@
     top: -150px;
   }
 }
+.map{
+  margin-top: 150px;
+  .map_height {
+    height: 500px!important;
+  }
+}
+.partners_wrapper{
+  position: relative;
+  margin-top: 150px;
+
+  &:before{
+    content: '';
+    background-image: url(./../../images/partners_leaf.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 382px;
+    left: 200px;
+    top: 110px;
+    height: 295px;
+    display: inline-block;
+    z-index: 0;
+  }
+  .partner_line{
+    background-color: #E8F1EC;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 305px;
+    display: inline-block;
+    top: 25%;
+    z-index: -1;
+  }
+  .title_wrapper{
+    display: inline-block;
+    h2{
+      display: inline-block;
+      margin-left: 30px;
+      position: relative;
+      top: -7px;
+    }
+  }
+  .parters_description{
+    padding: 71px 45px;
+    background-color: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    margin-top: 260px;
+  }
+  .partners_image{
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 511px;
+    width: 778px;
+    right: 0;
+    z-index: -1;
+    top: 50px;
+  }
+  .partners_button{
+    text-align: center;
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .export_wrapper {
+    margin-top: 80px;
+    &:before{
+      left: auto;
+      top: 0;
+      right: 0;
+      width: 150px;
+      background-image: url(./../../images/top_leaf_cut.png);
+    }
+    &:after{
+      transform: rotate(225deg);
+      left: 0;
+      right: auto;
+      top: 42px;
+    }
+    .aling-center{
+      order: -1;
+    }
+    .export_banner_image{
+      height: 240px;
+    }
+    .export_line{
+      left: auto;
+      right: 0;
+      height: 550px;
+      top: 23%;
+    }
+  }
+  .representation_wrapper {
+    margin-top: 100px;
+    &:before{
+      background-image: url(./../../images/export_country_leaf.png);
+      top: -35px;
+      right: 0;
+      left: auto;
+      width: 120px;
+      height: 130px;
+    }
+    &:after{
+      content: '';
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 382px;
+      left: 0px;
+      bottom: -130px;
+      height: 232px;
+      display: inline-block;
+      z-index: -1;
+      background-image: url(./../../images/country_mobile_leaf.png);
+    }
+    .col-lg-8{
+      order: -1;
+    }
+    .align-content-center{
+      text-align: center;
+    }
+    h2{
+      text-align: center;
+    }
+    .move-item{
+      position: static;
+    }
+    .move-button{
+      position: static;
+      hr{
+        margin-top: 10px;
+      }
+    }
+   .margin-sm-15{
+     .partner_info{
+       margin-top: 15px;
+     }
+   }
+    .partner_info{
+      height: 333px;
+    }
+  }
+  .partners_wrapper{
+    margin-top: 100px;
+    margin-bottom: 80px;
+    &:before{
+      content: none;
+    }
+    .title_wrapper{
+      display: block;
+      text-align: center;
+      margin-bottom: 10px;
+      h2{
+        width: 100%;
+        margin-left: 0;
+        top: 4px;
+      }
+    }
+    .partner_line{
+      top: 21%;
+    }
+    .partners_image{
+      width: 100%;
+      position: static;
+      height: 240px;
+    }
+    .parters_description{
+      margin-top: 30px;
+      background-color: transparent;
+      box-shadow: none;
+      padding: 0;
+    }
+    .partners_button{
+      margin-top: 45px;
+    }
+    .order-img{
+      order: 0;
+    }
+    .order-text{
+      order: 1;
+    }
+    .order-btn{
+      order: 2;
+    }
+  }
+  .map {
+    margin-top: 100px;
+    .map_height{
+      height: 500px;
+    }
+  }
+}

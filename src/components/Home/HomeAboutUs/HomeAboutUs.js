@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 const HomeAboutUs = () => (
     <Query query={gql`
 {
-  pageBy(uri: "main-home") {
+  pageBy(uri: "uk/main-home") {
     home{
       homeAboutUsImage {
         sourceUrl
@@ -24,7 +24,7 @@ const HomeAboutUs = () => (
         {
             ({ loading, error, data}) => {
                 if (loading){
-                    return (<br/>);
+                    return null;
                 }
 
 

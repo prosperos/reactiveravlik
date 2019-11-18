@@ -28,7 +28,9 @@ h4{
   font-size: 16px;
 }
 h5{
-  font-family: $openSans;
+  font-family: $playfair;
+  font-size: 16px;
+  color: $galliano;
 }
 p{
   font-family: $openSans;
@@ -53,6 +55,9 @@ strong{
   font-size: 16px;
   font-family: "Open Sans";
   color: $dimGray;
+}
+body{
+  overflow-x: hidden;
 }
 a:hover{
   text-decoration: none;
@@ -102,6 +107,26 @@ a:hover{
 .aling-center{
   display: flex;
   align-items: center;
+}
+blockquote{
+  font-family: "Open Sans";
+  font-style: italic;
+  font-size: 18px;
+  max-width: 576px;
+  margin: 75px auto 50px auto;
+  position: relative;
+  &:before{
+    content: '';
+    background-image: url(./../images/quotation-mark.png);
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 39px;
+    margin-left: 10px;
+    display: inline-block;
+    position: absolute;
+    left: -75px;
+    top: -20px;
+  }
 }
 @media (max-width: 576px) {
   h1{

@@ -1,0 +1,42 @@
+.home_blog.main-blog{
+  margin-top: 30px;
+ .blog-thumbnail,.exept_info{
+   display: inline-block;
+ }
+  .blog-thumbnail{
+    box-shadow: none;
+    width: 41%;
+  }
+  .exept_info{
+    width: 59%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    text-align: right;
+
+    padding-left: 46px;
+    padding-top: 25px;
+    padding-right: 25px;
+    .date{
+      font-family: Playfair Display;
+      font-size: 16px;
+      color: #546D5E;
+    }
+    h3{
+      text-align: left;
+    }
+    p{
+      overflow: hidden;
+      max-height: 88px;
+    }
+  }
+  .wrapper_article{
+    display: flex;
+    max-height: 235px;
+    margin-bottom: 30px;
+  }
+}
+.container_products{
+  .container-fluid{
+    padding-right:0;
+    padding-left: 0;
+  }
+}

@@ -8,7 +8,7 @@ import classNames from 'classnames'
 const Production = () => (
     <Query query={gql`
   {
-        pageBy(uri: "main-home") {
+        pageBy(uri: "uk/main-home") {
             home{
               ourProductsTitle 
               ourProductsButtonText

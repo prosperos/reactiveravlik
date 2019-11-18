@@ -8,7 +8,7 @@ import classNames from 'classnames'
 const OurServices = () => (
     <Query query={gql`
 {
-  pageBy(uri: "main-home") {
+  pageBy(uri: "uk/main-home") {
     home{
       ourServicesTitle 
       ourServicesItems{

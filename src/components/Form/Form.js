@@ -7,24 +7,72 @@ class Form extends Component {
         this.state = {
             name: "",
             email: "",
-            phone: "",
+            tel: "",
             text: "",
 
+            formErrors: {name: '', email: '', tel: ''},
+            nameValid: false,
+            emailValid: false,
+            telValid: false,
         };
     }
+
+
+    validateEmail (email) {
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        return re.test(email)
+    }
+
+    handleEmailChange = (e) => {
+        const email = e.target.value
+        console.log('handleEmailChange: ', email)
+        const emailValid = this.validateEmail(email)
+
+        this.setState({
+            email: email,
+            emailValid: emailValid
+        })
+    }
+
+    validateTel(tel){
+        const re = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/
+        return re.test(tel)
+    }
+
+    handleTelChange = (e) => {
+        const tel = e.target.value
+        console.log('handletelChange: ', tel)
+        const telValid = this.validateTel(tel)
+
+        this.setState({
+            tel: tel,
+            telValid: telValid
+        })
+    }
+
+
+
+    onInputFocus = (e) => {
+        console.log("focus: ",e)
+    }
+
+    onInputBlur = (e) => {
+
+        console.log("Blur: ",e)
+    }
+
     Change(e) {
         const { id, value } = e.currentTarget;
         this.setState({ [id]: value });
     }
+
     onSubmit(e) {
         e.preventDefault();
         let formData = new FormData();
-        if (this.state.myfile) {
-            formData.append("myfile", this.state.myfile);
-        }
+
         formData.append("name", this.state.name);
         formData.append("email", this.state.email);
-        formData.append("phone", this.state.phone);
+        formData.append("phone", this.state.tel);
         formData.append("text", this.state.text);
         fetch("/send.php", {
             method: "POST",
@@ -38,12 +86,23 @@ class Form extends Component {
             });
         });
     }
+
     render() {
-        const { name, email, text, phone } = this.state;
+        const { name, email, text, tel, emailValid } = this.state;
+
+        let emailClass = 'field-container'
+
+        if (!emailValid) {
+            emailClass += ' error'
+        }
+
+        console.log("emailValid: ", emailValid)
+
         return (
             <form
                 id="form"
                 method="post"
+
                 onSubmit={this.onSubmit.bind(this)}
             >
                 <input
@@ -54,22 +113,26 @@ class Form extends Component {
                     placeholder="Ім'я *"
                     onChange={this.Change.bind(this)}
                 />
+
+                <label className={emailClass}>Телефон *</label>
                 <input
                     id="tel"
                     name="phone"
                     type="tel"
-                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                    value={phone}
+                    value={tel}
                     placeholder="Телефон *"
-                    onChange={this.Change.bind(this)}
+                    onChange={this.handleTelChange}
                 />
+                <label className={emailClass}>Електронна скринька</label>
                 <input
                     id="email"
                     name="email"
                     type="text"
                     value={email}
                     placeholder="Електронна скринька"
-                    onChange={this.Change.bind(this)}
+                    onChange={this.handleEmailChange}
+                    onFocus={this.onInputFocus}
+                    onBlur={this.onInputBlur}
                 />
                 <textarea
                     id="text"

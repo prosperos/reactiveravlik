@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { Query } from 'react-apollo';
 import  gql  from 'graphql-tag';
-import classNames from 'classnames';
 import './Export.scss';
 import Footer from "../../common/Footer/Footer";
 import ShelterMap from "../../components/Maps/Maps";
+
+import Popup from "../../components/Popup/Popup";
+import Representation from "../../components/Export/Representation/Representation";
 
 class PureExport extends Component {
 
@@ -31,51 +33,34 @@ class PureExport extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="representation_wrapper">
+                <Representation/>
+
+
+                <div className="map">
+                    <ShelterMap data={data}/>
+                </div>
+                <div className="partners_wrapper">
+                    <div className="partner_line"></div>
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-6 move-button">
-                                <div className="row">
-                                    <div className="col-lg-2">
-                                        <hr/>
-                                    </div>
-                                    <div className="col-lg-8">
-                                        <h2>{data.pageBy.exportMeta.representationTitle}</h2>
-                                    </div>
+                            <div className="col-xl-11"><div className="title_wrapper"><hr/><h2>{data.pageBy.exportMeta.partnershipTitle}</h2></div></div>
+                            <div className="col-xl-6 order-text">
+                                <div className="parters_description">
+                                   <p> {data.pageBy.exportMeta.partnershipText}</p>
                                 </div>
                             </div>
+                            <div className="col-xl-6 order-img">
+                                <div className="partners_image" style={{backgroundImage: `url(${data.pageBy.exportMeta.partnershipImage.sourceUrl})`}}>
 
-
-                            <div className="offset-lg-1 col-lg-10">
-                                <div className="row">
-                                    {
-                                        data.pageBy.exportMeta.representationCountryItems.map((representationItem, key) => {
-
-                                            const wrapper_item = classNames({'col-lg-6' : true, 'offset-lg-6' : key === 0 , 'move-item' : key === 1 })
-                                            return (
-                                                <div className={wrapper_item} key={key}>
-                                                    <div className="partner_info" >
-                                                        <h2>{representationItem.countryName}</h2>
-                                                        <hr/>
-                                                        <div className="contact_details">
-                                                            <h3>{representationItem.personName}</h3>
-                                                            <a className="phone" href={representationItem.phone}>{representationItem.phone}</a>
-                                                            <a className="email" href={representationItem.email}>{representationItem.email}</a>
-                                                            <address>{representationItem.address}</address>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            )
-                                        })
-                                    }
-
+                                </div>
+                            </div>
+                            <div className="col-xl-12 order-btn">
+                                <div className="partners_button">
+                                    <Popup/>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="map">
-                    <ShelterMap/>
                 </div>
                 <Footer/>
             </div>
@@ -95,19 +80,13 @@ const Export = () => {
       sourceUrl
     }
     exportMeta{
-      representationTitle
-      representationCountryItems{
-        countryName
-        personName
-        phone
-        email
-        address
-      }
+   
       partnershipTitle
       partnershipText
       partnershipImage{
         sourceUrl
       }
+      buttonName
     }
   }
 }

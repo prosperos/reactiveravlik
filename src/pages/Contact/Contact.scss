@@ -1,0 +1,120 @@
+.wrapper_contact{
+  margin-top: 55px;
+  position: relative;
+
+  &:before{
+    content: '';
+    background-image: url(./../../images/contact_leaf.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 424px;
+    left: 0px;
+    top: -200px;
+    height: 265px;
+    display: inline-block;
+    z-index: 0;
+  }
+
+  &:after{
+    content: '';
+    background-image: url(./../../images/contact_right_leaf.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 226px;
+    right: 0px;
+    top: -190px;
+    height: 141px;
+    display: inline-block;
+    z-index: 0;
+  }
+
+  .bg_line{
+    background-color: #E8F1EC;
+    position: absolute;
+    width: 81%;
+    right: 0;
+    height: 360px;
+    display: inline-block;
+    top: 15%;
+  }
+  .align-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .title_wrapper {
+    text-align: center;
+  }
+  .address_wrapper{
+    .phone{
+      display: block;
+    }
+
+    a{
+      display: inline-block;
+    }
+    .address_wrapper{
+      a, address{
+        color: white;
+        font-family: "Open Sans";
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+    }
+    .phone,.email,.address{
+      position: relative;
+      margin-bottom: 10px;
+      &:before {
+        content: '';
+        width: 25px;
+        height: 25px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin-right: 26px;
+        margin-top: 3px;
+      }
+    }
+    .phone{
+      font-weight: bold;
+      color: #747474;
+      &:before{
+        background-image: url(./../../images/phone_black.png);
+      }
+    }
+    .email{
+      &:before{
+        background-image: url(./../../images/email_black.png);
+      }
+    }
+    .address{
+      &:before{
+        background-image: url(./../../images/location_black.png);
+      }
+    }
+    .popup_form{
+      margin-top: 35px;
+      text-align: center;
+      .big_button{
+        background-color: transparent;
+      }
+    }
+  }
+  .map_height{
+    height: 525px;
+  }
+
+}
+.main_contact_wrapper{
+  .representation_wrapper{
+    &:before{
+      background-image: url(./../../images/representation_contacty2.png);
+      left: auto;
+      right: 0;
+      top: -90px;
+      height: 295px;
+    }
+  }
+}

@@ -7,7 +7,7 @@ import './Blog.scss'
 const Blog = () => (
     <Query query={gql`
   {
-        pageBy(uri: "main-home") {
+        pageBy(uri: "uk/main-home") {
             home{
               blogTitle 
               blogButtonText
@@ -31,7 +31,7 @@ const Blog = () => (
         {
             ({ loading, error, data}) => {
                 if (loading){
-                    return (<br/>);
+                    return null;
                 }
                 return(
                     <div className="home_blog">

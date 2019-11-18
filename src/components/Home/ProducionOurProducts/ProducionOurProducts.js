@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 const ProducionOurProducts = () => (
     <Query query={gql`
 {
-  pageBy(uri: "main-home") {
+  pageBy(uri: "uk/main-home") {
     home{
         productionTitle 
         productionText
@@ -25,7 +25,7 @@ const ProducionOurProducts = () => (
         {
             ({ loading, error, data}) => {
                 if (loading){
-                    return (<br/>);
+                    return null;
                 }
 
                 return (

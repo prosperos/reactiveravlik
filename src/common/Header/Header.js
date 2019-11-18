@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import { Link, withRouter } from 'react-router-dom'
 import { LOCALES, DEFAULT_LOCALE } from "../../constants";
 import classNames from 'classnames'
-
+import white_logo from './../../images/white_logo.png'
 
 const Header = ({location}) => (
     <Query query={gql`
@@ -37,7 +37,7 @@ const Header = ({location}) => (
         {
             ({ loading, error, data}) => {
                 if (loading){
-                    return (<br/>);
+                    return null;
                 }
                 const WrapperLanguage = styled.div`
                     left : ${({ open }) => open ? '25px' : '322px'};
@@ -107,14 +107,15 @@ const Header = ({location}) => (
                 `
 
                 const Menu = ({ open, location }) => {
+
                     let array = data.menus.nodes[0].menuItems.nodes;
-                    //console.log("Menu: location: ", JSON.parse(JSON.stringify(location)))
 
                     return (
                         <StyledMenu open={open}>
                             <WrapperLanguage className="language" open={open}>
                                 <ul>
                                     <li className='selected_language'>
+
                                         {location.pathname.split('/')[1] || DEFAULT_LOCALE}
                                         <ul>
                                             {
@@ -123,6 +124,8 @@ const Header = ({location}) => (
                                                         const currentLocale = location.pathname.split('/')[1] || DEFAULT_LOCALE
                                                         const active = locale === currentLocale
                                                         const url = location.pathname.split('/').map((s, i) => i === 1 ? locale : s ).join('/')
+
+
                                                         return (
                                                             <li key={i} className={classNames({active: active})}>
                                                                 <Link to={url}>{locale}</Link>
@@ -164,8 +167,6 @@ const Header = ({location}) => (
                   cursor: pointer;
                   padding: 0;
                   z-index: 3110;
-                
-                   
                   &:focus {
                     outline: none;
                   }
@@ -243,6 +244,7 @@ const Header = ({location}) => (
                         [ref, handler],
                     );
                 };*/
+                const locationBlog  = location.pathname.indexOf('bloh');
 
                 return(
                     <header  id="mainMenu" className="main-header">
@@ -251,7 +253,12 @@ const Header = ({location}) => (
                                 <div className="col-lg-12">
                                     <div className="wrapper_logo">
                                         <Link to="/">
-                                            <div className="main_logo" style={{backgroundImage: `url(${data.pageBy.Header.headerLogo.sourceUrl})`}}></div>
+                                            {locationBlog > 1 && location.pathname.length > 9
+                                            ?
+                                                <div className="main_logo" style={{backgroundImage: `url(${white_logo})`}}></div>
+                                                :
+                                                <div className="main_logo" style={{backgroundImage: `url(${data.pageBy.Header.headerLogo.sourceUrl})`}}></div>
+                                            }
                                         </Link>
                                     </div>
                                 </div>

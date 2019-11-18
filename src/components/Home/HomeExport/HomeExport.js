@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 const HomeExport = () => (
     <Query query={gql`
 {
-  pageBy(uri: "main-home") {
+  pageBy(uri: "uk/main-home") {
     home{
         exportTitle 
         exportDescription
@@ -24,7 +24,7 @@ const HomeExport = () => (
         {
             ({ loading, error, data}) => {
                 if (loading){
-                    return (<br/>);
+                    return null;
                 }
                 return (
                     <div className="wrapper_export_content">

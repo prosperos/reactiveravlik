@@ -1,0 +1,21 @@
+.page_404{
+  .wrapper_404{
+    margin: 0 auto;
+    text-align: center;
+    .big_button{
+      margin-top: 70px;
+      display: inline-block;
+    }
+  }
+  h1{
+    color: #D1AD1F;
+    font-size: 50px;
+  }
+  img{
+    margin: 0 auto;
+    max-width: 430px;
+  }
+  p{
+    text-align: center;
+  }
+}

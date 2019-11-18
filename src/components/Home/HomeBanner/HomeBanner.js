@@ -10,7 +10,7 @@ const HomeBanner = (props) => (
 //    pageBy(uri: "main-home-${props.locale}") {
     <Query query={gql`
 {
-  pageBy(uri: "main-home") {
+  pageBy(uri: "uk/main-home") {
   
     home{
       homeBannerLogo {
@@ -28,7 +28,7 @@ const HomeBanner = (props) => (
         {
             ({ loading, error, data}) => {
                 if (loading){
-                    return (<br/>);
+                    return null;
                 }
                 var properties = []
                 for (var k in data.pageBy.home) {
