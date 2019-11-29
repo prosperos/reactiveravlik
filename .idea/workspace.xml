@@ -2,77 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58f422f3-543e-4202-a106-8b4164767b9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/Header/components/NavLinks.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/Header/components/StyledBurger.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/Header/components/StyledMenu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/Header/components/WrapperLanguage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/Header/components/WrapperMenu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/bf_hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/form_leaf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/insta_hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/map-site-mobile-leaf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/maps-and-flags.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/maps-leaf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/mobile_leaf_products.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/next_page.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/our_product_mobile_leaf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/phone_hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/select_hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/CookiesPolicy/CookiesPolicy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/CookiesPolicy/CookiesPolicy.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/MapSite/MapSite.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/MapSite/MapSite.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/PoliticalConfidentiality/PoliticalConfidentiality.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/PoliticalConfidentiality/PoliticalConfidentiality.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/.env.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Footer/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Footer/Footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Footer/Footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Header/Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Header/Header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AboutUs/About.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutUs/About.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AboutUs/AboutUs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutUs/AboutUs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Export/Representation/Representation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Export/Representation/Representation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Form/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/Form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/Blog/Blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Blog/Blog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/Blog/Blog.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Blog/Blog.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/HomeAboutUs/HomeAboutUs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/HomeAboutUs/HomeAboutUs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/HomeAboutUs/HomeAboutUs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/HomeAboutUs/HomeAboutUs.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/HomeBanner/HomeBanner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/HomeBanner/HomeBanner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/HomeBanner/HomeBanner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/HomeBanner/HomeBanner.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/HomeExport/HomeExport.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/HomeExport/HomeExport.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/HomeExport/HomeExport.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/HomeExport/HomeExport.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/OurServices/OurServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/OurServices/OurServices.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/OurServices/OurServices.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/OurServices/OurServices.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/ProducionOurProducts/ProducionOurProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/ProducionOurProducts/ProducionOurProducts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/ProducionOurProducts/ProducionOurProducts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/ProducionOurProducts/ProducionOurProducts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/Production/Production.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Production/Production.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Maps/Maps.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Maps/Maps.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Popup/Popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Popup/Popup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/About.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Blog/Blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Blog/Blog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Blog/Blog.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Blog/Blog.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/BlogDetail/BlogDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/BlogDetail/BlogDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Contact/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contact/Contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Contact/Contact.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contact/Contact.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Export/Export.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Export/Export.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Export/Export.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Export/Export.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Page404/Page404.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Page404/Page404.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Production/Production.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Production/Production.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Production/Production.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Production/Production.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Vyrobnytstvo/Vyrobnytstvo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Vyrobnytstvo/Vyrobnytstvo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Vyrobnytstvo/Vyrobnytstvo.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Vyrobnytstvo/Vyrobnytstvo.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reactwp-20191011-105621-447.wpress" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reactwp-20191118-100207-338.wpress" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,11 +25,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="true" current-in-tab="false">
+      <file pinned="true" current-in-tab="true">
         <entry file="remoteDeploymentFS://&lt;dcfbbaa7-3f25-4849-9d31-7738efd783e2&gt;/home/applications/ravlikreact/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="19" column="17" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="17" />
+            <state relative-caret-position="462">
+              <caret line="21" selection-start-line="21" selection-end-line="23" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,11 +46,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;dcfbbaa7-3f25-4849-9d31-7738efd783e2&gt;/home/applications/ravlikreact/.env.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="70" lean-forward="true" selection-start-column="70" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="410">
+              <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.env.js">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="70" selection-start-column="70" selection-end-column="70" />
+              <caret column="49" selection-start-column="49" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -124,8 +79,8 @@
       <file pinned="true" current-in-tab="false">
         <entry file="remoteDeploymentFS://&lt;dcfbbaa7-3f25-4849-9d31-7738efd783e2&gt;/opt/nginx/conf/nginx.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1337">
-              <caret line="522" selection-start-line="522" selection-end-line="522" />
+            <state relative-caret-position="413">
+              <caret line="1229" lean-forward="true" selection-start-line="1229" selection-end-line="1229" />
             </state>
           </provider>
         </entry>
@@ -159,18 +114,6 @@
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="e#156#204#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Home/Blog/Blog.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="643">
-              <caret line="81" column="54" selection-start-line="81" selection-start-column="54" selection-end-line="81" selection-end-column="54" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -241,7 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/pages/MapSite/MapSite.scss" />
         <option value="$PROJECT_DIR$/src/pages/CookiesPolicy/CookiesPolicy.js" />
         <option value="$PROJECT_DIR$/src/pages/PoliticalConfidentiality/PoliticalConfidentiality.js" />
         <option value="$PROJECT_DIR$/src/common/Header/components/StyledBurger.js" />
@@ -260,7 +202,6 @@
         <option value="$PROJECT_DIR$/src/common/Header/Header.js" />
         <option value="$PROJECT_DIR$/src/pages/Vyrobnytstvo/Vyrobnytstvo.js" />
         <option value="$PROJECT_DIR$/src/components/AboutUs/AboutUs.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.js" />
         <option value="$PROJECT_DIR$/src/pages/BlogDetail/BlogDetail.js" />
         <option value="$PROJECT_DIR$/src/pages/Page404/Page404.js" />
@@ -286,12 +227,14 @@
         <option value="$PROJECT_DIR$/src/components/Home/ProducionOurProducts/ProducionOurProducts.js" />
         <option value="$PROJECT_DIR$/src/components/Home/HomeExport/HomeExport.js" />
         <option value="$PROJECT_DIR$/src/components/Home/Blog/Blog.js" />
-        <option value="$PROJECT_DIR$/.env.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="&lt;dcfbbaa7-3f25-4849-9d31-7738efd783e2&gt;/home/applications/ravlikreact/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/Form/Form.js" />
         <option value="$PROJECT_DIR$/send.php" />
         <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="&lt;dcfbbaa7-3f25-4849-9d31-7738efd783e2&gt;/home/applications/ravlikreact/.env.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/.env.js" />
       </list>
     </option>
   </component>
@@ -468,17 +411,18 @@
       <workItem from="1574764623630" duration="18955000" />
       <workItem from="1574843573762" duration="19135000" />
       <workItem from="1574930616249" duration="21775000" />
-      <workItem from="1575016530159" duration="5470000" />
+      <workItem from="1575016530159" duration="10561000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="805679000" />
+    <option name="totallyTimeSpent" value="810770000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.497307" visible="true" weight="0.18923241" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.497307" visible="true" weight="0.18923241" />
       <window_info id="Structure" order="1" sideWeight="0.5007153" side_tool="true" weight="0.1748401" />
       <window_info id="npm" order="2" sideWeight="0.502693" side_tool="true" weight="0.1748401" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -499,7 +443,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Remote Host" order="3" visible="true" weight="0.40298507" />
+      <window_info active="true" anchor="right" id="Remote Host" order="3" visible="true" weight="0.43816632" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
@@ -666,16 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="36" column="64" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -898,13 +832,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Form/Form.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -929,10 +856,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.env.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="70" selection-start-column="70" selection-end-column="70" />
+          <caret column="49" selection-start-column="49" selection-end-column="49" />
         </state>
       </provider>
     </entry>

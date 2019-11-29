@@ -19,7 +19,7 @@ import PoliticalConfidentiality from "./pages/PoliticalConfidentiality/Political
 import { LOCALES, DEFAULT_LOCALE } from "./constants";
 
 const client = new ApolloClient({
-  uri: 'http://reactwp/graphql/',
+  uri: API_ROOT,
 })
 
 const LOCALE_PARAM = `/:locale(${LOCALES.filter(locale => locale !== DEFAULT_LOCALE).join('|')})?`
