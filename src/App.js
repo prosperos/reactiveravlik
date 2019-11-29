@@ -17,6 +17,8 @@ import Page404 from './pages/Page404/Page404'
 import MapSite from './pages/MapSite/MapSite'
 import PoliticalConfidentiality from "./pages/PoliticalConfidentiality/PoliticalConfidentiality";
 import { LOCALES, DEFAULT_LOCALE } from "./constants";
+import {API_ROOT} from "./env"
+
 
 const client = new ApolloClient({
   uri: API_ROOT,
