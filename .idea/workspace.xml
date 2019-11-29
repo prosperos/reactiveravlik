@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="58f422f3-543e-4202-a106-8b4164767b9a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/.env.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +24,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="true" current-in-tab="true">
+      <file pinned="true" current-in-tab="false">
         <entry file="remoteDeploymentFS://&lt;dcfbbaa7-3f25-4849-9d31-7738efd783e2&gt;/home/applications/ravlikreact/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="462">
@@ -37,20 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="true" current-in-tab="false">
         <entry file="remoteDeploymentFS://&lt;dcfbbaa7-3f25-4849-9d31-7738efd783e2&gt;/home/applications/ravlikreact/.env.js">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="70" lean-forward="true" selection-start-column="70" selection-end-column="70" />
+              <caret column="27" lean-forward="true" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -67,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.env.js">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="49" selection-start-column="49" selection-end-column="49" />
+              <caret column="70" selection-start-column="70" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -411,18 +401,18 @@
       <workItem from="1574764623630" duration="18955000" />
       <workItem from="1574843573762" duration="19135000" />
       <workItem from="1574930616249" duration="21775000" />
-      <workItem from="1575016530159" duration="10561000" />
+      <workItem from="1575016530159" duration="10855000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="810770000" />
+    <option name="totallyTimeSpent" value="811064000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.497307" visible="true" weight="0.18923241" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.497307" visible="true" weight="0.18923241" />
       <window_info id="Structure" order="1" sideWeight="0.5007153" side_tool="true" weight="0.1748401" />
       <window_info id="npm" order="2" sideWeight="0.502693" side_tool="true" weight="0.1748401" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -443,7 +433,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="Remote Host" order="3" visible="true" weight="0.43816632" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.43816632" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
@@ -802,16 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Home/HomeBanner/HomeBanner.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="43" column="64" selection-start-line="43" selection-start-column="60" selection-end-line="43" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -863,6 +843,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Home/HomeBanner/HomeBanner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="43" column="64" selection-start-line="43" selection-start-column="60" selection-end-line="43" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="410">
@@ -876,7 +866,7 @@
     <entry file="file://$PROJECT_DIR$/.env.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="49" selection-start-column="49" selection-end-column="49" />
+          <caret column="70" selection-start-column="70" selection-end-column="70" />
         </state>
       </provider>
     </entry>
