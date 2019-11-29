@@ -1,10 +1,12 @@
 import React from 'react';
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import './Blog.scss'
+import ScrollAnimation from 'react-animate-on-scroll'
 
-const Blog = () => (
+
+const Blog = (props) => (
     <Query query={gql`
   {
         pageBy(uri: "uk/main-home") {
@@ -33,18 +35,23 @@ const Blog = () => (
                 if (loading){
                     return null;
                 }
+                const {location} = props
                 return(
                     <div className="home_blog">
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-1">
+                                    <ScrollAnimation  animateIn='fadeInLeft'>
                                     <hr/>
+                                    </ScrollAnimation>
                                 </div>
                                 <div className="col-lg-11 center-block">
-                                    <h2 className="main_title">
-                                        {data.pageBy.home.blogTitle}
-                                    </h2>
-                                    <hr/>
+                                    <ScrollAnimation animateIn='fadeIn' delay={400}>
+                                        <h2 className="main_title">
+                                            {data.pageBy.home.blogTitle}
+                                        </h2>
+                                        <hr/>
+                                    </ScrollAnimation>
                                 </div>
                                    {
                                        data.posts.edges.map(( blogItem, key) => {
@@ -54,21 +61,25 @@ const Blog = () => (
                                                return false;
                                             return(
                                                 <div className="col-lg-4" key={key}>
-                                                    <Link to={`/blog/${blogItem.node.slug}`}>
-                                                        <div className="blog-thumbnail">
-                                                            <div className="blog_img" style={{backgroundImage: `url(${blogItem.node.featuredImage.sourceUrl})`}}></div>
-                                                            <h3 className="title_blog">{blogItem.node.title}</h3>
-                                                            <p>{blogItem.node.excerpt}</p>
-                                                        </div>
-                                                    </Link>
+                                                    <ScrollAnimation  animateIn='fadeInUp' delay={700}>
+                                                        <Link to={`${location.pathname}blog/${blogItem.node.slug}`}>
+                                                            <div className="blog-thumbnail">
+                                                                <div className="blog_img" style={{backgroundImage: `url(${blogItem.node.featuredImage.sourceUrl})`}}></div>
+                                                                <h3 className="title_blog">{blogItem.node.title}</h3>
+                                                                <p>{blogItem.node.excerpt}</p>
+                                                            </div>
+                                                        </Link>
+                                                    </ScrollAnimation>
                                                 </div>
                                             )
                                         })
                                     }
                                 <div className="col-lg-12">
-                                    <div className="btn_wrapper">
-                                        <Link to={`/blog/`} className="big_button">{data.pageBy.home.blogButtonText}</Link>
-                                    </div>
+                                    <ScrollAnimation  animateIn='fadeIn' delay={750}>
+                                        <div className="btn_wrapper">
+                                            <Link to={`${location.pathname}blog/`} className="big_button">{data.pageBy.home.blogButtonText}</Link>
+                                        </div>
+                                    </ScrollAnimation>
                                 </div>
                             </div>
                         </div>
@@ -78,4 +89,4 @@ const Blog = () => (
         }
     </Query>
 )
-export default Blog;
+export default withRouter(Blog);

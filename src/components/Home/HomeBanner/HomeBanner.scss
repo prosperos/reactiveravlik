@@ -1,5 +1,6 @@
 @import './../../variables';
 .home_leaf{
+  margin-left: 65px;
   position: relative;
   &:after{
     content: '';
@@ -29,15 +30,14 @@
 .wrapper_bunner_content {
   margin-top: 25px;
   position: relative;
-  &:before{
-    content: '';
+  .bunner_line{
     background-color: $lilyWhite;
     position: absolute;
     width: 67%;
     right: 0;
     height: 415px;
     display: inline-block;
-    top: 10%;
+    top: 60px;
   }
 }
 .center_content{
@@ -54,7 +54,8 @@
   display: flex;
   margin-top: 20px;
   .banner_text{
-    width: 80%;
+    width: 93%;
+    float: right;
   }
 }
 .bg_image{
@@ -103,6 +104,7 @@
     }
   }
   .home_leaf{
+    margin-left: 0;
     &:after {
       content: '';
       background-image: url(./../../../images/home_header_leaf.png);

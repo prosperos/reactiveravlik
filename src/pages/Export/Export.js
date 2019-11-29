@@ -7,6 +7,7 @@ import ShelterMap from "../../components/Maps/Maps";
 
 import Popup from "../../components/Popup/Popup";
 import Representation from "../../components/Export/Representation/Representation";
+import Header from "../../common/Header/Header";
 
 class PureExport extends Component {
 
@@ -14,6 +15,8 @@ class PureExport extends Component {
         const { data } = this.props
         return(
             <div>
+                <Header/>
+                <div className="page-wrapper">
                 <div className="export_wrapper">
                     <div className="export_line"></div>
                     <div className="container">
@@ -34,8 +37,6 @@ class PureExport extends Component {
                     </div>
                 </div>
                 <Representation/>
-
-
                 <div className="map">
                     <ShelterMap data={data}/>
                 </div>
@@ -50,9 +51,7 @@ class PureExport extends Component {
                                 </div>
                             </div>
                             <div className="col-xl-6 order-img">
-                                <div className="partners_image" style={{backgroundImage: `url(${data.pageBy.exportMeta.partnershipImage.sourceUrl})`}}>
-
-                                </div>
+                                <div className="partners_image" style={{backgroundImage: `url(${data.pageBy.exportMeta.partnershipImage.sourceUrl})`}}></div>
                             </div>
                             <div className="col-xl-12 order-btn">
                                 <div className="partners_button">
@@ -61,6 +60,7 @@ class PureExport extends Component {
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
                 <Footer/>
             </div>
@@ -73,7 +73,7 @@ const Export = () => {
     return (
         <Query query={gql`
 {
-  pageBy(uri: "uk/eksport") {
+  pageBy(uri: "uk/export") {
     title
     content
     featuredImage {
@@ -90,7 +90,6 @@ const Export = () => {
     }
   }
 }
-
         `
         }>
             {

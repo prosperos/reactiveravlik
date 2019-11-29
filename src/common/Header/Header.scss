@@ -22,9 +22,8 @@
     }
   }
   .nav_links{
-
     a{
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       display: inline-block;
     }
     .phone,.facebook,.insta{
@@ -40,20 +39,44 @@
     }
     .phone{
       &:before{
+        transition: all 0.5s ease;
         background-image: url(./../../images/phone_black.png);
+      }
+      &:hover{
+        &:before {
+          transition: all 0.5s ease;
+          background-image: url(./../../images/phone_hover.png);
+        }
       }
     }
     .facebook{
       &:before{
         background-image: url(./../../images/fb.png);
       }
+      &:hover{
+        transition: all 0.5s ease;
+        &:before {
+          transition: all 0.5s ease;
+          background-image: url(./../../images/bf_hover.png);
+        }
+      }
     }
     .insta{
       &:before{
+        transition: all 0.5s ease;
         background-image: url(./../../images/insta.png);
+      }
+      &:hover{
+        &:before {
+          transition: all 0.5s ease;
+          background-image: url(./../../images/insta_hover.png);
+        }
       }
     }
   }
+}
+.menu_item{
+  margin-bottom: 20px;
 }
 .language{
   position: absolute;
@@ -80,6 +103,7 @@
     display: inline-block;
     width: 35px;
     text-transform: uppercase;
+    transition-duration: 0.5s;
     &:after{
       content: '';
       background-image: url(./../../images/select.png);
@@ -91,7 +115,10 @@
       margin-left: 4px;
     }
     &:hover{
+      color: #D1AD1F;
       &:after{
+        background-image: url(./../../images/select_hover.png);
+        transition-duration: 0.5s;
         transform: rotate(180deg);
       }
     }
@@ -132,6 +159,12 @@
   ul li ul li {
     clear: both;
     width: 100%;
+    a{
+      &:hover{
+        color: #D1AD1F;
+      }
+    }
+
   }
   ul li ul li.active {
     display: none;

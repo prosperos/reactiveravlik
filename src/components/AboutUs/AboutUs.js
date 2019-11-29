@@ -7,7 +7,7 @@ import './About.scss'
 const AboutUs = () => (
     <Query query={gql`
 {
-  pageBy(uri: "/uk/pro-nas") {
+  pageBy(uri: "/uk/about-us") {
     aboutUs{
       bigImage {
         sourceUrl

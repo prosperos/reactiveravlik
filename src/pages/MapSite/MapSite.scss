@@ -1,0 +1,99 @@
+.maps_site_menu {
+  margin-top: 100px;
+  &:after {
+    content: '';
+    background-image: url(./../../images/header_left_leaf.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 520px;
+    left: 0%;
+    height: 315px;
+    display: inline-block;
+    z-index: -1;
+    top: 0px;
+  }
+  &:before {
+    content: '';
+    background-image: url(./../../images/maps-leaf.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 280px;
+    right: 0;
+    height: 315px;
+    display: inline-block;
+    z-index: -1;
+    top: 350px;
+  }
+  .title_wrapper{
+    text-align: center;
+    margin-bottom: 30px;
+    h1{
+      font-size: 32px;
+    }
+  }
+}
+.map_menu_wrapper{
+  list-style: none;
+  .main-header .wrapper_logo {
+    margin-left: 65px;
+  }
+
+  .menu_item{
+    font-family: "Playfair Display";
+    font-size: 20px;
+    margin-bottom: 25px;
+    width: 50%;
+    display: inline-block;
+    a{
+      color: #747474;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .maps_site_menu {
+    margin-top: 80px;
+    .title_wrapper {
+      margin-bottom: 10px;
+    }
+  }
+  .maps_site_menu {
+    position: relative;
+    margin-bottom: 100px;
+    &:after {
+      background-image: url(./../../images/map-site-mobile-leaf.png);
+      width: 250px;
+      background-size: contain;
+      height: 185px;
+      top: -130px;
+    }
+    &:before{
+      content: '';
+      background-color: #E8F1EC;
+      position: absolute;
+      width: 310px;
+      right: 0;
+      height: 556px;
+      display: inline-block;
+      top: -9%;
+      background-image: none;
+    }
+  }
+  .map_menu_wrapper {
+    text-align: center;
+    padding-left: 0;
+    .menu_item{
+      width: 100%;
+
+    }
+  }
+  .maps_site_wrapper{
+    .main-footer{
+      &:after{
+        background-size: contain;
+      }
+    }
+  }
+}

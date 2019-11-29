@@ -1,5 +1,10 @@
 @import './../../variables';
-
+.vertical-center-block{
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
 .wrapper_production_content{
   box-shadow:  0 0 30px rgba(0, 0, 0, 0.1);
   margin-bottom: 60px;
@@ -43,6 +48,8 @@
   .vertical-center-block{
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 2;
   }
   .production_text_wpapper {
     max-width: 520px;

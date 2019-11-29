@@ -11,7 +11,6 @@ export default () => (
                 </a>
                 <div className="form_wrapper_mobile">
                     <h3>Зв'язатись з нами</h3>
-
                     <MyForm />
                 </div>
             </div>

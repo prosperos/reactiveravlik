@@ -7,11 +7,12 @@ import {
     Marker,
     InfoWindow
 } from "react-google-maps"
+import customMarker from "./../../images/maps-and-flags.png"
 
 const MapWithAMarker = compose(withScriptjs, withGoogleMap)(props => {
 
     return (
-        <GoogleMap defaultOptions={{ styles: props.styles }} defaultZoom={5} defaultCenter={{ lat: 49.976620 , lng: 24.608153 }}>
+        <GoogleMap defaultOptions={{ styles: props.styles }} defaultZoom={4} defaultCenter={{ lat: 49.976620 , lng: 24.608153 }}>
             {props.markers.map(marker => {
                 const onClick = props.onClick.bind(this, marker)
 
@@ -21,6 +22,7 @@ const MapWithAMarker = compose(withScriptjs, withGoogleMap)(props => {
                         key={marker.id}
                         onClick={onClick}
                         position={{ lat: marker.latitude, lng: marker.longitude }}
+                        icon={{ url: customMarker}}
                     >
                         {props.selectedMarker === marker &&
                         <InfoWindow>
@@ -251,7 +253,7 @@ export default class ShelterMap extends Component {
             })
     }
     handleClick = (marker, event) => {
-        // console.log({ marker })
+         //console.log( marker )
         this.setState({ selectedMarker: marker })
 
     }

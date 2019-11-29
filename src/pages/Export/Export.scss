@@ -31,7 +31,7 @@
     left: 0;
     height: 310px;
     display: inline-block;
-    top: 40%;
+    top: 30%;
   }
   .export_banner_image{
     background-size: cover;
@@ -43,6 +43,7 @@
   .title_content {
     text-align: center;
   }
+
 }
 .representation_wrapper{
   margin-top: 150px;
@@ -194,9 +195,50 @@
   .partners_button{
     text-align: center;
     margin-top: 60px;
+    button.big_button{
+      background-color: transparent;
+    }
   }
 }
+@media (min-width: 577px) {
+  .popup-content {
+    width: 370px !important;
+    border: none!important;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    padding: 0!important;
+    #form {
+      input, textarea {
+        width: 273px;
+      }
+    }
 
+    .form_wrapper_mobile {
+      margin-top: 50px;
+      h3{
+        color: #747474;
+        margin-bottom: 40px;
+      }
+    }
+  }
+  .modalMobile{
+    height: 602px;
+    box-shadow: none;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      right: -10px;
+      bottom: 0;
+      width: 120px;
+      height: 100px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(./../../images/form_leaf.png);
+    }
+  }
+}
 @media (max-width: 576px) {
   .export_wrapper {
     margin-top: 80px;

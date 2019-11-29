@@ -1,7 +1,7 @@
 .production_wrapper{
   position: relative;
   margin-top: 55px;
-
+  margin-left: 65px;
   &:before{
     content: '';
     background-color: #E8F1EC;
@@ -126,4 +126,79 @@
     left: 46%;
     transform: translate(-46%, -46%);
   }
+  .slick-arrow.slick-prev.slick-disabled{
+    &:before{
+      opacity: 0.5;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .production_wrapper{
+    margin-left: 0;
+    position: relative;
+    &:after{
+      content: '';
+      background-image: url(./../../images/mobile_leaf_products.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: inline-block;
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      left: 0;
+      top: -110px;
+    }
+    &:before{
+      top: -3%;
+      width: 268px;
+    }
+    .content_production {
+      display: block;
+      margin-top: 25px;
+      .product_text_wrapper{
+        width: 100%;
+        position: static;
+        margin-bottom: 40px;
+        p{
+          max-width: 100%;
+        }
+      }
+    }
+    .small_slider{
+      .slick-track{
+        .slick-slide{
+
+          &:first-child{
+            display: none;
+          }
+        }
+
+      }
+    }
+    .slider_item{
+      margin-left: 0;
+    }
+    .content_production{
+      margin-bottom: 110px;
+    }
+    .wrapper_info_rawlik{
+      min-height: 243px;
+    }
+    .slick-arrow{
+      bottom: -50px;
+    }
+    .slick-arrow.slick-prev{
+      left: 28%;
+    }
+    .slick-arrow.slick-prev.slick-disabled{
+      &:before{
+        opacity: 0.5;
+      }
+    }
+     .slick-next{
+      left: 64%;
+    }
+  }
+
 }

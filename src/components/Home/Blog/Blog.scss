@@ -35,6 +35,7 @@
     }
     .title_blog{
       padding: 15px 0;
+      font-size: 20px;
     }
     .title_blog, p{
       max-width: 83%;
@@ -48,6 +49,12 @@
   .btn_wrapper{
     margin-top: 70px;
   }
+  .center-block{
+    hr{
+      display: none;
+    }
+  }
+
 }
 @media (max-width: 576px) {
   .home_blog {

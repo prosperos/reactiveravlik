@@ -27,7 +27,7 @@ class ProductionItem extends React.Component{
     }
 
     get currentIndex() {
-        const { slug, locale } = this.props.match.params
+        const { slug } = this.props.match.params
 
         for (let i = 0; i < this.items.length; i++){
             let item = this.items[i];
@@ -68,7 +68,7 @@ class ProductionItem extends React.Component{
     }
 
     getItemUrl = (item) => {
-        return `/${this.props.match.params.locale}/produktsiya/${item.slug}`
+        return `/${this.props.match.params.locale}/our-products/${item.slug}`
     }
 
     render() {

@@ -20,15 +20,15 @@
   margin-top: 150px;
   margin-bottom: 150px;
   position: relative;
-  &:before{
-    content: '';
+
+  .wrapper_aboutus_line{
     background-color: #E8F1EC;
     position: absolute;
     width: 100%;
     right: 0;
     height: 305px;
     display: inline-block;
-    top: 20%;
+    top: 100px;
   }
   &:after{
     content: '';

@@ -66,7 +66,7 @@ const Representation = () => {
     return (
         <Query query={gql`
 {
-  pageBy(uri: "uk/eksport") {
+  pageBy(uri: "uk/export") {
     exportMeta{
       representationTitle
       representationCountryItems{

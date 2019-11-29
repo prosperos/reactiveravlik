@@ -2,10 +2,10 @@ import React from 'react';
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 import './HomeExport.scss'
-//import classNames from 'classnames'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
+import ScrollAnimation from 'react-animate-on-scroll'
 
-const HomeExport = () => (
+const HomeExport = (props) => (
     <Query query={gql`
 {
   pageBy(uri: "uk/main-home") {
@@ -26,24 +26,43 @@ const HomeExport = () => (
                 if (loading){
                     return null;
                 }
+
+                const {location} = props
                 return (
                     <div className="wrapper_export_content">
-                        <div className="bg_line"></div>
+                        <ScrollAnimation delay={400} animateIn='fadeInRight'>
+                            <div className="bg_line"></div>
+                        </ScrollAnimation>
                         <div className="container">
                             <div className="row">
-                                <div className="col-lg-1 hidden-xs "><hr/></div>
-                                <div className="col-lg-11 center-block"><h2>{data.pageBy.home.exportTitle}</h2><hr className="title_line"/></div>
+                                <div className="col-lg-1 hidden-xs ">
+                                    <ScrollAnimation  animateIn='fadeInLeft'>
+                                        <hr/>
+                                    </ScrollAnimation>
+                                </div>
+                                <div className="col-lg-11 center-block">
+                                    <ScrollAnimation delay={200} animateIn='fadeIn'>
+                                        <h2>{data.pageBy.home.exportTitle}</h2>
+                                    </ScrollAnimation>
+                                    <ScrollAnimation  animateIn='fadeInLeft'>
+                                        <hr className="title_line"/>
+                                    </ScrollAnimation>
+                                </div>
                                 <div className="col-lg-6 offset-0 offset-sm-1 offset-md-1 offset-lg-1 offset-xl-1 vertical-center-block">
-                                    <div className="export_text_wpapper">
-                                        <div className="export_image" style={{backgroundImage: `url(${data.pageBy.home.exportImage.sourceUrl})`}}></div>
-                                        <p>
-                                            {data.pageBy.home.exportDescription}
-                                        </p>
-                                        <Link to={`/export/`} className="small_button">{data.pageBy.home.exportButtomText}</Link>
-                                    </div>
+                                    <ScrollAnimation delay={400} animateIn='fadeIn'>
+                                        <div className="export_text_wpapper">
+                                            <div className="export_image" style={{backgroundImage: `url(${data.pageBy.home.exportImage.sourceUrl})`}}></div>
+                                            <p>
+                                                {data.pageBy.home.exportDescription}
+                                            </p>
+                                            <Link to={`${location.pathname}export`} className="small_button">{data.pageBy.home.exportButtomText}</Link>
+                                        </div>
+                                    </ScrollAnimation>
                                 </div>
                                 <div className="col-lg-4">
-                                    <div className="export_image" style={{backgroundImage: `url(${data.pageBy.home.exportImage.sourceUrl})`}}></div>
+                                    <ScrollAnimation delay={300} animateIn='fadeIn'>
+                                        <div className="export_image" style={{backgroundImage: `url(${data.pageBy.home.exportImage.sourceUrl})`}}></div>
+                                    </ScrollAnimation>
                                 </div>
                             </div>
                         </div>
@@ -53,4 +72,4 @@ const HomeExport = () => (
         }
     </Query>
 )
-export default HomeExport;
+export default withRouter(HomeExport);

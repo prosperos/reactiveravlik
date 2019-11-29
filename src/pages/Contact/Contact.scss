@@ -67,6 +67,8 @@
     .phone,.email,.address{
       position: relative;
       margin-bottom: 10px;
+      display: flex;
+      align-items: center;
       &:before {
         content: '';
         width: 25px;

@@ -1,19 +1,12 @@
 import React, { Component } from 'react';
 import { Query } from 'react-apollo';
 import  gql  from 'graphql-tag';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components'
-
+import { Link, withRouter } from 'react-router-dom';
 import './Page404.scss'
-class PurePage404 extends Component {
 
+class PurePage404 extends Component {
     render() {
         const { data } = this.props
-
-        if (data && document.querySelector('#mainMenu')) {
-            let header = document.querySelector('#mainMenu').style.display = "none";
-        }
-
         return(
             <div className="page_404">
                 <div className="container">
@@ -23,7 +16,7 @@ class PurePage404 extends Component {
                                 <img src={data.pageBy.featuredImage.sourceUrl} alt=""/>
                                 <h1>{data.pageBy.title}</h1>
                                 <p>{data.pageBy.content}</p>
-                               <Link to="/" className="big_button">{data.pageBy.page404.page404ButtonName}</Link>
+                                <Link to="/" className="big_button">{data.pageBy.page404.page404ButtonName}</Link>
                             </div>
                         </div>
                     </div>
@@ -33,7 +26,7 @@ class PurePage404 extends Component {
     }
 }
 
-const Page404 = () => {
+const Page404 = (props) => {
     return (
         <Query query={gql`
 {
@@ -55,15 +48,10 @@ const Page404 = () => {
                     if (loading) {
                         return null;
                     }
-                    if (error) {
-                        console.log(error)
-                        return
-                    }
-
-                    return <PurePage404 data={data} />
+                    return <PurePage404 data={data} {...props} />
                 }
             }
         </Query>
     )
 }
-export default Page404;
+export default withRouter(Page404);

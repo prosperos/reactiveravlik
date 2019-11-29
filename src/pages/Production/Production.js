@@ -9,6 +9,7 @@ import './Production.scss'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Footer from "../../common/Footer/Footer";
+import Header from "../../common/Header/Header";
 
 class PureProduction extends Component {
 
@@ -17,8 +18,6 @@ class PureProduction extends Component {
         this.state = {
             open: false,
         };
-
-
 
         this.settings = {
             //centerMode: true,
@@ -34,8 +33,20 @@ class PureProduction extends Component {
             speed: 500,
             slidesToShow: 3,
             slidesToScroll: 1,
-            initialSlide: 0
+            initialSlide: 0,
+            responsive: [
 
+                {
+                    breakpoint: 600,
+                    settings: {
+                        centerMode: true,
+                        centerPadding: "10px",
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },
+
+            ]
         };
     }
 
@@ -44,6 +55,7 @@ class PureProduction extends Component {
         const { data, locale } = this.props
         return(
             <div>
+                <Header/>
                 <div className="production_wrapper">
                     <div className="container-fluid">
                         <div className="row">
@@ -60,20 +72,18 @@ class PureProduction extends Component {
                                         <Link to={`/ravlik/}`}  className="slider_item first">
                                             <div className="ravlik_image"></div>
                                             <div className="wrapper_info_rawlik">
-                                                <h3></h3>
-                                                <p></p> <br/>
+
                                             </div>
                                         </Link>
                                         {
                                             data.ravliks.edges.map((ravlikItem, key) => {
                                                 return (
-                                                    <Link to={`/${locale}/produktsiya/${ravlikItem.node.slug}`} key={key}
-                                                          className="slider_item">
+                                                    <Link to={`/${locale}/our-products/${ravlikItem.node.slug}`} key={key} className="slider_item">
                                                         <div className="ravlik_image" style={{backgroundImage: `url(${ravlikItem.node.featuredImage.sourceUrl})`}}></div>
                                                         <div className="wrapper_info_rawlik">
                                                             <h3>{ravlikItem.node.title}</h3>
                                                             <p>{ravlikItem.node.content}</p>
-                                                            <Link to={`/${locale}/produktsiya/${ravlikItem.node.slug}`} className="small_button">Детальніше</Link>
+                                                            <Link to={`/${locale}/our-products/${ravlikItem.node.slug}`} className="small_button">Детальніше</Link>
                                                         </div>
                                                     </Link>
                                                 )
@@ -87,7 +97,6 @@ class PureProduction extends Component {
                 </div>
                 <Footer/>
             </div>
-
         );
     }
 }
@@ -98,7 +107,7 @@ const Production = (props) => {
     return (
         <Query query={gql`
         {
-          pageBy(uri: "/uk/produktsiya") {
+          pageBy(uri: "/uk/our-products") {
             title
             content
           }
@@ -123,11 +132,6 @@ const Production = (props) => {
                     if (loading) {
                         return null;
                     }
-                    if (error) {
-                        //console.log(error)
-                        return
-                    }
-
 
                     return <PureProduction data={data} locale={locale} />
                 }
@@ -136,6 +140,3 @@ const Production = (props) => {
     )
 }
 export default Production;
-
-//fetch("/index.php?graphql", {"credentials":"include","headers":{"accept":"application/json","accept-language":"en-US,en;q=0.9,uk;q=0.8,ru;q=0.7","content-type":"application/json","x-wp-nonce":"a295687a2e"},"referrer":"http://reactwp/wp-admin/admin.php?page=wp-graphiql%2Fwp-graphiql.php&query=%7B++ravliks%28where%3A+%7Blanguage%3A+EN%7D%29+%7B++++edges+%7B++++++node+%7B++++++++title++++++++slug++++++++ravlikMeta+%7B++++++++++amount++++++++++price++++++++%7D++++++%7D++++%7D++%7D%7D","referrerPolicy":"strict-origin-when-cross-origin","body":"{\"query\":\"{\\n  ravliks(where: {language: EN}) {\\n    edges {\\n      node {\\n        title\\n        slug\\n        ravlikMeta {\\n          amount\\n          price\\n        }\\n      }\\n    }\\n  }\\n}\\n\",\"variables\":null}","method":"POST","mode":"cors"});
-

@@ -3,16 +3,17 @@ import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 import './Contact.scss'
 //import classNames from 'classnames'
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
 import Popup from "../../components/Popup/Popup";
 import ShelterMap from "../../components/Maps/Maps";
 import Representation from "../../components/Export/Representation/Representation";
 import Footer from "../../common/Footer/Footer";
+import Header from "../../common/Header/Header";
 
 const Contact = () => (
     <Query query={gql`
 {
-  pageBy(uri: "uk/kontakty") {
+  pageBy(uri: "uk/contacts") {
   title
     contactsMeta{
         contactsPhone 
@@ -32,6 +33,8 @@ const Contact = () => (
 
                 return (
                     <div className="main_contact_wrapper">
+                        <Header/>
+                        <div className="page-wrapper">
                         <div className="wrapper_contact">
                             <div className="bg_line"></div>
                             <div className="container">
@@ -59,8 +62,8 @@ const Contact = () => (
                                </div>
                             </div>
                         </div>
-
                         <Representation/>
+                        </div>
                         <Footer/>
                     </div>
                 )

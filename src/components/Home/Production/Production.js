@@ -1,11 +1,12 @@
 import React from 'react';
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import './Production.scss'
 import classNames from 'classnames'
+import ScrollAnimation from 'react-animate-on-scroll'
 
-const Production = () => (
+const Production = (props) => (
     <Query query={gql`
   {
         pageBy(uri: "uk/main-home") {
@@ -34,18 +35,23 @@ const Production = () => (
                 if (loading){
                     return null;
                 }
-               return(
+                const {  location } = props
+                return(
                    <div className="production_ravliks">
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-1">
-                                    <hr className="hide_mobile"/>
+                                    <ScrollAnimation animateIn='fadeInLeft'>
+                                        <hr className="hide_mobile"/>
+                                    </ScrollAnimation>
                                 </div>
                                 <div className="col-lg-11 center-block">
-                                    <h2 className="main_title">
-                                        {data.pageBy.home.ourProductsTitle}
-                                    </h2>
-                                    <hr className="visible-sm"/>
+                                    <ScrollAnimation delay={200} animateIn='fadeIn'>
+                                        <h2 className="main_title">
+                                            {data.pageBy.home.ourProductsTitle}
+                                        </h2>
+                                        <hr className="visible-sm"/>
+                                    </ScrollAnimation>
                                 </div>
                             {
                                 data.ravliks.edges.map(( ravlikItem, key) => {
@@ -53,21 +59,25 @@ const Production = () => (
                                     const wrapper_item = classNames({'wrapper_item' : true, 'top_offset' : key === 1 || key === data.ravliks.edges.length-1})
                                     return(
                                         <div className={col_class} key={key}>
-                                            <div className={wrapper_item}>
-                                                <div className="ravlik_img" style={{backgroundImage: `url(${ravlikItem.node.featuredImage.sourceUrl})`}}></div>
-                                                <h3 className="info_ravlik">
-                                                    <Link to={`/ravlik/${ravlikItem.node.slug}`}>{ravlikItem.node.title}</Link>
-                                                </h3>
-                                                <p>{ravlikItem.node.content}</p>
-                                            </div>
+                                            <ScrollAnimation delay={300 * key}  animateIn='fadeIn'>
+                                                <div className={wrapper_item}>
+                                                    <div className="ravlik_img" style={{backgroundImage: `url(${ravlikItem.node.featuredImage.sourceUrl})`}}></div>
+                                                    <h3 className="info_ravlik">
+                                                        <Link to={`${location.pathname}our-products/${ravlikItem.node.slug}`}>{ravlikItem.node.title}</Link>
+                                                    </h3>
+                                                    <p>{ravlikItem.node.content}</p>
+                                                </div>
+                                            </ScrollAnimation>
                                         </div>
                                     )
                                 })
                             }
                             <div className="col-lg-12">
-                                <div className="btn_wrapper">
-                                    <Link to={`/productionua/`} className="big_button">{data.pageBy.home.ourProductsButtonText}</Link>
-                                </div>
+                                <ScrollAnimation delay={650} animateIn='fadeIn'>
+                                    <div className="btn_wrapper">
+                                        <Link to={`${location.pathname}our-products`} className="big_button">{data.pageBy.home.ourProductsButtonText}</Link>
+                                    </div>
+                                </ScrollAnimation>
                             </div>
                             </div>
                         </div>
@@ -77,4 +87,4 @@ const Production = () => (
         }
     </Query>
 )
-export default Production;
+export default  withRouter(Production);
