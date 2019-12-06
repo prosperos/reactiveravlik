@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58f422f3-543e-4202-a106-8b4164767b9a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Footer/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Footer/Footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Footer/Footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Header/Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Header/Header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AboutUs/About.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutUs/About.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AboutUs/AboutUs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutUs/AboutUs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Export/Representation/Representation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Export/Representation/Representation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/HomeBanner/HomeBanner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/HomeBanner/HomeBanner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/env.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/env.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Blog/Blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Blog/Blog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Contact/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contact/Contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Export/Export.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Export/Export.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Export/Export.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Export/Export.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Production/Production.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Production/Production.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Production/Production.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Production/Production.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Vyrobnytstvo/Vyrobnytstvo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Vyrobnytstvo/Vyrobnytstvo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Vyrobnytstvo/Vyrobnytstvo.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Vyrobnytstvo/Vyrobnytstvo.scss" afterDir="false" />
-    </list>
+    <list default="true" id="58f422f3-543e-4202-a106-8b4164767b9a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1650">
-              <caret line="124" column="48" lean-forward="true" selection-start-line="124" selection-start-column="48" selection-end-line="124" selection-end-column="48" />
+              <caret line="124" column="48" selection-start-line="124" selection-start-column="48" selection-end-line="124" selection-end-column="48" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
               </folding>
@@ -102,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/Home/HomeExport/HomeExport.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="704">
-              <caret line="32" column="23" lean-forward="true" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="77" />
+              <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="77" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -187,7 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/common/Header/components/StyledMenu.js" />
         <option value="$PROJECT_DIR$/src/common/Header/components/NavLinks.js" />
         <option value="&lt;dcfbbaa7-3f25-4849-9d31-7738efd783e2&gt;/home/applications/ravlikwp/wordpress/wp-config.php" />
         <option value="&lt;dcfbbaa7-3f25-4849-9d31-7738efd783e2&gt;/opt/nginx/conf/nginx.conf" />
@@ -238,6 +213,7 @@
         <option value="&lt;2e4352ec-471e-488c-812b-6c998c2d7577&gt;/www/bomondbeautystudio.com.ua/index.php" />
         <option value="&lt;2e4352ec-471e-488c-812b-6c998c2d7577&gt;/www/bomondbeautystudio.com.ua/js/form.js" />
         <option value="&lt;2e4352ec-471e-488c-812b-6c998c2d7577&gt;/www/bomondbeautystudio.com.ua/send.php" />
+        <option value="&lt;dcfbbaa7-3f25-4849-9d31-7738efd783e2&gt;/home/applications/ravlikreact/src/env.js" />
       </list>
     </option>
   </component>
@@ -247,7 +223,7 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-2129" />
     <option name="y" value="28" />
     <option name="width" value="1936" />
@@ -438,12 +414,12 @@
       <workItem from="1575016530159" duration="22912000" />
       <workItem from="1575275564559" duration="8496000" />
       <workItem from="1575449031905" duration="30626000" />
-      <workItem from="1575622603074" duration="13752000" />
+      <workItem from="1575622603074" duration="14648000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="875995000" />
+    <option name="totallyTimeSpent" value="876891000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2056" y="28" width="2064" height="1128" extended-state="7" />
@@ -893,7 +869,7 @@
     <entry file="file://$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1650">
-          <caret line="124" column="48" lean-forward="true" selection-start-line="124" selection-start-column="48" selection-end-line="124" selection-end-column="48" />
+          <caret line="124" column="48" selection-start-line="124" selection-start-column="48" selection-end-line="124" selection-end-column="48" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
           </folding>
@@ -903,7 +879,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/Home/HomeExport/HomeExport.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="704">
-          <caret line="32" column="23" lean-forward="true" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="77" />
+          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="77" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

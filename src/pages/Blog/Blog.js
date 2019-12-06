@@ -1,4 +1,4 @@
-import '../../../node_modules/aos/dist/aos.css';
+import aos/dist/aos.css;
 import React, { Component } from 'react';
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
