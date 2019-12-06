@@ -31,7 +31,7 @@
     left: 0;
     height: 310px;
     display: inline-block;
-    top: 30%;
+    top: 110px;
   }
   .export_banner_image{
     background-size: cover;
@@ -154,7 +154,11 @@
     top: 110px;
     height: 295px;
     display: inline-block;
-    z-index: 0;
+    z-index: 1;
+  }
+  .order-text{
+    position: relative;
+    z-index: 5;
   }
   .partner_line{
     background-color: #E8F1EC;
@@ -163,11 +167,11 @@
     left: 0;
     height: 305px;
     display: inline-block;
-    top: 25%;
+    top: 220px;
     z-index: -1;
   }
   .title_wrapper{
-    display: inline-block;
+    display: flex;
     h2{
       display: inline-block;
       margin-left: 30px;

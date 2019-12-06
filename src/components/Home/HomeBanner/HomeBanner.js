@@ -11,11 +11,11 @@ import ScrollAnimation from "react-animate-on-scroll";
 class HomeItems extends Component {
     render() {
         const { data } = this.props
-        let properties = []
+     /*   let properties = []
         for (let k in data.pageBy.home) {
             let v = data.pageBy.home[k]
             properties.push({key: k, value: v})
-        }
+        }*/
 
         const image_url = data.pageBy.home.homeBannerLogo.sourceUrl
         const banner_bg_url = {

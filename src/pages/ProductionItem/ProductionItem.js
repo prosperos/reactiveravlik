@@ -1,10 +1,14 @@
+import '../../../node_modules/aos/dist/aos.css';
 import React from 'react'
 import gql from 'graphql-tag'
 import { graphql } from 'react-apollo'
 import './ProductionItem.scss'
 import {Link} from "react-router-dom";
-import Footer from "../../common/Footer/Footer";
 import Page404 from "../Page404/Page404"
+import Header from "../../common/Header/Header";
+import AOS from 'aos';
+
+
 
 class ProductionItem extends React.Component{
 
@@ -14,7 +18,12 @@ class ProductionItem extends React.Component{
         this.state = {
             disabledNext: false,
             disabledPrev: false,
+            startAnimation: false
         }
+    }
+
+    componentDidMount() {
+        AOS.init();
     }
 
     get items() {
@@ -72,23 +81,15 @@ class ProductionItem extends React.Component{
     }
 
     render() {
-       // console.log('RENDER: slug: ', this.props.match.params.slug)
-        //console.log(this.items)
         const props = this.props;
-
-
-
-       // console.log('data', this.props.match.params);
-
         if( !props.data.ravlik){
             return <Page404/>
         }
-        //console.log('categories', props.data.ravlik.categories.edges)
         return(
             <div className="container_product">
+                <Header/>
                 <div className="wrapper_products">
                     <div className="product_content_line"></div>
-
                     <div className="product_image_line"></div>
                     <div className="product_detail_leaf_right_bottom"></div>
                     <div className="container">
@@ -98,11 +99,13 @@ class ProductionItem extends React.Component{
                             </div>
                             <div className="col-lg-6 vertical_content">
                                 <div className="content_inner">
-                                    <h1>{props.data.ravlik.title}</h1>
-                                    <hr/>
-                                    <div className="ravlik_text">
-                                        <p>{props.data.ravlik.content}</p>
-                                    </div>
+                                        <h1>{props.data.ravlik.title}</h1>
+
+                                        <hr/>
+
+                                        <div className="ravlik_text">
+                                            <p>{props.data.ravlik.content}</p>
+                                        </div>
                                 </div>
                                 <div className="product_info">
                                     <div className="innert_product_info">
@@ -132,14 +135,14 @@ class ProductionItem extends React.Component{
                                             </ul>
                                         </div>
                                     </div>
-                                    <div className="innert_product_info">
+                                    <div className="innert_product_info" data-aos="fade-left" data-aos-delay="3450">
                                         <div className="storage_conditions"><h3>{props.data.pageBy.allText.umovyZberihannya}</h3></div>
                                         <p>{props.data.ravlik.ravlikMeta.storageConditions}</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-lg-6 static_img">
-                                <div className="produtct_image" style={{backgroundImage: `url(${props.data.ravlik.featuredImage.sourceUrl})`}}></div>
+                                <div className="produtct_image" data-aos="fade-left" data-aos-delay="1450" style={{backgroundImage: `url(${props.data.ravlik.featuredImage.sourceUrl})`}}></div>
                             </div>
                             <div className="wrapper_button">
                                 <Prev url={this.getItemUrl(this.prevItem)} />
@@ -148,20 +151,32 @@ class ProductionItem extends React.Component{
                         </div>
                     </div>
                 </div>
-                <Footer/>
             </div>
         );
     }
 }
+
+const prevNextHandler = () => {
+    const aos_elements = document.querySelectorAll(".aos-init")
+    aos_elements.forEach((item) => {
+        item.classList.remove("aos-animate")
+        item.classList.remove("aos-init")
+    })
+
+    setTimeout(() => {
+        AOS.init()
+    }, 900)
+}
+
 function Prev(props) {
     return (
-        <Link to={props.url} className="prew"></Link>
+        <Link to={props.url} onClick={prevNextHandler} className="prew"></Link>
     );
 }
 
 function Next(props) {
     return (
-        <Link to={props.url} className="next"></Link>
+        <Link to={props.url} onClick={prevNextHandler} className="next"></Link>
     );
 }
 

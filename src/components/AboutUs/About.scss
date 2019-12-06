@@ -49,7 +49,7 @@
       left: 0;
       height: 310px;
       display: inline-block;
-      top: 40%;
+      top: 175px;
     }
   }
   .banner_big_image{
@@ -79,6 +79,7 @@
     justify-content: flex-end;
     position: relative;
     top: 50px;
+    text-align: center;
   }
 }
 .lets_meet{
@@ -98,6 +99,10 @@
     z-index: -1;
     top: -240px;
   }
+  .animations-top{
+    position: relative;
+    z-index: 100;
+  }
   .meet_big_image{
     position: absolute;
     background-size: cover;
@@ -107,7 +112,7 @@
     width: 778px;
     right: 0%;
     z-index: -1;
-    top: -42%;
+    top: -38%;
   }
   .wrapper_meet{
     padding: 45px;

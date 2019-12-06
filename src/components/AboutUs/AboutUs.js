@@ -3,6 +3,7 @@ import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 //import { Link } from 'react-router-dom'
 import './About.scss'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 const AboutUs = () => (
     <Query query={gql`
@@ -44,38 +45,50 @@ const AboutUs = () => (
                 return(
                     <div>
                         <div className="about_us_bunner">
-                            <div className="about_us_bg_line"></div>
+                            <ScrollAnimation animateIn='fadeInLeft' delay={750}>
+                                <div className="about_us_bg_line"></div>
+                            </ScrollAnimation>
                             <div className="container">
                                 <div className="row">
                                     <div className="col-lg-7">
-                                       <div className="banner_big_image" style={{backgroundImage: `url(${data.pageBy.aboutUs.bigImage.sourceUrl})`}}></div>
-                                       <div className="banner_small_image" style={{backgroundImage: `url(${data.pageBy.aboutUs.smallImage.sourceUrl})`}}></div>
+                                        <ScrollAnimation animateIn='fadeIn' >
+                                            <div className="banner_big_image" style={{backgroundImage: `url(${data.pageBy.aboutUs.bigImage.sourceUrl})`}}></div>
+                                        </ScrollAnimation>
+                                        <ScrollAnimation animateIn='fadeIn' delay={250}>
+                                            <div className="banner_small_image" style={{backgroundImage: `url(${data.pageBy.aboutUs.smallImage.sourceUrl})`}}></div>
+                                        </ScrollAnimation>
                                         <span className="leaf_boottom"></span>
                                     </div>
                                     <div className="col-lg-4 offset-lg-1 wrapper_text">
-                                        <h1>
-                                            {data.pageBy.aboutUs.mainBlockTitle}
-                                        </h1>
-                                        <hr/>
-                                        <p>{data.pageBy.aboutUs.mainBlockText}</p>
+                                        <ScrollAnimation animateIn='fadeInRight' delay={550}>
+                                            <h1>{data.pageBy.aboutUs.mainBlockTitle}</h1>
+                                            <hr/>
+                                            <p>{data.pageBy.aboutUs.mainBlockText}</p>
+                                        </ScrollAnimation>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="lets_meet">
-                            <div className="meet_bg_line"></div>
+                            <ScrollAnimation animateIn='fadeInRight' delay={500}>
+                                <div className="meet_bg_line"></div>
+                            </ScrollAnimation>
                             <div className="container">
                                 <div className="row">
-                                    <div className="col-lg-6">
-                                        <div className="wrapper_meet">
-                                            <h2> {data.pageBy.aboutUs.aboutUsTitle}</h2>
-                                            <hr />
-                                            <div className="meet_mobile_image" style={{backgroundImage: `url(${data.pageBy.aboutUs.aboutUsImage.sourceUrl})`}}></div>
-                                            <p> {data.pageBy.aboutUs.aboutUsText}</p>
-                                        </div>
+                                    <div className="col-lg-6 animations-top">
+                                        <ScrollAnimation animateIn='fadeInLeft' delay={250}>
+                                            <div className="wrapper_meet">
+                                                <h2> {data.pageBy.aboutUs.aboutUsTitle}</h2>
+                                                <hr />
+                                                <div className="meet_mobile_image" style={{backgroundImage: `url(${data.pageBy.aboutUs.aboutUsImage.sourceUrl})`}}></div>
+                                                <p> {data.pageBy.aboutUs.aboutUsText}</p>
+                                            </div>
+                                        </ScrollAnimation>
                                     </div>
                                     <div className="col-lg-6">
-                                        <div className="meet_big_image" style={{backgroundImage: `url(${data.pageBy.aboutUs.aboutUsImage.sourceUrl})`}}></div>
+                                        <ScrollAnimation animateIn='fadeIn' >
+                                            <div className="meet_big_image" style={{backgroundImage: `url(${data.pageBy.aboutUs.aboutUsImage.sourceUrl})`}}></div>
+                                        </ScrollAnimation>
                                     </div>
                                 </div>
                             </div>
@@ -85,18 +98,24 @@ const AboutUs = () => (
                             <div className="container-fluid">
                                 <div className="row">
                                     <div className="col-xl-3">
-                                        <div className="left_image" style={{backgroundImage: `url(${data.pageBy.aboutUs.eatDelicaciesLeftImage.sourceUrl})`}}></div>
+                                        <ScrollAnimation animateIn='fadeInRight' delay={250}>
+                                            <div className="left_image" style={{backgroundImage: `url(${data.pageBy.aboutUs.eatDelicaciesLeftImage.sourceUrl})`}}></div>
+                                        </ScrollAnimation>
                                     </div>
                                     <div className="col-xl-6">
-                                        <div className="delicacies_wrapper_text">
-                                            <h2> {data.pageBy.aboutUs.eatDelicaciesTitle}</h2>
-                                            <hr />
-                                            <div className="left_image_mobile" style={{backgroundImage: `url(${data.pageBy.aboutUs.eatDelicaciesLeftImage.sourceUrl})`}}></div>
-                                            <p> {data.pageBy.aboutUs.eatDelicaciesText}</p>
-                                        </div>
+                                        <ScrollAnimation animateIn='fadeIn' delay={100}>
+                                            <div className="delicacies_wrapper_text">
+                                                <h2> {data.pageBy.aboutUs.eatDelicaciesTitle}</h2>
+                                                <hr />
+                                                <div className="left_image_mobile" style={{backgroundImage: `url(${data.pageBy.aboutUs.eatDelicaciesLeftImage.sourceUrl})`}}></div>
+                                                <p> {data.pageBy.aboutUs.eatDelicaciesText}</p>
+                                            </div>
+                                        </ScrollAnimation>
                                     </div>
                                     <div className="col-xl-3">
-                                        <div className="right_image" style={{backgroundImage: `url(${data.pageBy.aboutUs.bigImage.sourceUrl})`}}></div>
+                                        <ScrollAnimation animateIn='fadeInLeft' delay={250}>
+                                            <div className="right_image" style={{backgroundImage: `url(${data.pageBy.aboutUs.bigImage.sourceUrl})`}}></div>
+                                        </ScrollAnimation>
                                     </div>
                                 </div>
                             </div>

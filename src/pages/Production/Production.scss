@@ -79,12 +79,23 @@
     }
   }
   .product_text_wrapper.full_text{
-    bottom: -70%;
+    bottom: -60%;
     transition: 1s ease-in-out;
   }
 
   .small_slider {
     width: 100%;
+    .move_buttom{
+      position: absolute;
+      left: 46%;
+      transform: translate(-46%, -46%);
+      bottom: 0px;
+    }
+    .move_buttom_left{
+      left: 55%;
+      bottom: 0px;
+      position: absolute;
+    }
   }
   .small_slider.full_slider{
     width: 100%;

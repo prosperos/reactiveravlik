@@ -1,16 +1,27 @@
+import '../../../node_modules/aos/dist/aos.css';
 import React, { Component } from 'react';
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 import { Link } from 'react-router-dom'
 import './Blog.scss'
-//import  "bootstrap/scss/bootstrap.scss"
 import classnames from 'classnames'
 import Footer from "../../common/Footer/Footer";
 import Header from "../../common/Header/Header";
+import AOS from 'aos';
+
 
 const dateFormat = require('dateformat')
 
 class PureBlog extends Component {
+
+    constructor(props, context) {
+        super(props, context);
+        AOS.init();
+    }
+
+    componentWillReceiveProps (){
+        AOS.refresh();
+    }
     state = {
         list:  [],
         page: 0,
@@ -56,10 +67,10 @@ class PureBlog extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-1">
-                            <hr/>
+                            <hr data-aos="fade-in-left" data-aos-delay="50"/>
                         </div>
                         <div className="col-lg-11 center-block">
-                            <h2 className="main_title">Блог</h2>
+                            <h2 data-aos="fade-in" data-aos-delay="150" className="main_title">Блог</h2>
                         </div>
 
                         <div className="col-lg-12 center-block">
@@ -71,7 +82,7 @@ class PureBlog extends Component {
                                         const finalDate = dateFormat(newDate, "dd.mm.yyyy" );
                                         return(
                                             <div className="col-lg-10 offset-lg-1 col-xl-10 offset-xl-1 col-sm-10 offset-sm-1" key={key}>
-                                                <Link className="wrapper_article" to={`/${locale}/blog/${blogItem.node.slug}`}>
+                                                <Link data-aos="fade-in" data-aos-delay="550" className="wrapper_article" to={`/${locale}/blog/${blogItem.node.slug}`}>
                                                     <div className="blog-thumbnail">
                                                         <div className="blog_img" style={{backgroundImage: `url(${blogItem.node.featuredImage.sourceUrl})`}}></div>
 
@@ -90,7 +101,7 @@ class PureBlog extends Component {
                             </div>
                             <div className="row">
                                 <div className="col-lg-12">
-                                    <div className={'pagination'}>
+                                    <div className={'pagination'}  data-aos="fade-in" data-aos-delay="750">
                                         <span className="prew" onClick={() =>this.changePage(0)} ></span>
                                         {this.pagination}
                                         <span className="last" onClick={() =>this.changePage(Math.floor(data.posts.edges.length / this.state.pageSize))} ></span>
@@ -140,7 +151,6 @@ const Blog = (props) => {
                 if (loading){
                     return null;
                 }
-                console.log("blog",props)
                 return <PureBlog data={data} locale={locale} />
 
             }

@@ -25,14 +25,16 @@
     height: 421px;
     position: absolute;
   }
+  .main-link-footer{
+    margin-left: 55px;
+  }
   .footer_logo{
     background-image: url(./../../images/logo.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position:center;
-    width: 100%;
+    width: 172px;
     height: 115px;
-    margin-bottom: 30px;
   }
   a{
     display: inline-block;
