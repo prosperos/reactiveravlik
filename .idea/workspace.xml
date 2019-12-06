@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58f422f3-543e-4202-a106-8b4164767b9a" name="Default Changelist" comment="" />
+    <list default="true" id="58f422f3-543e-4202-a106-8b4164767b9a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Blog/Blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Blog/Blog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Contact/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contact/Contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,8 +83,24 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Home/HomeExport/HomeExport.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="77" />
+            <state relative-caret-position="440">
+              <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;dcfbbaa7-3f25-4849-9d31-7738efd783e2&gt;/home/applications/ravlikreact/env.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;dcfbbaa7-3f25-4849-9d31-7738efd783e2&gt;/home/applications/ravlikreact/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -111,7 +133,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Link to=</find>
       <find>lets_meet</find>
       <find>meet_big_image</find>
       <find>delicacies_wrapper_text</find>
@@ -141,6 +162,7 @@
       <find>setState</find>
       <find>ter</find>
       <find>.button</find>
+      <find>import aos/dist/aos.css</find>
     </findStrings>
     <replaceStrings>
       <replace>Показать все</replace>
@@ -191,8 +213,6 @@
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/pages/Production/Production.js" />
         <option value="$PROJECT_DIR$/src/pages/Production/Production.scss" />
-        <option value="$PROJECT_DIR$/src/pages/Blog/Blog.js" />
-        <option value="$PROJECT_DIR$/src/pages/Contact/Contact.js" />
         <option value="$PROJECT_DIR$/src/common/Footer/Footer.scss" />
         <option value="$PROJECT_DIR$/src/common/Footer/Footer.js" />
         <option value="$PROJECT_DIR$/src/components/AboutUs/AboutUs.js" />
@@ -209,11 +229,13 @@
         <option value="&lt;2e4352ec-471e-488c-812b-6c998c2d7577&gt;/www/bomondbeautystudio.com.ua/css/style.css" />
         <option value="&lt;3995c468-e634-4bea-adad-4d2e4803a90b&gt;/var/www/instabox/wp-content/themes/novo/functions.php" />
         <option value="&lt;3995c468-e634-4bea-adad-4d2e4803a90b&gt;/var/www/instabox/wp-includes/post.php" />
-        <option value="$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.js" />
         <option value="&lt;2e4352ec-471e-488c-812b-6c998c2d7577&gt;/www/bomondbeautystudio.com.ua/index.php" />
         <option value="&lt;2e4352ec-471e-488c-812b-6c998c2d7577&gt;/www/bomondbeautystudio.com.ua/js/form.js" />
         <option value="&lt;2e4352ec-471e-488c-812b-6c998c2d7577&gt;/www/bomondbeautystudio.com.ua/send.php" />
         <option value="&lt;dcfbbaa7-3f25-4849-9d31-7738efd783e2&gt;/home/applications/ravlikreact/src/env.js" />
+        <option value="$PROJECT_DIR$/src/pages/Blog/Blog.js" />
+        <option value="$PROJECT_DIR$/src/pages/Contact/Contact.js" />
+        <option value="$PROJECT_DIR$/src/pages/ProductionItem/ProductionItem.js" />
       </list>
     </option>
   </component>
@@ -414,16 +436,15 @@
       <workItem from="1575016530159" duration="22912000" />
       <workItem from="1575275564559" duration="8496000" />
       <workItem from="1575449031905" duration="30626000" />
-      <workItem from="1575622603074" duration="14648000" />
+      <workItem from="1575622603074" duration="15456000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="876891000" />
+    <option name="totallyTimeSpent" value="877699000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2056" y="28" width="2064" height="1128" extended-state="7" />
-    <editor active="true" />
+    <frame x="-2056" y="28" width="2064" height="1128" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4966443" visible="true" weight="0.19111776" />
       <window_info id="Structure" order="1" sideWeight="0.5007153" side_tool="true" weight="0.1748401" />
@@ -441,12 +462,12 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.3873442" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.40703517" />
       <window_info anchor="bottom" id="File Transfer" order="13" weight="0.32885906" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="Remote Host" order="3" visible="true" weight="0.29241517" />
+      <window_info anchor="right" id="Remote Host" order="3" visible="true" weight="0.29241517" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
@@ -878,8 +899,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Home/HomeExport/HomeExport.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="77" />
+        <state relative-caret-position="440">
+          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
