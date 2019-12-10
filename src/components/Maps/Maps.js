@@ -12,7 +12,7 @@ import customMarker from "./../../images/maps-and-flags.png"
 const MapWithAMarker = compose(withScriptjs, withGoogleMap)(props => {
 
     return (
-        <GoogleMap defaultOptions={{ styles: props.styles }} defaultZoom={4} defaultCenter={{ lat: 49.976620 , lng: 24.608153 }}>
+        <GoogleMap defaultOptions={{ styles: props.styles }} defaultZoom={4} defaultCenter={{ lat: 48.711142 , lng: 13.718709 }}>
             {props.markers.map(marker => {
                 const onClick = props.onClick.bind(this, marker)
 

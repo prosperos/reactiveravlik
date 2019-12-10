@@ -6,7 +6,7 @@ import './Footer.scss'
 import MyForm from "../../components/Form/Form";
 import Popup from "../../components/Popup/Popup";
 import ScrollAnimation from 'react-animate-on-scroll'
-import AOS from "aos";
+
 
 
 class AnimateFooter extends Component {
@@ -57,35 +57,34 @@ class AnimateFooter extends Component {
                             <div className="row wrapper_bootom">
                                 <div className="col-lg-2 col-6">
                                     <div className="footer_content">
-                                        <p>© 2019 ТзОВ "Rue des escargots"</p>
+                                        <p>{data.pageBy.footer.copyrightC}</p>
                                     </div>
                                 </div>
                                 <div className="col-lg-2 col-6">
                                     <div className="footer_content">
-                                        <Link to="/polityka-konfidentsiynosti/" className="footer_copyright">
-                                            Політика конфіденсійності
+                                        <Link to="/privacy-policy/" className="footer_copyright">
+                                            {data.pageBy.footer.copyrightPrivacyPolicyNameButton}
                                         </Link>
                                     </div>
                                 </div>
                                 <div className="col-lg-2 col-6 ">
                                     <div className="footer_content">
                                         <Link to="/cookies/" className="footer_copyright">
-                                            Використання cookies
+                                            {data.pageBy.footer.copyrightCookies}
                                         </Link>
                                     </div>
                                 </div>
                                 <div className="col-lg-2 col-6">
                                     <div className="footer_content">
                                         <Link to="/maps-site/" className="footer_copyright">
-                                            Карта сайту
+                                            {data.pageBy.footer.copyrightMapsSiteName}
                                         </Link>
                                     </div>
                                 </div>
                                 <div className="offset-1 col-6 col-lg-2 offset-xs-0 offset-md-2  offset-xl-2">
                                     <div className="footer_content link">
-                                        <Link to="http://voroninstudio.eu/" className="footer_copyright">
-                                            Розроблено у VORONIN STUDIO
-                                            2019
+                                        <Link to="https://voroninstudio.eu/" className="footer_copyright">
+                                            {data.pageBy.footer.copyrightDevelopedBy}
                                         </Link>
                                     </div>
                                 </div>
@@ -109,6 +108,11 @@ const Footer = (props) => {
           location
           contactTitle
           contactButtonName
+          copyrightC
+          copyrightPrivacyPolicyNameButton
+          copyrightCookies
+          copyrightMapsSiteName
+          copyrightDevelopedBy
         }
       }
     }

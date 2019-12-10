@@ -58,6 +58,15 @@
     display: none;
   }
 }
+.home_leaf{
+  .align-button {
+    display: none;
+  }
+}
+.align-button {
+  text-align: center;
+  margin-top: 50px;
+}
 @media (max-width: 576px) {
   .wrapper_production_content{
     padding-top: 45px;

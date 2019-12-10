@@ -51,7 +51,6 @@ class PureRepresentation extends Component {
                                             )
                                         })
                                     }
-
                                 </div>
                             </div>
                         </div>
@@ -81,7 +80,6 @@ const Representation = () => {
     }
   }
 }
-
         `
         }>
             {

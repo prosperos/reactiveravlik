@@ -89,8 +89,8 @@ class ProductionItem extends React.Component{
             <div className="container_product">
                 <Header/>
                 <div className="wrapper_products">
-                    <div className="product_content_line"></div>
-                    <div className="product_image_line"></div>
+                    <div className="product_content_line" data-aos="fade-left" data-aos-delay="350"></div>
+                    <div className="product_image_line" data-aos="fade-in" data-aos-delay="750"></div>
                     <div className="product_detail_leaf_right_bottom"></div>
                     <div className="container">
                         <div className="row">
@@ -99,15 +99,13 @@ class ProductionItem extends React.Component{
                             </div>
                             <div className="col-lg-6 vertical_content">
                                 <div className="content_inner">
-                                        <h1>{props.data.ravlik.title}</h1>
-
-                                        <hr/>
-
-                                        <div className="ravlik_text">
-                                            <p>{props.data.ravlik.content}</p>
-                                        </div>
+                                    <h1  data-aos="fade-in" data-aos-delay="50">{props.data.ravlik.title}</h1>
+                                    <hr  data-aos="fade-right" data-aos-delay="150"/>
+                                    <div className="ravlik_text" data-aos="fade-in" data-aos-delay="350">
+                                        <p>{props.data.ravlik.content}</p>
+                                    </div>
                                 </div>
-                                <div className="product_info">
+                                <div className="product_info" data-aos="fade-left" data-aos-delay="350">
                                     <div className="innert_product_info">
                                         <div className="category_title"><h3>{props.data.pageBy.allText.category}</h3></div>
                                         <div className="wrapper_category_items">
@@ -135,19 +133,22 @@ class ProductionItem extends React.Component{
                                             </ul>
                                         </div>
                                     </div>
-                                    <div className="innert_product_info" data-aos="fade-left" data-aos-delay="3450">
+                                    <div className="innert_product_info">
                                         <div className="storage_conditions"><h3>{props.data.pageBy.allText.umovyZberihannya}</h3></div>
                                         <p>{props.data.ravlik.ravlikMeta.storageConditions}</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-lg-6 static_img">
-                                <div className="produtct_image" data-aos="fade-left" data-aos-delay="1450" style={{backgroundImage: `url(${props.data.ravlik.featuredImage.sourceUrl})`}}></div>
+                                <div className="produtct_image" data-aos="fade-left" data-aos-delay="550" style={{backgroundImage: `url(${props.data.ravlik.featuredImage.sourceUrl})`}}></div>
                             </div>
-                            <div className="wrapper_button">
-                                <Prev url={this.getItemUrl(this.prevItem)} />
-                                <Next url={this.getItemUrl(this.nextItem)} />
-                            </div>
+
+                        </div>
+                    </div>
+                    <div className="full_height_wrapper" data-aos="fade-in" data-aos-delay="950">
+                        <div className="wrapper_button"  >
+                            <Prev url={this.getItemUrl(this.prevItem)} />
+                            <Next url={this.getItemUrl(this.nextItem)} />
                         </div>
                     </div>
                 </div>

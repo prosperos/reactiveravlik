@@ -30,7 +30,7 @@ function App() {
   return (
       <ApolloProvider client={client}>
         <BrowserRouter>
-          <div>
+          <>
 
             <div className="content">
               <Switch>
@@ -43,13 +43,13 @@ function App() {
                 <Route exact path={`${LOCALE_PARAM}/blog/`} component={Blog} />
                 <Route exact path={`${LOCALE_PARAM}/blog/:slug`} component={BlogDetail} />
                 <Route exact path={`${LOCALE_PARAM}/contacts/`} component={Contact} />
-                <Route exact path={`${LOCALE_PARAM}/karta-sajtu/`} component={MapSite} />
+                <Route exact path={`${LOCALE_PARAM}/maps-site/`} component={MapSite} />
                 <Route exact path={`${LOCALE_PARAM}/political-confidentiality/`} component={PoliticalConfidentiality} />
                 <Route  path={`${LOCALE_PARAM}`} component={Page404} />
                 {/*<Route component={Page404} />*/}
               </Switch>
             </div>
-          </div>
+          </>
 
         </BrowserRouter>
       </ApolloProvider>

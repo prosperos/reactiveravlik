@@ -31,6 +31,22 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="ftp.cluster021.hosting.ovh.net">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$/../enduro" web="/" />
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="ftp.cluster026.hosting.ovh.net">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$/../enduro" web="/" />
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="voronin@eventindustry.com.ua">
         <serverdata>
           <mappings>

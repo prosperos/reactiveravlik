@@ -40,6 +40,7 @@ class Form extends Component {
 
     validateTel(tel){
         const re = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/
+
         return re.test(tel)
     }
 
@@ -47,7 +48,10 @@ class Form extends Component {
         const tel = e.target.value
         //console.log('handletelChange: ', tel)
         const telValid = this.validateTel(tel)
-
+        if (telValid){
+            this.setState({label_show_phone: true})
+        }
+        console.log('telValid', telValid)
         this.setState({
             tel: tel,
             telValid: telValid
@@ -64,16 +68,21 @@ class Form extends Component {
 
     onInputBlurPhone = (e) => {
         this.setState({label_show_phone: false})
+
     }
     onInputFocusPhone = (e) => {
         this.setState({label_show_phone: true})
     }
+
+
     onInputBlurComment = (e) => {
         this.setState({label_show_comment: false})
     }
     onInputFocusComment = (e) => {
         this.setState({label_show_comment: true})
     }
+
+
     onInputBlurName = (e) => {
         this.setState({label_show_name: false})
     }

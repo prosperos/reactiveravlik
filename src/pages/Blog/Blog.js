@@ -47,7 +47,6 @@ class PureBlog extends Component {
     }
 
     get page() {
-
         const list = this.props.data.posts.edges;
         const {  page, pageSize } = this.state;
         return list.slice(page * pageSize, (page + 1) * pageSize);

@@ -4,10 +4,10 @@ import gql from 'graphql-tag'
 import './MapSite.scss'
 //import classNames from 'classnames'
 import Footer from "../../common/Footer/Footer";
-import {Link} from "react-router-dom";
+import {Link, withRouter} from "react-router-dom";
 import Header from "../../common/Header/Header";
 
-const MapSite = () => (
+const MapSite = (props) => (
     <Query query={gql`
 {
   pageBy(uri: "uk/karta-sajtu") {
@@ -31,7 +31,9 @@ const MapSite = () => (
                 if (loading){
                     return null;
                 }
+                //console.log('map',props)
                 let array = data.menus.nodes[0].menuItems.nodes;
+                const location = props.match.params.locale
                 return (
                     <div className="maps_site_wrapper">
                         <Header/>
@@ -49,7 +51,7 @@ const MapSite = () => (
                                             const url = new URL(s).pathname
                                             return(
                                                 <li className='menu_item' key={idx}>
-                                                    <Link to={url}>{item.label}</Link>
+                                                    <a href={`${ url} `}>{item.label}</a>
                                                 </li>
                                             )
                                         })}
@@ -58,7 +60,6 @@ const MapSite = () => (
                                 </div>
                             </div>
                         </div>
-
                         <Footer/>
                     </div>
                 )
@@ -66,4 +67,4 @@ const MapSite = () => (
         }
     </Query>
 )
-export default MapSite;
+export default withRouter( MapSite );
