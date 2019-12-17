@@ -39,8 +39,7 @@ class Form extends Component {
     }
 
     validateTel(tel){
-        const re = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/
-
+        const re = /^(()?\d{3}())?(-|\s)?\d{3}(-|\s)?\d{4}$/
         return re.test(tel)
     }
 
@@ -67,8 +66,8 @@ class Form extends Component {
 
 
     onInputBlurPhone = (e) => {
+        const valid = this.validateTel(e.target.value)
         this.setState({label_show_phone: false})
-
     }
     onInputFocusPhone = (e) => {
         this.setState({label_show_phone: true})

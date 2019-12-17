@@ -19,7 +19,16 @@ class HeaderMain extends React.Component{
     render() {
         const { data, currentLocale, location, match } = this.props
         const Menu = ({ open, location }) => {
-            let array = data.menus.nodes[0].menuItems.nodes;
+
+
+            let array = ''
+            if (this.props.match.params.locale === "uk") {
+                 array = data.menus.nodes[0].menuItems.nodes;
+            } else if (this.props.match.params.locale === "fr") {
+                 array = data.menus.nodes[1].menuItems.nodes;
+            } else if (this.props.match.params.locale === undefined) {
+                 array = data.menus.nodes[2].menuItems.nodes;
+            }
 
             return (
                 <StyledMenu open={open}>
@@ -35,7 +44,7 @@ class HeaderMain extends React.Component{
                                                 const active = locale === currentLocale
                                                 const locale_param = locale === DEFAULT_LOCALE ? undefined : locale
                                                 //const url = '/' + location.pathname.split('/').map((s, i) => i === 1 ? locale_param : s ).filter((param) => param && param.length).join('/')
-                                              const url = generatePath(match.path, {
+                                                const url = generatePath(match.path, {
                                                     ...match.params,
                                                     locale: locale_param
                                                 });
@@ -172,7 +181,9 @@ const Header = (props) => {
         }
       }
     }
-    
+
+
+
         `
         }>
             {
@@ -181,7 +192,6 @@ const Header = (props) => {
                         return null;
                     }
                     return <HeaderMain data={data} currentLocale={currentLocale} {...props} />
-
                 }
             }
         </Query>

@@ -6,14 +6,14 @@ import './Vyrobnytstvo.scss';
 import Footer from "../../common/Footer/Footer"
 import Header from "../../common/Header/Header"
 import ScrollAnimation from 'react-animate-on-scroll'
-
+import {  withRouter } from 'react-router-dom'
 
 class PureVyrobnytstvo extends Component {
 
     render() {
         const { data } = this.props
         return(
-            <div>
+            <>
                 <Header/>
                 <div className="page-wrapper">
                     <div className="vyrobnytstvo_wrapper">
@@ -121,17 +121,27 @@ class PureVyrobnytstvo extends Component {
                     </div>
                 </div>
                 <Footer/>
-            </div>
-
+            </>
         );
     }
 }
 
-const Vyrobnytstvo = () => {
+const Vyrobnytstvo = (props) => {
+
+    let locale = ''
+    if (props.match.params.locale === "uk") {
+        locale = "uk/production"
+    } else if (props.match.params.locale === "fr") {
+        locale = "production-fr/"
+    } else if (props.match.params.locale === undefined) {
+        locale = "production-en/"
+    }
+    const locale_url_prefix = locale ? '/' + locale : ''
+
     return (
         <Query query={gql`
     {
-  pageBy(uri: "uk/production") {
+  pageBy(uri: "${locale_url_prefix}") {
     title
     content
     featuredImage{
@@ -166,15 +176,10 @@ const Vyrobnytstvo = () => {
                     if (loading) {
                         return null;
                     }
-                    if (error) {
-                        console.log(error)
-                        return
-                    }
-
                     return <PureVyrobnytstvo data={data} />
                 }
             }
         </Query>
     )
 }
-export default Vyrobnytstvo;
+export default withRouter(Vyrobnytstvo);

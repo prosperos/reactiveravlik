@@ -8,13 +8,13 @@ import Popup from "../../components/Popup/Popup";
 import Representation from "../../components/Export/Representation/Representation";
 import Header from "../../common/Header/Header";
 import ScrollAnimation from 'react-animate-on-scroll'
-
+import {  withRouter } from 'react-router-dom'
 class PureExport extends Component {
 
     render() {
         const { data } = this.props
         return(
-            <div>
+            <>
                 <Header/>
                 <div className="page-wrapper">
                 <div className="export_wrapper">
@@ -29,19 +29,17 @@ class PureExport extends Component {
                                 </ScrollAnimation>
                             </div>
                             <div className="col-xl-4 aling-center">
-
-                                    <div className="title_content">
-                                        <ScrollAnimation delay={250} animateIn='fadeIn'>
-                                            <h1>{data.pageBy.title}</h1>
-                                        </ScrollAnimation>
-                                        <ScrollAnimation delay={50} animateIn='fadeInRight'>
-                                            <hr/>
-                                        </ScrollAnimation>
-                                        <ScrollAnimation delay={450} animateIn='fadeIn'>
-                                            <p>{data.pageBy.content}</p>
-                                        </ScrollAnimation>
-                                    </div>
-
+                                <div className="title_content">
+                                    <ScrollAnimation delay={250} animateIn='fadeIn'>
+                                        <h1>{data.pageBy.title}</h1>
+                                    </ScrollAnimation>
+                                    <ScrollAnimation delay={50} animateIn='fadeInRight'>
+                                        <hr/>
+                                    </ScrollAnimation>
+                                    <ScrollAnimation delay={450} animateIn='fadeIn'>
+                                        <p>{data.pageBy.content}</p>
+                                    </ScrollAnimation>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -79,35 +77,44 @@ class PureExport extends Component {
                                 </ScrollAnimation>
                             </div>
                             <div className="col-xl-12 order-btn">
-                                <ScrollAnimation delay={600} animateIn='fadeIn'>
+                                {/*<ScrollAnimation delay={600} animateIn='fadeIn'>*/}
                                     <div className="partners_button">
                                         <Popup/>
                                     </div>
-                                </ScrollAnimation>
+                                {/*</ScrollAnimation>*/}
                             </div>
                         </div>
                     </div>
                 </div>
                 </div>
                 <Footer/>
-            </div>
+            </>
 
         );
     }
 }
 
-const Export = () => {
+const Export = ( props) => {
+
+    let locales = ''
+    if (props.match.params.locale === "uk"){
+        locales = props.match.params.locale + "/export"
+    }else if(props.match.params.locale === "fr"){
+        locales =  "eksport-fr/"
+    }else if(props.match.params.locale === undefined){
+        locales =  "eksport-en/"
+    }
+    const locales_url_prefix = locales ? '/' + locales : ''
     return (
         <Query query={gql`
 {
-  pageBy(uri: "uk/export") {
+  pageBy(uri: "${locales_url_prefix}") {
     title
     content
     featuredImage {
       sourceUrl
     }
     exportMeta{
-   
       partnershipTitle
       partnershipText
       partnershipImage{
@@ -124,15 +131,10 @@ const Export = () => {
                     if (loading) {
                         return null;
                     }
-                    if (error) {
-                        console.log(error)
-                        return
-                    }
-
                     return <PureExport data={data} />
                 }
             }
         </Query>
     )
 }
-export default Export;
+export default withRouter( Export );

@@ -13,7 +13,15 @@ class AnimateFooter extends Component {
 
     render() {
         const {data, match} = this.props
-        console.log(match.params.locale)
+        let locale = ''
+        if (match.params.locale === undefined){
+             locale = '';
+        } else {
+             locale = match.params.locale
+        }
+
+        const locale_url_prefix = locale ? '/' + locale : ''
+
         return(
                 <footer className="main-footer">
                     <div className="container">
@@ -62,30 +70,30 @@ class AnimateFooter extends Component {
                                 </div>
                                 <div className="col-lg-2 col-6">
                                     <div className="footer_content">
-                                        <Link to="/privacy-policy/" className="footer_copyright">
+                                        <Link to={`${locale_url_prefix}/privacy-policy/`}  className="footer_copyright">
                                             {data.pageBy.footer.copyrightPrivacyPolicyNameButton}
                                         </Link>
                                     </div>
                                 </div>
                                 <div className="col-lg-2 col-6 ">
                                     <div className="footer_content">
-                                        <Link to="/cookies/" className="footer_copyright">
+                                        <Link to={`${locale_url_prefix}/cookies/`} className="footer_copyright">
                                             {data.pageBy.footer.copyrightCookies}
                                         </Link>
                                     </div>
                                 </div>
                                 <div className="col-lg-2 col-6">
                                     <div className="footer_content">
-                                        <Link to="/maps-site/" className="footer_copyright">
+                                        <Link to={`${locale_url_prefix}/maps-site/`} className="footer_copyright">
                                             {data.pageBy.footer.copyrightMapsSiteName}
                                         </Link>
                                     </div>
                                 </div>
                                 <div className="offset-1 col-6 col-lg-2 offset-xs-0 offset-md-2  offset-xl-2">
                                     <div className="footer_content link">
-                                        <Link to="https://voroninstudio.eu/" className="footer_copyright">
+                                        <a href="https://voroninstudio.eu/" rel="nofollow" className="footer_copyright">
                                             {data.pageBy.footer.copyrightDevelopedBy}
-                                        </Link>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
-import './PoliticalConfidentiality.scss'
+import './Cookies.scss'
 import Footer from "../../common/Footer/Footer";
 import Header from "../../common/Header/Header";
 import ReactHtmlParser from 'react-html-parser'
@@ -15,10 +15,10 @@ class HtmlComponent extends React.Component {
 }
 
 
-const PoliticalConfidentiality = () => (
+const Cookies = () => (
     <Query query={gql`
 {
-  pageBy(uri: "political") {
+  pageBy(uri: "uk/cookies") {
     title
     content
   }
@@ -32,9 +32,9 @@ const PoliticalConfidentiality = () => (
                 }
                 console.log(data)
                 return (
-                    <div className="political_wrapper">
+                    <div className="сookies_wrapper">
                         <Header/>
-                        <div className="political_inner">
+                        <div className="сookies_inner">
                             <div className="container">
                                 <div className="row">
                                     <div className="col-lg-12">
@@ -59,4 +59,4 @@ const PoliticalConfidentiality = () => (
         }
     </Query>
 )
-export default PoliticalConfidentiality;
+export default Cookies;

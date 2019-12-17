@@ -15,6 +15,7 @@ import BlogDetail from './pages/BlogDetail/BlogDetail'
 import Contact from './pages/Contact/Contact'
 import Page404 from './pages/Page404/Page404'
 import MapSite from './pages/MapSite/MapSite'
+import UseCookies from './pages/UseCookies/UseCookies'
 import PoliticalConfidentiality from "./pages/PoliticalConfidentiality/PoliticalConfidentiality";
 import { LOCALES, DEFAULT_LOCALE } from "./constants";
 import {API_ROOT} from "./env"
@@ -44,7 +45,8 @@ function App() {
                 <Route exact path={`${LOCALE_PARAM}/blog/:slug`} component={BlogDetail} />
                 <Route exact path={`${LOCALE_PARAM}/contacts/`} component={Contact} />
                 <Route exact path={`${LOCALE_PARAM}/maps-site/`} component={MapSite} />
-                <Route exact path={`${LOCALE_PARAM}/political-confidentiality/`} component={PoliticalConfidentiality} />
+                <Route exact path={`${LOCALE_PARAM}/privacy-policy/`} component={PoliticalConfidentiality} />
+                <Route exact path={`${LOCALE_PARAM}/cookies/`} component={UseCookies} />
                 <Route  path={`${LOCALE_PARAM}`} component={Page404} />
                 {/*<Route component={Page404} />*/}
               </Switch>

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Query } from 'react-apollo'
 import  gql  from 'graphql-tag'
-
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import Slider from "react-slick"
 import classNames from 'classnames'
 import './Production.scss'
@@ -12,14 +11,11 @@ import Footer from "../../common/Footer/Footer";
 import Header from "../../common/Header/Header";
 import ScrollAnimation from 'react-animate-on-scroll'
 
-
-
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
-
         <div className="move_buttom_left" >
-            <ScrollAnimation animateIn='fadeIn' delay={500}>
+            <ScrollAnimation animateIn='fadeIn' delay={2300}>
                 <div
                     className={className}
                     style={{ ...style, display: "block" }}
@@ -27,18 +23,15 @@ function SampleNextArrow(props) {
                 />
             </ScrollAnimation>
         </div>
-
     );
 }
 function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
-
         <div className="move_buttom" >
-        <ScrollAnimation animateIn='fadeIn' delay={500}>
-            <button className={className} style={{ ...style, display: "block"}} onClick={onClick}
-            />
-        </ScrollAnimation>
+            <ScrollAnimation animateIn='fadeIn' delay={2300}>
+                <button className={className} style={{ ...style, display: "block"}} onClick={onClick}/>
+            </ScrollAnimation>
         </div>
     );
 }
@@ -81,9 +74,10 @@ class PureProduction extends Component {
         };
     }
 
-
     render() {
         const { data, locale } = this.props
+        const url_prefix = locale ? `/${locale}` : ''
+
         return(
             <>
                 <Header/>
@@ -104,7 +98,7 @@ class PureProduction extends Component {
                                        </ScrollAnimation>
                                     </div>
                                     <Slider {...this.settings} className={classNames({'small_slider': 1, 'full_slider': this.state.open})}>
-                                        <Link to={`/}`}  className="slider_item first">
+                                        <Link to='/'  className="slider_item first">
                                             <div className="ravlik_image"></div>
                                             <div className="wrapper_info_rawlik">
                                             </div>
@@ -113,7 +107,7 @@ class PureProduction extends Component {
                                             data.ravliks.edges.map((ravlikItem, key) => {
                                                 return (
                                                     <ScrollAnimation key={key} animateIn='fadeInRight' delay={1900}>
-                                                        <Link to={`/${locale}/our-products/${ravlikItem.node.slug}`}  className="slider_item">
+                                                        <Link to={`${url_prefix}/our-products/${ravlikItem.node.slug}`}  className="slider_item">
                                                             <div className="ravlik_image" style={{backgroundImage: `url(${ravlikItem.node.featuredImage.sourceUrl})`}}></div>
                                                             <div className="wrapper_info_rawlik">
                                                                 <h3>{ravlikItem.node.title}</h3>
@@ -139,11 +133,20 @@ class PureProduction extends Component {
 
 const Production = (props) => {
     const { locale } = props.match.params
+    let locales = ''
+    if (props.match.params.locale === "uk"){
+        locales = props.match.params.locale + "/our-products"
+    }else if(props.match.params.locale === "fr"){
+        locales =  "la-production/"
+    }else if(props.match.params.locale === undefined){
+        locales =  "products/"
+    }
+    const locales_url_prefix = locales ? '/' + locales : ''
 
     return (
         <Query query={gql`
         {
-          pageBy(uri: "/uk/our-products") {
+           pageBy(uri: "${locales_url_prefix}") {
             title
             content
           }
@@ -174,4 +177,4 @@ const Production = (props) => {
         </Query>
     )
 }
-export default Production;
+export default withRouter( Production );

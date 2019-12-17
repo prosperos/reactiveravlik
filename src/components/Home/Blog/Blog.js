@@ -6,10 +6,21 @@ import './Blog.scss'
 import ScrollAnimation from 'react-animate-on-scroll'
 
 
-const Blog = (props) => (
+const Blog = (props) => {
+    let locale = ''
+    if (props.match.params.locale === "uk"){
+        locale = props.match.params.locale + "/main-home"
+    }else if(props.match.params.locale === "fr"){
+        locale =  "accueil/"
+    }else if(props.match.params.locale === undefined){
+        locale =  "home/"
+    }
+    const locale_url_prefix = locale ? '/' + locale : ''
+
+    return (
     <Query query={gql`
   {
-        pageBy(uri: "uk/main-home") {
+        pageBy(uri: "${locale_url_prefix}") {
             home{
               blogTitle 
               blogButtonText
@@ -77,7 +88,7 @@ const Blog = (props) => (
                                 <div className="col-lg-12">
                                     <ScrollAnimation  animateIn='fadeIn' delay={750}>
                                         <div className="btn_wrapper">
-                                            <Link to={`${location.pathname}blog/`} className="big_button">{data.pageBy.home.blogButtonText}</Link>
+                                            <Link to={`${location.pathname}/blog/`} className="big_button">{data.pageBy.home.blogButtonText}</Link>
                                         </div>
                                     </ScrollAnimation>
                                 </div>
@@ -88,5 +99,6 @@ const Blog = (props) => (
             }
         }
     </Query>
-)
+    )
+}
 export default withRouter(Blog);

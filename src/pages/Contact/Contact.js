@@ -9,7 +9,7 @@ import Representation from "../../components/Export/Representation/Representatio
 import Footer from "../../common/Footer/Footer";
 import Header from "../../common/Header/Header";
 import AOS from "aos";
-
+import { withRouter } from 'react-router-dom'
 
 class AnimateContact extends Component {
     constructor(props, context) {
@@ -36,8 +36,7 @@ class AnimateContact extends Component {
                                         <h1 data-aos="fade-in" data-aos-delay="450">{data.pageBy.title}</h1>
                                         <hr data-aos="fade-in-left" data-aos-delay="550" />
                                     </div>
-                                    <div className="address_wrapper" data-aos="fade-in" data-aos-delay="450">
-
+                                    <div className="address_wrapper">
                                         <a href={`tel:${data.pageBy.contactsMeta.contactsPhone}`} className="phone">{data.pageBy.contactsMeta.contactsPhone}</a>
                                         <a href={`mailto:${data.pageBy.contactsMeta.contactsEmail}`} className="email">{data.pageBy.contactsMeta.contactsEmail}</a>
                                         <address className="address">
@@ -63,10 +62,21 @@ class AnimateContact extends Component {
 
 }
 
-const Contact = () => (
-    <Query query={gql`
+const Contact = (props) => {
+
+    let locales = ''
+    if (props.match.params.locale === "uk") {
+        locales =  "uk/contacts"
+    } else if (props.match.params.locale === "fr") {
+        locales = "contacts-fr/"
+    } else if (props.match.params.locale === undefined) {
+        locales = "contacts-en/"
+    }
+    const locales_url_prefix = locales ? '/' + locales : ''
+    return (
+        <Query query={gql`
 {
-  pageBy(uri: "uk/contacts") {
+  pageBy(uri: "${locales_url_prefix}") {
   title
     contactsMeta{
         contactsPhone 
@@ -77,17 +87,18 @@ const Contact = () => (
     }
   }
     `
-    }>
-        {
-            ({ loading, error, data}) => {
-                if (loading){
-                    return null;
+        }>
+            {
+                ({loading, error, data}) => {
+                    if (loading) {
+                        return null;
+                    }
+
+                    return <AnimateContact data={data}/>
+
                 }
-
-                return <AnimateContact data={data} />
-
             }
-        }
-    </Query>
-)
-export default Contact;
+        </Query>
+    )
+}
+export default withRouter( Contact );

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { Component } from 'react';
 import Popup from "reactjs-popup";
 import MyForm from "../Form/Form";
+
 export default () => (
-    <Popup trigger={<button className="button big_button"> Зв'язатись з нами </button>} modal>
+    <Popup  trigger={<button className="button big_button" > Зв'язатись з нами </button>} modal>
         {close => (
             <div className="modal modalMobile">
                 <a className="close" onClick={close}>
@@ -17,3 +18,4 @@ export default () => (
         )}
     </Popup>
 );
+

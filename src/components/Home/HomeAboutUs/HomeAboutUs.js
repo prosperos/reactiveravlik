@@ -57,22 +57,31 @@ class AboutUs extends Component {
 }
 
 const HomeAboutUs = (props) => {
+    let locale = ''
+    if (props.match.params.locale === "uk"){
+        locale = props.match.params.locale + "/main-home"
+    }else if(props.match.params.locale === "fr"){
+        locale =  "accueil/"
+    }else if(props.match.params.locale === undefined){
+        locale =  "home/"
+    }
+    const locale_url_prefix = locale ? '/' + locale : ''
 
     return (
     <Query query={gql`
-{
-  pageBy(uri: "uk/main-home") {
-    home{
-      homeAboutUsImage {
-        sourceUrl
+    {
+     pageBy(uri: "${locale_url_prefix}") {
+        home{
+          homeAboutUsImage {
+            sourceUrl
+          }
+          homeAboutUsTitle
+          homeAboutUsText
+          homeAboutUsBtnName
+          homeAboutUsBtnUrl
+        }
       }
-      homeAboutUsTitle
-      homeAboutUsText
-      homeAboutUsBtnName
-      homeAboutUsBtnUrl
     }
-  }
-}
     `
     }>
         {

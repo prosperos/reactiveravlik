@@ -6,8 +6,6 @@ import './HomeBanner.scss'
 import { Link} from "react-scroll";
 import ScrollAnimation from "react-animate-on-scroll";
 
-
-
 class HomeItems extends Component {
     render() {
         const { data } = this.props
@@ -66,35 +64,44 @@ class HomeItems extends Component {
     }
 }
 
-const HomeBanner = (props) => (
-
-//    pageBy(uri: "main-home-${props.locale}") {
-    <Query query={gql`
-{
-  pageBy(uri: "uk/main-home") {
-  
-    home{
-      homeBannerLogo {
-        sourceUrl
-      }
-      homeBannerText
-      homeBannerImage {
-        sourceUrl
-      }
+const HomeBanner = (props) => {
+    let locale = ''
+    if (props.locale === "uk"){
+        locale = props.locale + "/main-home"
+    }else if(props.locale === "fr"){
+        locale =  "accueil/"
+    }else if(props.locale === undefined){
+        locale =  "home/"
     }
-  }
-}
-    `
-    }>
-        {
-            ({ loading, error, data}) => {
-                if (loading){
-                    return null;
-                }
-                return <HomeItems data={data} />
+    const locale_url_prefix = locale ? '/' + locale : ''
 
+    return (
+        <Query query={gql`
+        {
+         pageBy(uri: "${locale_url_prefix}") {
+            home{
+              homeBannerLogo {
+                sourceUrl
+              }
+              homeBannerText
+              homeBannerImage {
+                sourceUrl
+              }
             }
+          }
         }
-    </Query>
-)
+            `
+        }>
+            {
+                ({loading, error, data}) => {
+                    if (loading) {
+                        return null;
+                    }
+                    return <HomeItems data={data}/>
+
+                }
+            }
+        </Query>
+    )
+}
 export default HomeBanner;

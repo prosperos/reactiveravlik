@@ -10,20 +10,20 @@
           <option name="port" value="22" />
         </fileTransfer>
       </webServer>
-      <webServer id="0ee165f8-1d25-4008-a6fd-08f182fa3a5a" name="ftp.cluster021.hosting.ovh.net" url="http://ftp.cluster021.hosting.ovh.net">
-        <fileTransfer host="ftp.cluster021.hosting.ovh.net" port="21">
-          <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
-          </advancedOptions>
-          <option name="port" value="21" />
-        </fileTransfer>
-      </webServer>
       <webServer id="3a625b3a-045b-4eac-b407-a6b126a25486" name="ftp.cluster026.hosting.ovh.net" url="http://ftp.cluster026.hosting.ovh.net">
         <fileTransfer host="ftp.cluster026.hosting.ovh.net" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
           <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="8cb13dc2-bb40-462d-8170-b0c287d4a25f" name="root" url="http://159.203.216.214">
+        <fileTransfer host="159.203.216.214" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
         </fileTransfer>
       </webServer>
     </option>
