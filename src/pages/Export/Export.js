@@ -93,9 +93,7 @@ class PureExport extends Component {
         );
     }
 }
-
 const Export = ( props) => {
-
     let locales = ''
     if (props.match.params.locale === "uk"){
         locales = props.match.params.locale + "/export"
@@ -107,23 +105,23 @@ const Export = ( props) => {
     const locales_url_prefix = locales ? '/' + locales : ''
     return (
         <Query query={gql`
-{
-  pageBy(uri: "${locales_url_prefix}") {
-    title
-    content
-    featuredImage {
-      sourceUrl
-    }
-    exportMeta{
-      partnershipTitle
-      partnershipText
-      partnershipImage{
-        sourceUrl
-      }
-      buttonName
-    }
-  }
-}
+            {
+              pageBy(uri: "${locales_url_prefix}") {
+                title
+                content
+                featuredImage {
+                  sourceUrl
+                }
+                exportMeta{
+                  partnershipTitle
+                  partnershipText
+                  partnershipImage{
+                    sourceUrl
+                  }
+                  buttonName
+                }
+              }
+            }
         `
         }>
             {

@@ -66,6 +66,10 @@ const Production = (props) => {
                                     </div>
                                     {
                                         data.ravliks.edges.map((ravlikItem, key) => {
+
+                                            if (key > 3 )
+                                                return false;
+
                                             const col_class = classNames({
                                                 'col-lg-5': true,
                                                 'offset-0 offset-lg-1 offset-md-1 offset-sm-1 offset-xl-1': key === 0 || key === 1 || key === data.ravliks.edges.length - 1
@@ -74,18 +78,22 @@ const Production = (props) => {
                                                 'wrapper_item': true,
                                                 'top_offset': key === 1 || key === data.ravliks.edges.length - 1
                                             })
+
                                             return (
                                                 <div className={col_class} key={key}>
                                                     <ScrollAnimation delay={300 * key} animateIn='fadeIn'>
-                                                        <div className={wrapper_item}>
-                                                            <div className="ravlik_img"
-                                                                 style={{backgroundImage: `url(${ravlikItem.node.featuredImage.sourceUrl})`}}></div>
-                                                            <h3 className="info_ravlik">
-                                                                <Link
-                                                                    to={`${location.pathname}our-products/${ravlikItem.node.slug}`}>{ravlikItem.node.title}</Link>
-                                                            </h3>
-                                                            <p>{ravlikItem.node.content}</p>
-                                                        </div>
+                                                        <Link
+                                                            to={`${location.pathname}our-products/${ravlikItem.node.slug}`}>
+                                                                <div className={wrapper_item}>
+                                                                    <div className="ravlik_img"
+                                                                         style={{backgroundImage: `url(${ravlikItem.node.featuredImage.sourceUrl})`}}></div>
+                                                                    <h3 className="info_ravlik">
+                                                                        <Link
+                                                                            to={`${location.pathname}our-products/${ravlikItem.node.slug}`}>{ravlikItem.node.title}</Link>
+                                                                    </h3>
+                                                                    <p>{ravlikItem.node.content}</p>
+                                                                </div>
+                                                        </Link>
                                                     </ScrollAnimation>
                                                 </div>
                                             )

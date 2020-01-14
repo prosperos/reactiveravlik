@@ -19,7 +19,7 @@ export default class Home extends Component{
             <div>
                 <Header/>
                 <div className="home_leaf">
-                    <HomeBanner locale={this.props.match.params.locale} />
+                    <HomeBanner />
                     <HomeAboutUs/>
                     <OurServices/>
                     <Production/>

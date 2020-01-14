@@ -29,7 +29,6 @@ class HeaderMain extends React.Component{
             } else if (this.props.match.params.locale === undefined) {
                  array = data.menus.nodes[2].menuItems.nodes;
             }
-
             return (
                 <StyledMenu open={open}>
                     <WrapperLanguage className="language" open={open}>
@@ -65,6 +64,7 @@ class HeaderMain extends React.Component{
                     {array.map((item,idx) =>{
                         const  s = item.url
                         let url = new URL(s).pathname
+
 
                         if ( url === '/' + DEFAULT_LOCALE) {
                             url = '/'
@@ -181,9 +181,6 @@ const Header = (props) => {
         }
       }
     }
-
-
-
         `
         }>
             {

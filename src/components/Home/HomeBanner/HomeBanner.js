@@ -3,7 +3,8 @@ import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 import button_scroll from './../../../images/bottom_scroll.png'
 import './HomeBanner.scss'
-import { Link} from "react-scroll";
+import { Link } from "react-scroll";
+import {  withRouter } from 'react-router-dom'
 import ScrollAnimation from "react-animate-on-scroll";
 
 class HomeItems extends Component {
@@ -66,11 +67,11 @@ class HomeItems extends Component {
 
 const HomeBanner = (props) => {
     let locale = ''
-    if (props.locale === "uk"){
-        locale = props.locale + "/main-home"
-    }else if(props.locale === "fr"){
+    if (props.match.params.locale === "uk"){
+        locale = props.match.params.locale + "/main-home"
+    }else if(props.match.params.locale === "fr"){
         locale =  "accueil/"
-    }else if(props.locale === undefined){
+    }else if(props.match.params.locale === undefined){
         locale =  "home/"
     }
     const locale_url_prefix = locale ? '/' + locale : ''
@@ -104,4 +105,4 @@ const HomeBanner = (props) => {
         </Query>
     )
 }
-export default HomeBanner;
+export default  withRouter(HomeBanner);

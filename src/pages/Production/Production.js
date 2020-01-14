@@ -86,16 +86,16 @@ class PureProduction extends Component {
                         <div className="row">
                             <div className="col-lg-12" >
                                 <div className="content_production">
-                                   <div className={classNames({'product_text_wrapper': 1, 'full_text': this.state.open})}>
-                                       <ScrollAnimation animateIn='fadeIn' delay={500}>
-                                        <h1>{data.pageBy.title}</h1>
-                                       </ScrollAnimation>
-                                       <ScrollAnimation animateIn='fadeIn' delay={900}>
-                                        <hr/>
-                                       </ScrollAnimation>
-                                       <ScrollAnimation animateIn='fadeInBottom' delay={1400}>
-                                        <p>{data.pageBy.content}</p>
-                                       </ScrollAnimation>
+                                    <div className={classNames({'product_text_wrapper': 1, 'full_text': this.state.open})}>
+                                        <ScrollAnimation animateIn='fadeIn' delay={500}>
+                                            <h1>{data.pageBy.title}</h1>
+                                        </ScrollAnimation>
+                                        <ScrollAnimation animateIn='fadeIn' delay={900}>
+                                            <hr/>
+                                        </ScrollAnimation>
+                                        <ScrollAnimation animateIn='fadeInBottom' delay={1400}>
+                                            <p>{data.pageBy.content}</p>
+                                        </ScrollAnimation>
                                     </div>
                                     <Slider {...this.settings} className={classNames({'small_slider': 1, 'full_slider': this.state.open})}>
                                         <Link to='/'  className="slider_item first">

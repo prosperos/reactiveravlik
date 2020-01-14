@@ -4,7 +4,7 @@ import gql from 'graphql-tag'
 import './OurServices.scss'
 import classNames from 'classnames'
 import ScrollAnimation from 'react-animate-on-scroll'
-import {  withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 
 const OurServices = (props) => {
     let locale = ''
@@ -19,22 +19,22 @@ const OurServices = (props) => {
 
     return (
         <Query query={gql`
-{
-    pageBy(uri: "${locale_url_prefix}") {
-    home{
-      ourServicesTitle 
-      ourServicesItems{
-        ourServicesIcon{
-            sourceUrl
-        }
-        ourServicesDescription
-        ourServicesTitle
-      }
-     
-    }
-  }
-}
-    `
+            {
+                pageBy(uri: "${locale_url_prefix}") {
+                home{
+                  ourServicesTitle 
+                  ourServicesItems{
+                    ourServicesIcon{
+                        sourceUrl
+                    }
+                    ourServicesDescription
+                    ourServicesTitle
+                  }
+                 
+                }
+              }
+            }
+        `
         }>
             {
                 ({loading, error, data}) => {
@@ -42,7 +42,6 @@ const OurServices = (props) => {
                         return null;
                     }
                     const itemServices = data.pageBy.home.ourServicesItems
-
                     return (
                         <div className="wrapper_our_services_content">
                             <div className="container">
